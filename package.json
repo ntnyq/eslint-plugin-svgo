@@ -1,0 +1,87 @@
+{
+  "name": "eslint-plugin-svgo",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@9.15.1",
+  "description": "Optimize SVG files with SVGO using ESLint.",
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "svgo"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "ntnyq",
+    "email": "ntnyq13@gmail.com"
+  },
+  "homepage": "https://github.com/ntnyq/eslint-plugin-svgo#readme",
+  "repository": "ntnyq/eslint-plugin-svgo",
+  "bugs": {
+    "url": "https://github.com/ntnyq/eslint-plugin-svgo/issues"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "workers"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "coverage": "vitest --coverage",
+    "dev": "tsup --watch src",
+    "lint": "eslint .",
+    "prepare": "husky",
+    "prepublishOnly": "pnpm run build",
+    "release": "run-s release:check release:publish",
+    "release:check": "run-s lint typecheck test",
+    "release:publish": "bumpp && pnpm publish",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "eslint": "^9.5.0"
+  },
+  "dependencies": {
+    "eslint-formatting-reporter": "^0.0.0",
+    "svgo": "^4.0.0-rc.1",
+    "synckit": "^0.9.2"
+  },
+  "devDependencies": {
+    "@ntnyq/eslint-config": "^3.9.4",
+    "@ntnyq/prettier-config": "^1.22.0",
+    "@types/node": "^22.10.2",
+    "@vitest/coverage-v8": "^3.0.0-beta.3",
+    "bumpp": "^9.9.1",
+    "eslint": "^9.17.0",
+    "eslint-vitest-rule-tester": "^0.7.1",
+    "husky": "^9.1.7",
+    "nano-staged": "^0.8.0",
+    "npm-run-all2": "^7.0.2",
+    "prettier": "^3.4.2",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.0-beta.3"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "nano-staged": {
+    "*.{js,ts,mjs,cjs,json,md,yml,yaml}": "eslint --fix"
+  }
+}
