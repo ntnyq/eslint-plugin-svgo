@@ -2,6 +2,7 @@ import { join } from 'node:path'
 import { messages, reportDifferences } from 'eslint-formatting-reporter'
 import { createSyncFn } from 'synckit'
 import { dirWorkers } from '../dir'
+import { svgoConfigProperties } from '../schema'
 import type { Rule } from 'eslint'
 import type { Config } from 'svgo'
 
@@ -23,37 +24,7 @@ export const svgo = {
       {
         type: 'object',
         properties: {
-          path: {
-            type: 'string',
-          },
-          multipass: {
-            type: 'boolean',
-          },
-          floatPrecision: {
-            type: 'number',
-          },
-          js2svg: {
-            type: 'object',
-            properties: {
-              indent: {
-                type: 'number',
-              },
-              pretty: {
-                type: 'boolean',
-              },
-              eol: {
-                type: 'string',
-                enum: ['lf', 'crlf'],
-              },
-            },
-          },
-          // TODO: enhance plugin support
-          plugins: {
-            type: 'array',
-            items: {
-              type: 'string',
-            },
-          },
+          ...svgoConfigProperties,
         },
         additionalProperties: true,
       },
@@ -85,10 +56,7 @@ export const svgo = {
           })
 
           reportDifferences(context, sourceCode, output.data)
-        } catch (err) {
-          console.log({
-            err,
-          })
+        } catch {
           context.report({
             loc: {
               start: { line: 1, column: 0 },

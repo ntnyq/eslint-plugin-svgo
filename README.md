@@ -47,6 +47,11 @@ export default [
         'error',
         {
           // svgo config
+          floatPrecision: 2,
+          js2svg: {
+            pretty: true,
+          },
+          plugins: [],
         },
       ],
     },
@@ -62,7 +67,65 @@ Use svgo to optimize SVG files.
 
 #### Options
 
-All SVGO configs is supported.
+Default options:
+
+```json
+{
+  "js2svg": {
+    "indent": 2,
+    "pretty": true
+  },
+  "plugins": ["preset-default"]
+}
+```
+
+##### path
+
+- **type**: `string`
+- **default**: `context.filename`
+
+Can be used by plugins, for example prefixids.
+
+##### multipass
+
+- **type**: `boolean`
+- **default**: `false`
+
+Pass over SVGs multiple times to ensure all optimizations are applied.
+
+##### floatPrecision
+
+- **type**: `number`
+- **default**: `3`
+
+Precision of floating point numbers. Will be passed to each plugin that supports this param.
+
+##### datauri
+
+- **type**: `'base64' | 'enc' | 'unenc'`
+- **default**: `undefined`
+
+Output as Data URI string.
+
+##### js2svg
+
+- **type**: `object`
+- **default**: `{ indent: 2, pretty: true }`
+
+Options for rendering optimized SVG from AST. Check [svgo/lib/types.d.ts](https://github.com/svg/svgo/blob/main/lib/types.d.ts) for details.
+
+Options bellow are not supported:
+
+- `regEntities`
+- `regValEntities`
+- `encodeEntity`
+
+##### plugins
+
+- **type**: `array`
+- **default**: `['preset-default']`
+
+Plugins configuration. Check [Plugins | SVGO Documentation](https://svgo.dev/docs/plugins/) for details.
 
 ## Credits
 
