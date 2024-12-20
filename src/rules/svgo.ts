@@ -5,7 +5,10 @@ import { dirWorkers } from '../dir'
 import type { Rule } from 'eslint'
 import type { Config } from 'svgo'
 
-let optimizeSVG: (input: string, config: Config) => string
+// import from svgo next release
+type Output = { data: string }
+
+let optimizeSVG: (input: string, config: Config) => Output
 
 export const svgo = {
   meta: {
@@ -29,6 +32,21 @@ export const svgo = {
           floatPrecision: {
             type: 'number',
           },
+          js2svg: {
+            type: 'object',
+            properties: {
+              indent: {
+                type: 'number',
+              },
+              pretty: {
+                type: 'boolean',
+              },
+              eol: {
+                type: 'string',
+                enum: ['lf', 'crlf'],
+              },
+            },
+          },
           // TODO: enhance plugin support
           plugins: {
             type: 'array',
@@ -43,13 +61,17 @@ export const svgo = {
     messages,
     defaultOptions: [
       {
+        js2svg: {
+          indent: 2,
+          pretty: true,
+        },
         plugins: ['preset-default'],
       },
     ],
   },
   create(context) {
     if (!optimizeSVG) {
-      optimizeSVG = createSyncFn(join(dirWorkers, 'svgo.js')) as any
+      optimizeSVG = createSyncFn(join(dirWorkers, 'svgo.cjs')) as any
     }
 
     return {
@@ -57,13 +79,16 @@ export const svgo = {
         const sourceCode = context.sourceCode.text
 
         try {
-          const optimized = optimizeSVG(sourceCode, {
+          const output = optimizeSVG(sourceCode, {
             path: context.filename,
             ...(context.options?.[0] || {}),
           })
 
-          reportDifferences(context, sourceCode, optimized)
-        } catch {
+          reportDifferences(context, sourceCode, output.data)
+        } catch (err) {
+          console.log({
+            err,
+          })
           context.report({
             loc: {
               start: { line: 1, column: 0 },

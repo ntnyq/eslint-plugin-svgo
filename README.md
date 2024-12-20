@@ -3,7 +3,6 @@
 [![CI](https://github.com/ntnyq/eslint-plugin-svgo/workflows/CI/badge.svg)](https://github.com/ntnyq/eslint-plugin-svgo/actions)
 [![NPM VERSION](https://img.shields.io/npm/v/eslint-plugin-svgo.svg)](https://www.npmjs.com/package/eslint-plugin-svgo)
 [![NPM DOWNLOADS](https://img.shields.io/npm/dy/eslint-plugin-svgo.svg)](https://www.npmjs.com/package/eslint-plugin-svgo)
-[![CODECOV](https://codecov.io/github/ntnyq/eslint-plugin-svgo/branch/main/graph/badge.svg)](https://codecov.io/github/ntnyq/eslint-plugin-svgo)
 [![LICENSE](https://img.shields.io/github/license/ntnyq/eslint-plugin-svgo.svg)](https://github.com/ntnyq/eslint-plugin-svgo/blob/main/LICENSE)
 
 Optimize SVG files with [SVGO](https://github.com/svg/svgo) using ESLint.
