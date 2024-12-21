@@ -21,12 +21,12 @@ yarn add eslint-plugin-svgo -D
 pnpm add eslint-plugin-svgo -D
 ```
 
-## Usage
+## Basic Usage
 
 ```ts
 // eslint.config.js
 
-import svgo, { parserPlain } from 'eslint-plugin-svgo'
+import pluginSvgo from 'eslint-plugin-svgo'
 
 /**
  * @type import('eslint').Linter.Config[]
@@ -34,14 +34,25 @@ import svgo, { parserPlain } from 'eslint-plugin-svgo'
 export default [
   // ...other flat configs
 
-  {
+  pluginSvgo.configs.recommended,
+]
+```
+
+### Advanced Usage
+
+```ts
+// eslint.config.js
+
+import { config } from 'eslint-plugin-svgo'
+
+/**
+ * @type import('eslint').Linter.Config[]
+ */
+export default [
+  // ...other flat configs
+
+  config({
     files: ['**/*.svg'],
-    languageOptions: {
-      parser: parserPlain,
-    },
-    plugins: {
-      svgo,
-    },
     rules: {
       'svgo/svgo': [
         'error',
@@ -55,7 +66,7 @@ export default [
         },
       ],
     },
-  },
+  }),
 ]
 ```
 
@@ -126,6 +137,31 @@ Options bellow are not supported:
 - **default**: `['preset-default']`
 
 Plugins configuration. Check [Plugins | SVGO Documentation](https://svgo.dev/docs/plugins/) for details.
+
+## Types
+
+### `config`
+
+Helper function to create ESLint config.
+
+#### parameters
+
+All parameters of ESLint flat config are supported.
+
+##### name
+
+- **type**: `string`
+- **default**: `svgo/recommended`
+
+##### files
+
+- **type**: `string[]`
+- **default**: `[**/*.svg]`
+
+#### rules
+
+- **type**: `Linter.RulesRecord`
+- **default**: `{ 'svgo/svgo': 'error' }`
 
 ## Credits
 
