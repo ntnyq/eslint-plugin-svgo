@@ -67,6 +67,7 @@
     "@types/node": "^22.10.2",
     "bumpp": "^9.9.1",
     "eslint": "^9.17.0",
+    "eslint-vitest-rule-tester": "^0.7.1",
     "husky": "^9.1.7",
     "json-schema": "^0.4.0",
     "nano-staged": "^0.8.0",

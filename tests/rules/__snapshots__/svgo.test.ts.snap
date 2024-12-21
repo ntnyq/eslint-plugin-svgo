@@ -1,0 +1,45 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`svgo > invalid > Invalid #0: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 100" width="150">
+  <rect id="useless" width="0" height="0" fill="#ff0000"/>
+</svg> 1`] = `
+[
+  {
+    "column": 9,
+    "endColumn": 22,
+    "endLine": 2,
+    "fix": {
+      "range": [
+        83,
+        96,
+      ],
+      "text": "",
+    },
+    "line": 2,
+    "message": "Delete \`id="useless"·\`",
+    "messageId": "delete",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+  {
+    "column": 7,
+    "endColumn": 7,
+    "endLine": 3,
+    "fix": {
+      "range": [
+        140,
+        140,
+      ],
+      "text": "
+",
+    },
+    "line": 3,
+    "message": "Insert \`⏎\`",
+    "messageId": "insert",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+]
+`;
