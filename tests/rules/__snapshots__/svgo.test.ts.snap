@@ -1,8 +1,162 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`svgo > invalid > Invalid #0: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 100" width="150">
-  <rect id="useless" width="0" height="0" fill="#ff0000"/>
-</svg> 1`] = `
+exports[`svgo > invalid > Invalid #0: default preset-default 1`] = `
+[
+  {
+    "column": 1,
+    "endColumn": 29,
+    "endLine": 3,
+    "fix": {
+      "range": [
+        0,
+        145,
+      ],
+      "text": "<svg xmlns="http://www.w3.org/2000/svg" width="150" viewBox="0 0 150 100"",
+    },
+    "line": 1,
+    "message": "Replace \`<?xml·version="1.0"·encoding="UTF-8"?>⏎<svg·xmlns="http://www.w3.org/2000/svg"·viewBox="·0·0··150·100·"·width="150">⏎··<!--·Created·with·love!·--\` with \`<svg·xmlns="http://www.w3.org/2000/svg"·width="150"·viewBox="0·0·150·100"\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+  {
+    "column": 6,
+    "endColumn": 76,
+    "endLine": 5,
+    "fix": {
+      "range": [
+        161,
+        231,
+      ],
+      "text": "circle id="a" cx="50" cy="50" r="50" fill="#000",
+    },
+    "line": 5,
+    "message": "Replace \`ellipse·cx="50"·cy="50.0"·rx="50.00"·ry="auto"·fill="black"·id="circle\` with \`circle·id="a"·cx="50"·cy="50"·r="50"·fill="#000\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+  {
+    "column": 4,
+    "endColumn": 23,
+    "endLine": 8,
+    "fix": {
+      "range": [
+        248,
+        273,
+      ],
+      "text": "use href="#a",
+    },
+    "line": 7,
+    "message": "Replace \`g>⏎····<use·href="#circle\` with \`use·href="#a\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+  {
+    "column": 1,
+    "endColumn": 7,
+    "endLine": 11,
+    "fix": {
+      "range": [
+        299,
+        373,
+      ],
+      "text": "</svg>
+",
+    },
+    "line": 9,
+    "message": "Replace \`····<rect·id="useless"·width="0"·height="0"·fill="#ff0000"/>⏎··</g>⏎</svg>\` with \`</svg>⏎\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+]
+`;
+
+exports[`svgo > invalid > Invalid #1: preset-default disable cleanupIds 1`] = `
+[
+  {
+    "column": 1,
+    "endColumn": 29,
+    "endLine": 3,
+    "fix": {
+      "range": [
+        0,
+        145,
+      ],
+      "text": "<svg xmlns="http://www.w3.org/2000/svg" width="150" viewBox="0 0 150 100"",
+    },
+    "line": 1,
+    "message": "Replace \`<?xml·version="1.0"·encoding="UTF-8"?>⏎<svg·xmlns="http://www.w3.org/2000/svg"·viewBox="·0·0··150·100·"·width="150">⏎··<!--·Created·with·love!·--\` with \`<svg·xmlns="http://www.w3.org/2000/svg"·width="150"·viewBox="0·0·150·100"\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+  {
+    "column": 6,
+    "endColumn": 76,
+    "endLine": 5,
+    "fix": {
+      "range": [
+        161,
+        231,
+      ],
+      "text": "circle id="circle" cx="50" cy="50" r="50" fill="#000",
+    },
+    "line": 5,
+    "message": "Replace \`ellipse·cx="50"·cy="50.0"·rx="50.00"·ry="auto"·fill="black"·id="circle\` with \`circle·id="circle"·cx="50"·cy="50"·r="50"·fill="#000\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+  {
+    "column": 1,
+    "endColumn": 3,
+    "endLine": 8,
+    "fix": {
+      "range": [
+        245,
+        253,
+      ],
+      "text": "",
+    },
+    "line": 7,
+    "message": "Delete \`··<g>⏎··\`",
+    "messageId": "delete",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+  {
+    "column": 1,
+    "endColumn": 7,
+    "endLine": 11,
+    "fix": {
+      "range": [
+        299,
+        373,
+      ],
+      "text": "</svg>
+",
+    },
+    "line": 9,
+    "message": "Replace \`····<rect·id="useless"·width="0"·height="0"·fill="#ff0000"/>⏎··</g>⏎</svg>\` with \`</svg>⏎\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+]
+`;
+
+exports[`svgo > invalid > Invalid #2: plugin cleanupIds 1`] = `
 [
   {
     "column": 9,
