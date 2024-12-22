@@ -83,7 +83,9 @@ const js2svg = {
       enum: ['lf', 'crlf'],
     },
     finalNewline: booleanSchema,
-    indent: integerSchema,
+    indent: {
+      oneOf: [stringSchema, integerSchema],
+    },
     pretty: booleanSchema,
     procInstEnd: stringSchema,
     procInstStart: stringSchema,
@@ -104,7 +106,7 @@ const plugins = {
   items: {
     anyOf: [
       {
-        type: 'string',
+        ...stringSchema,
         enum: [
           PLUGIN_PRESET_DEFAULT,
 
