@@ -1,3 +1,7 @@
+/**
+ * @kind default
+ */
+
 import { booleanSchema, stringArraySchema } from '../shared'
 import { createParamsSchema, createPluginSchema } from '../utils'
 

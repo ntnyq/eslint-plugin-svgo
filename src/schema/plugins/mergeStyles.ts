@@ -1,3 +1,7 @@
+/**
+ * @kind default
+ */
+
 import { createParamsSchema, createPluginSchema } from '../utils'
 
 export const mergeStylesParams = createParamsSchema()
