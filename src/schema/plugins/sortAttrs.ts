@@ -1,14 +1,10 @@
+import { stringArraySchema, stringSchema } from '../shared'
 import { createPluginParams, createPluginSchema } from '../utils'
 
 export const sortAttrsParams = createPluginParams({
-  order: {
-    type: 'array',
-    items: {
-      type: 'string',
-    },
-  },
+  order: stringArraySchema,
   xmlnsOrder: {
-    type: 'string',
+    ...stringSchema,
     enum: ['front'],
   },
 })

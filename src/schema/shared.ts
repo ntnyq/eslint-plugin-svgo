@@ -4,7 +4,20 @@ export const booleanSchema: JSONSchema4 = {
   type: 'boolean',
 }
 
-export const precisionSchema: JSONSchema4 = {
+export const stringSchema: JSONSchema4 = {
+  type: 'string',
+}
+
+export const integerSchema: JSONSchema4 = {
   type: 'integer',
+}
+
+export const stringArraySchema: JSONSchema4 = {
+  type: 'array',
+  items: stringSchema,
+}
+
+export const precisionSchema: JSONSchema4 = {
+  ...integerSchema,
   minimum: 0,
 }

@@ -1,5 +1,7 @@
 import { PLUGIN_PRESET_DEFAULT, PLUGINS_PRESET_DEFAULT } from '../constants'
 import {
+  addAttributesToSVGElementPlugin,
+  addClassesToSVGElementPlugin,
   cleanupAttrsPlugin,
   cleanupEnableBackgroundPlugin,
   cleanupIdsPlugin,
@@ -19,8 +21,10 @@ import {
   minifyStylesPlugin,
   moveElemsAttrsToGroupPlugin,
   moveGroupAttrsToElemsPlugin,
+  prefixIdsPlugin,
   presetDefaultPlugin,
   removeAttributesBySelectorPlugin,
+  removeAttrsPlugin,
   removeCommentsPlugin,
   removeDeprecatedAttrsPlugin,
   removeDescPlugin,
@@ -34,6 +38,7 @@ import {
   removeHiddenElemsPlugin,
   removeMetadataPlugin,
   removeNonInheritableGroupAttrsPlugin,
+  removeOffCanvasPathsPlugin,
   removeTitlePlugin,
   removeUnknownsAndDefaultsPlugin,
   removeUnusedNSPlugin,
@@ -47,6 +52,7 @@ import {
   sortAttrsPlugin,
   sortDefsChildrenPlugin,
 } from './plugins'
+import { booleanSchema, integerSchema, precisionSchema, stringSchema } from './shared'
 import type { JSONSchema4 } from 'json-schema'
 
 /**
@@ -61,76 +67,32 @@ const js2svg = {
   type: 'object',
   // @keep-sorted
   properties: {
-    attrEnd: {
-      type: 'string',
-    },
-    attrStart: {
-      type: 'string',
-    },
-    cdataEnd: {
-      type: 'string',
-    },
-    cdataStart: {
-      type: 'string',
-    },
-    commentEnd: {
-      type: 'string',
-    },
-    commentStart: {
-      type: 'string',
-    },
-    doctypeEnd: {
-      type: 'string',
-    },
-    doctypeStart: {
-      type: 'string',
-    },
+    attrEnd: stringSchema,
+    attrStart: stringSchema,
+    cdataEnd: stringSchema,
+    cdataStart: stringSchema,
+    commentEnd: stringSchema,
+    commentStart: stringSchema,
+    doctypeEnd: stringSchema,
+    doctypeStart: stringSchema,
     eol: {
-      type: 'string',
+      ...stringSchema,
       enum: ['lf', 'crlf'],
     },
-    finalNewline: {
-      type: 'boolean',
-    },
-    indent: {
-      type: 'number',
-    },
-    pretty: {
-      type: 'boolean',
-    },
-    procInstEnd: {
-      type: 'string',
-    },
-    procInstStart: {
-      type: 'string',
-    },
-    tagCloseEnd: {
-      type: 'string',
-    },
-    tagCloseStart: {
-      type: 'string',
-    },
-    tagOpenEnd: {
-      type: 'string',
-    },
-    tagOpenStart: {
-      type: 'string',
-    },
-    tagShortEnd: {
-      type: 'string',
-    },
-    tagShortStart: {
-      type: 'string',
-    },
-    textEnd: {
-      type: 'string',
-    },
-    textStart: {
-      type: 'string',
-    },
-    useShortTags: {
-      type: 'boolean',
-    },
+    finalNewline: booleanSchema,
+    indent: integerSchema,
+    pretty: booleanSchema,
+    procInstEnd: stringSchema,
+    procInstStart: stringSchema,
+    tagCloseEnd: stringSchema,
+    tagCloseStart: stringSchema,
+    tagOpenEnd: stringSchema,
+    tagOpenStart: stringSchema,
+    tagShortEnd: stringSchema,
+    tagShortStart: stringSchema,
+    textEnd: stringSchema,
+    textStart: stringSchema,
+    useShortTags: booleanSchema,
   },
 } satisfies JSONSchema4
 
@@ -150,6 +112,9 @@ const plugins = {
       /**
        * plugins with params
        */
+
+      addAttributesToSVGElementPlugin,
+      addClassesToSVGElementPlugin,
       cleanupAttrsPlugin,
       cleanupEnableBackgroundPlugin,
       cleanupIdsPlugin,
@@ -169,8 +134,10 @@ const plugins = {
       minifyStylesPlugin,
       moveElemsAttrsToGroupPlugin,
       moveGroupAttrsToElemsPlugin,
+      prefixIdsPlugin,
       presetDefaultPlugin,
       removeAttributesBySelectorPlugin,
+      removeAttrsPlugin,
       removeCommentsPlugin,
       removeDeprecatedAttrsPlugin,
       removeDescPlugin,
@@ -184,15 +151,16 @@ const plugins = {
       removeHiddenElemsPlugin,
       removeMetadataPlugin,
       removeNonInheritableGroupAttrsPlugin,
+      removeOffCanvasPathsPlugin,
       removeTitlePlugin,
       removeUnknownsAndDefaultsPlugin,
+      removeUnusedNSPlugin,
       removeUselessDefsPlugin,
       removeUselessStrokeAndFillPlugin,
       removeViewBoxPlugin,
       removeXlinkPlugin,
       removeXMLNSPlugin,
       removeXMLProcInstPlugin,
-      removeUnusedNSPlugin,
       reusePathsPlugin,
       sortAttrsPlugin,
       sortDefsChildrenPlugin,
@@ -201,18 +169,11 @@ const plugins = {
 } satisfies JSONSchema4
 
 export const svgoConfigProperties = {
-  path: {
-    type: 'string',
-  },
-  multipass: {
-    type: 'boolean',
-  },
-  floatPrecision: {
-    type: 'integer',
-    minimum: 0,
-  },
+  path: stringSchema,
+  multipass: booleanSchema,
+  floatPrecision: precisionSchema,
   datauri: {
-    type: 'string',
+    ...stringSchema,
     enum: ['base64', 'enc', 'unenc'],
   },
   js2svg,

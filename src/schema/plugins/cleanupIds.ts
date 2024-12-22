@@ -1,22 +1,12 @@
-import { booleanSchema } from '../shared'
+import { booleanSchema, stringArraySchema } from '../shared'
 import { createPluginParams, createPluginSchema } from '../utils'
 
 export const cleanupIdsParams = createPluginParams({
   remove: booleanSchema,
   minify: booleanSchema,
   force: booleanSchema,
-  preserve: {
-    type: 'array',
-    items: {
-      type: 'string',
-    },
-  },
-  preservePrefixes: {
-    type: 'array',
-    items: {
-      type: 'string',
-    },
-  },
+  preserve: stringArraySchema,
+  preservePrefixes: stringArraySchema,
 })
 
 export const cleanupIdsPlugin = createPluginSchema('cleanupIds', cleanupIdsParams)

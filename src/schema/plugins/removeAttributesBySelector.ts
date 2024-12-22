@@ -1,3 +1,4 @@
+import { stringArraySchema, stringSchema } from '../shared'
 import { createPluginParams, createPluginSchema } from '../utils'
 
 export const removeAttributesBySelectorParams = createPluginParams({
@@ -6,15 +7,8 @@ export const removeAttributesBySelectorParams = createPluginParams({
     items: {
       type: 'object',
       properties: {
-        selector: {
-          type: 'string',
-        },
-        attributes: {
-          type: 'array',
-          items: {
-            type: 'string',
-          },
-        },
+        selector: stringSchema,
+        attributes: stringArraySchema,
       },
     },
   },

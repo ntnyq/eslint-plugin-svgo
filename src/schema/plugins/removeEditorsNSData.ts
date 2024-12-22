@@ -1,12 +1,8 @@
+import { stringArraySchema } from '../shared'
 import { createPluginParams, createPluginSchema } from '../utils'
 
 export const removeEditorsNSDataParams = createPluginParams({
-  additionalNamespaces: {
-    type: 'array',
-    items: {
-      type: 'string',
-    },
-  },
+  additionalNamespaces: stringArraySchema,
 })
 
 export const removeEditorsNSDataPlugin = createPluginSchema(

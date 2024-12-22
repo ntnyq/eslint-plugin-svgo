@@ -1,4 +1,4 @@
-import { booleanSchema } from '../shared'
+import { booleanSchema, stringSchema } from '../shared'
 import { createPluginParams, createPluginSchema } from '../utils'
 
 export const convertColorsParams = createPluginParams({
@@ -7,11 +7,9 @@ export const convertColorsParams = createPluginParams({
   rgb2hex: booleanSchema,
   convertCase: {
     oneOf: [
+      booleanSchema,
       {
-        type: 'boolean',
-      },
-      {
-        type: 'string',
+        ...stringSchema,
         enum: ['lower', 'upper'],
       },
     ],
