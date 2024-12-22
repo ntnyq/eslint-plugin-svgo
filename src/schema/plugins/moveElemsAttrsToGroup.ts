@@ -2,11 +2,6 @@
  * @kind default
  */
 
-import { createParamsSchema, createPluginSchema } from '../utils'
+import { createPluginSchema } from '../utils'
 
-export const moveElemsAttrsToGroupParams = createParamsSchema()
-
-export const moveElemsAttrsToGroupPlugin = createPluginSchema(
-  'moveElemsAttrsToGroup',
-  moveElemsAttrsToGroupParams,
-)
+export const moveElemsAttrsToGroupPlugin = createPluginSchema('moveElemsAttrsToGroup')

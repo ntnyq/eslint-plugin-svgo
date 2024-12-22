@@ -1,39 +1,23 @@
-import { booleanSchema } from '../shared'
+import { booleanSchema, onlyFalseSchema } from '../shared'
 import { createParamsSchema, createPluginSchema } from '../utils'
 import { cleanupAttrsParams } from './cleanupAttrs'
-import { cleanupEnableBackgroundParams } from './cleanupEnableBackground'
 import { cleanupIdsParams } from './cleanupIds'
 import { cleanupNumericValuesParams } from './cleanupNumericValues'
-import { collapseGroupsParams } from './collapseGroups'
 import { convertColorsParams } from './convertColors'
-import { convertEllipseToCircleParams } from './convertEllipseToCircle'
 import { convertShapeToPathParams } from './convertShapeToPath'
 import { convertTransformParams } from './convertTransform'
 import { inlineStylesParams } from './inlineStyles'
 import { mergePathsParams } from './mergePaths'
-import { mergeStylesParams } from './mergeStyles'
 import { minifyStylesParams } from './minifyStyles'
-import { moveElemsAttrsToGroupParams } from './moveElemsAttrsToGroup'
-import { moveGroupAttrsToElemsParams } from './moveGroupAttrsToElems'
 import { removeCommentsParams } from './removeComments'
 import { removeDescParams } from './removeDesc'
 import { removeDoctypeParams } from './removeDoctype'
 import { removeEditorsNSDataParams } from './removeEditorsNSData'
-import { removeEmptyAttrsParams } from './removeEmptyAttrs'
-import { removeEmptyContainersParams } from './removeEmptyContainers'
 import { removeEmptyTextParams } from './removeEmptyText'
 import { removeHiddenElemsParams } from './removeHiddenElems'
-import { removeMetadataParams } from './removeMetadata'
-import { removeNonInheritableGroupAttrsParams } from './removeNonInheritableGroupAttrs'
-import { removeTitleParams } from './removeTitle'
 import { removeUnknownsAndDefaultsParams } from './removeUnknownsAndDefaults'
-import { removeUnusedNSParams } from './removeUnusedNS'
-import { removeUselessDefsParams } from './removeUselessDefs'
 import { removeUselessStrokeAndFillParams } from './removeUselessStrokeAndFill'
-import { removeViewBoxParams } from './removeViewBox'
-import { removeXMLProcInstParams } from './removeXMLProcInst'
 import { sortAttrsParams } from './sortAttrs'
-import { sortDefsChildrenParams } from './sortDefsChildren'
 
 export const presetDefaultParams = createParamsSchema({
   overrides: {
@@ -43,24 +27,18 @@ export const presetDefaultParams = createParamsSchema({
       cleanupAttrs: {
         oneOf: [booleanSchema, cleanupAttrsParams],
       },
-      cleanupEnableBackground: {
-        oneOf: [booleanSchema, cleanupEnableBackgroundParams],
-      },
+      cleanupEnableBackground: onlyFalseSchema,
       cleanupIds: {
         oneOf: [booleanSchema, cleanupIdsParams],
       },
       cleanupNumericValues: {
         oneOf: [booleanSchema, cleanupNumericValuesParams],
       },
-      collapseGroups: {
-        oneOf: [booleanSchema, collapseGroupsParams],
-      },
+      collapseGroups: onlyFalseSchema,
       convertColors: {
         oneOf: [booleanSchema, convertColorsParams],
       },
-      convertEllipseToCircle: {
-        oneOf: [booleanSchema, convertEllipseToCircleParams],
-      },
+      convertEllipseToCircle: onlyFalseSchema,
       convertPathData: {
         oneOf: [booleanSchema, convertColorsParams],
       },
@@ -76,18 +54,12 @@ export const presetDefaultParams = createParamsSchema({
       mergePaths: {
         oneOf: [booleanSchema, mergePathsParams],
       },
-      mergeStyles: {
-        oneOf: [booleanSchema, mergeStylesParams],
-      },
+      mergeStyles: onlyFalseSchema,
       minifyStyles: {
         oneOf: [booleanSchema, minifyStylesParams],
       },
-      moveElemsAttrsToGroup: {
-        oneOf: [booleanSchema, moveElemsAttrsToGroupParams],
-      },
-      moveGroupAttrsToElems: {
-        oneOf: [booleanSchema, moveGroupAttrsToElemsParams],
-      },
+      moveElemsAttrsToGroup: onlyFalseSchema,
+      moveGroupAttrsToElems: onlyFalseSchema,
       removeComments: {
         oneOf: [booleanSchema, removeCommentsParams],
       },
@@ -100,51 +72,31 @@ export const presetDefaultParams = createParamsSchema({
       removeEditorsNSData: {
         oneOf: [booleanSchema, removeEditorsNSDataParams],
       },
-      removeEmptyAttrs: {
-        oneOf: [booleanSchema, removeEmptyAttrsParams],
-      },
-      removeEmptyContainers: {
-        oneOf: [booleanSchema, removeEmptyContainersParams],
-      },
+      removeEmptyAttrs: onlyFalseSchema,
+      removeEmptyContainers: onlyFalseSchema,
       removeEmptyText: {
         oneOf: [booleanSchema, removeEmptyTextParams],
       },
       removeHiddenElems: {
         oneOf: [booleanSchema, removeHiddenElemsParams],
       },
-      removeMetadata: {
-        oneOf: [booleanSchema, removeMetadataParams],
-      },
-      removeNonInheritableGroupAttrs: {
-        oneOf: [booleanSchema, removeNonInheritableGroupAttrsParams],
-      },
-      removeTitle: {
-        oneOf: [booleanSchema, removeTitleParams],
-      },
+      removeMetadata: onlyFalseSchema,
+      removeNonInheritableGroupAttrs: onlyFalseSchema,
+      removeTitle: onlyFalseSchema,
       removeUnknownsAndDefaults: {
         oneOf: [booleanSchema, removeUnknownsAndDefaultsParams],
       },
-      removeUnusedNS: {
-        oneOf: [booleanSchema, removeUnusedNSParams],
-      },
-      removeUselessDefs: {
-        oneOf: [booleanSchema, removeUselessDefsParams],
-      },
+      removeUnusedNS: onlyFalseSchema,
+      removeUselessDefs: onlyFalseSchema,
       removeUselessStrokeAndFill: {
         oneOf: [booleanSchema, removeUselessStrokeAndFillParams],
       },
-      removeViewBox: {
-        oneOf: [booleanSchema, removeViewBoxParams],
-      },
-      removeXMLProcInst: {
-        oneOf: [booleanSchema, removeXMLProcInstParams],
-      },
+      removeViewBox: onlyFalseSchema,
+      removeXMLProcInst: onlyFalseSchema,
       sortAttrs: {
         oneOf: [booleanSchema, sortAttrsParams],
       },
-      sortDefsChildren: {
-        oneOf: [booleanSchema, sortDefsChildrenParams],
-      },
+      sortDefsChildren: onlyFalseSchema,
     },
     additionalProperties: false,
   },

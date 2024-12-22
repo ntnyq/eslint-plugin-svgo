@@ -1,8 +1,3 @@
-import { createParamsSchema, createPluginSchema } from '../utils'
+import { createPluginSchema } from '../utils'
 
-export const removeOffCanvasPathsParams = createParamsSchema()
-
-export const removeOffCanvasPathsPlugin = createPluginSchema(
-  'removeOffCanvasPaths',
-  removeOffCanvasPathsParams,
-)
+export const removeOffCanvasPathsPlugin = createPluginSchema('removeOffCanvasPaths')

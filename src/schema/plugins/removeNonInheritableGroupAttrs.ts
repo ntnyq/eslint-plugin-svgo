@@ -2,11 +2,8 @@
  * @kind default
  */
 
-import { createParamsSchema, createPluginSchema } from '../utils'
-
-export const removeNonInheritableGroupAttrsParams = createParamsSchema()
+import { createPluginSchema } from '../utils'
 
 export const removeNonInheritableGroupAttrsPlugin = createPluginSchema(
   'removeNonInheritableGroupAttrs',
-  removeNonInheritableGroupAttrsParams,
 )

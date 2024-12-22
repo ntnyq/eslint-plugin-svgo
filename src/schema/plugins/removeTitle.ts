@@ -2,8 +2,6 @@
  * @kind default
  */
 
-import { createParamsSchema, createPluginSchema } from '../utils'
+import { createPluginSchema } from '../utils'
 
-export const removeTitleParams = createParamsSchema()
-
-export const removeTitlePlugin = createPluginSchema('removeTitle', removeTitleParams)
+export const removeTitlePlugin = createPluginSchema('removeTitle')
