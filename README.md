@@ -90,6 +90,17 @@ Default options:
 }
 ```
 
+#### svgoConfig
+
+- **type**: `boolean | string`
+- **default**: `undefined`
+
+Use an external config file, e.g: svgo.config.mjs.
+
+Set to `true`, svgo will auto load config.
+
+Set to `path/to/your/svgo.config` to custom config file path.
+
 ##### path
 
 - **type**: `string`

@@ -3,6 +3,7 @@ import { messages, reportDifferences } from 'eslint-formatting-reporter'
 import { createSyncFn } from 'synckit'
 import { dirWorkers } from '../dir'
 import { svgoConfigProperties } from '../schema'
+import { booleanSchema, stringSchema } from '../schema/shared'
 import type { Rule } from 'eslint'
 import type { Config } from 'svgo'
 
@@ -25,6 +26,11 @@ export const svgo = {
         type: 'object',
         properties: {
           ...svgoConfigProperties,
+
+          svgoConfig: {
+            description: 'Use an external config file, e.g: svgo.config.mjs',
+            oneOf: [booleanSchema, stringSchema],
+          },
         },
         additionalProperties: false,
       },

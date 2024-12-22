@@ -1,11 +1,20 @@
+// @ts-check
+
 const { runAsWorker } = require('synckit')
 
-// TODO: load config from `svgo.config.mjs`
+/**
+ * @typedef {import('svgo').Config & { svgoConfig?: boolean | string }} Options
+ */
 
 /**
  * @type {import('svgo')}
  */
 let svgo
+
+/**
+ * @type {import('svgo').Config | null}
+ */
+let externalConfig
 
 runAsWorker(
   async (
@@ -14,14 +23,21 @@ runAsWorker(
      */
     input,
     /**
-     * @type {import('svgo').Config} svgo config
+     * @type {Options} optimize options
      */
-    config,
+    options,
   ) => {
+    const { svgoConfig, ...ruleConfig } = options
+
     if (!svgo) {
       svgo = await import('svgo')
     }
 
-    return svgo.optimize(input, config)
+    if (svgoConfig && !externalConfig) {
+      externalConfig =
+        typeof svgoConfig === 'string' ? await svgo.loadConfig(svgoConfig) : await svgo.loadConfig()
+    }
+
+    return svgo.optimize(input, svgoConfig ? externalConfig || ruleConfig : ruleConfig)
   },
 )
