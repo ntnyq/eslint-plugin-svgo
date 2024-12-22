@@ -4,6 +4,7 @@ import { cleanupAttrsParams } from './cleanupAttrs'
 import { cleanupIdsParams } from './cleanupIds'
 import { cleanupNumericValuesParams } from './cleanupNumericValues'
 import { convertColorsParams } from './convertColors'
+import { convertPathDataParams } from './convertPathData'
 import { convertShapeToPathParams } from './convertShapeToPath'
 import { convertTransformParams } from './convertTransform'
 import { inlineStylesParams } from './inlineStyles'
@@ -40,7 +41,7 @@ export const presetDefaultParams = createParamsSchema({
       },
       convertEllipseToCircle: onlyFalseSchema,
       convertPathData: {
-        oneOf: [booleanSchema, convertColorsParams],
+        oneOf: [booleanSchema, convertPathDataParams],
       },
       convertShapeToPath: {
         oneOf: [booleanSchema, convertShapeToPathParams],
