@@ -1,23 +1,25 @@
 import type { Linter } from 'eslint'
 import type { Config as SVGOOptions } from 'svgo'
 
-type DeepExcludeVoid<T> = T extends void
+/**
+ * ESLint options doesn't suppport:
+ * - void
+ * - function
+ * - regexp
+ */
+type DeepExcludeVoidAndFnAndRegexp<T> = T extends RegExp | ((...args: any[]) => any) | void
   ? never
   : T extends object
-    ? {
-        [K in keyof T]: DeepExcludeVoid<T[K]>
-      }
+    ? { [K in keyof T]: DeepExcludeVoidAndFnAndRegexp<T[K]> }
     : T extends (infer U)[]
-      ? DeepExcludeVoid<U>[]
-      : T extends (...args: any[]) => any
-        ? (...args: Parameters<T>) => DeepExcludeVoid<ReturnType<T>>
-        : Exclude<T, void>
+      ? DeepExcludeVoidAndFnAndRegexp<U>[]
+      : T
 
 /**
  * rule options
  */
 export type RuleOptions = {
-  'svgo/svgo': [DeepExcludeVoid<SVGOOptions>]
+  'svgo/svgo': [DeepExcludeVoidAndFnAndRegexp<SVGOOptions>]
 }
 
 /**
