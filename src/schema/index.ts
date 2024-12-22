@@ -1,4 +1,4 @@
-import { PLUGIN_PRESET_DEFAULT, PLUGINS_PRESET_DEFAULT } from '../constants'
+import { PLUGIN_NON_DEFAULT, PLUGIN_PRESET_DEFAULT, PLUGINS_PRESET_DEFAULT } from '../constants'
 import {
   addAttributesToSVGElementPlugin,
   addClassesToSVGElementPlugin,
@@ -39,6 +39,9 @@ import {
   removeMetadataPlugin,
   removeNonInheritableGroupAttrsPlugin,
   removeOffCanvasPathsPlugin,
+  removeRasterImagesPlugin,
+  removeScriptElementPlugin,
+  removeStyleElementPlugin,
   removeTitlePlugin,
   removeUnknownsAndDefaultsPlugin,
   removeUnusedNSPlugin,
@@ -107,8 +110,12 @@ const plugins = {
 
           // preset-default plugin names
           ...PLUGINS_PRESET_DEFAULT,
+
+          // non-default plugin names
+          ...PLUGIN_NON_DEFAULT,
         ],
       },
+
       /**
        * plugins with params
        */
@@ -152,6 +159,9 @@ const plugins = {
       removeMetadataPlugin,
       removeNonInheritableGroupAttrsPlugin,
       removeOffCanvasPathsPlugin,
+      removeRasterImagesPlugin,
+      removeScriptElementPlugin,
+      removeStyleElementPlugin,
       removeTitlePlugin,
       removeUnknownsAndDefaultsPlugin,
       removeUnusedNSPlugin,
