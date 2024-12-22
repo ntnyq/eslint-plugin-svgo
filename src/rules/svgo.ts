@@ -13,7 +13,7 @@ let optimizeSVG: (input: string, config: Config) => Output
 
 export const svgo = {
   meta: {
-    type: 'layout',
+    type: 'suggestion',
     docs: {
       recommended: true,
       description: 'Use SVGO to optimize SVG files',
