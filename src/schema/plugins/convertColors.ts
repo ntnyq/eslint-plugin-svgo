@@ -1,7 +1,7 @@
 import { booleanSchema, stringSchema } from '../shared'
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const convertColorsParams = createPluginParams({
+export const convertColorsParams = createParamsSchema({
   currentColor: booleanSchema,
   names2hex: booleanSchema,
   rgb2hex: booleanSchema,

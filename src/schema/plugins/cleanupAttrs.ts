@@ -1,7 +1,7 @@
 import { booleanSchema } from '../shared'
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const cleanupAttrsParams = createPluginParams({
+export const cleanupAttrsParams = createParamsSchema({
   newlines: booleanSchema,
   trim: booleanSchema,
   spaces: booleanSchema,

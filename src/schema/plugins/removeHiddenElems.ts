@@ -1,7 +1,7 @@
 import { booleanSchema } from '../shared'
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const removeHiddenElemsParams = createPluginParams({
+export const removeHiddenElemsParams = createParamsSchema({
   isHidden: booleanSchema,
   displayNone: booleanSchema,
   opacity0: booleanSchema,

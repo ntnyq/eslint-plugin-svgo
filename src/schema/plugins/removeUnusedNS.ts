@@ -1,5 +1,5 @@
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const removeUnusedNSParams = createPluginParams()
+export const removeUnusedNSParams = createParamsSchema()
 
 export const removeUnusedNSPlugin = createPluginSchema('removeUnusedNS', removeUnusedNSParams)

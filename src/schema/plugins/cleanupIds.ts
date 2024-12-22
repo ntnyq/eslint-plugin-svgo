@@ -1,7 +1,7 @@
 import { booleanSchema, stringArraySchema } from '../shared'
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const cleanupIdsParams = createPluginParams({
+export const cleanupIdsParams = createParamsSchema({
   remove: booleanSchema,
   minify: booleanSchema,
   force: booleanSchema,

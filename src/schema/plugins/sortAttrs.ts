@@ -1,7 +1,7 @@
 import { stringArraySchema, stringSchema } from '../shared'
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const sortAttrsParams = createPluginParams({
+export const sortAttrsParams = createParamsSchema({
   order: stringArraySchema,
   xmlnsOrder: {
     ...stringSchema,

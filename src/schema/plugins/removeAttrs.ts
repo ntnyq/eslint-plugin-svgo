@@ -1,7 +1,7 @@
 import { booleanSchema, stringSchema } from '../shared'
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const removeAttrsParams = createPluginParams({
+export const removeAttrsParams = createParamsSchema({
   attrs: stringSchema,
   elemSeparator: stringSchema,
   preserveCurrentColor: booleanSchema,

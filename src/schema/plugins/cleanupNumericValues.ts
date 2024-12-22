@@ -1,7 +1,7 @@
 import { booleanSchema, precisionSchema } from '../shared'
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const cleanupNumericValuesParams = createPluginParams({
+export const cleanupNumericValuesParams = createParamsSchema({
   floatPrecision: precisionSchema,
   leadingZero: booleanSchema,
   defaultPx: booleanSchema,

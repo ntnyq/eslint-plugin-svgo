@@ -1,7 +1,7 @@
 import { booleanSchema } from '../shared'
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const inlineStylesParams = createPluginParams({
+export const inlineStylesParams = createParamsSchema({
   onlyMatchedOnce: booleanSchema,
   removeMatchedSelectors: booleanSchema,
 })

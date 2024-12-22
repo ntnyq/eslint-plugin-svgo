@@ -1,5 +1,5 @@
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const reusePathsParams = createPluginParams()
+export const reusePathsParams = createParamsSchema()
 
 export const reusePathsPlugin = createPluginSchema('reusePaths', reusePathsParams)

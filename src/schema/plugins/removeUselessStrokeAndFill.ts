@@ -1,7 +1,7 @@
 import { booleanSchema } from '../shared'
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const removeUselessStrokeAndFillParams = createPluginParams({
+export const removeUselessStrokeAndFillParams = createParamsSchema({
   stroke: booleanSchema,
   fill: booleanSchema,
   removeNone: booleanSchema,

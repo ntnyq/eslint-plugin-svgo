@@ -1,5 +1,5 @@
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const removeXMLNSParams = createPluginParams()
+export const removeXMLNSParams = createParamsSchema()
 
 export const removeXMLNSPlugin = createPluginSchema('removeXMLNS', removeXMLNSParams)

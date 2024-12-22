@@ -1,6 +1,6 @@
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const convertEllipseToCircleParams = createPluginParams()
+export const convertEllipseToCircleParams = createParamsSchema()
 
 export const convertEllipseToCirclePlugin = createPluginSchema(
   'convertEllipseToCircle',

@@ -1,7 +1,7 @@
 import { booleanSchema, precisionSchema } from '../shared'
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const convertTransformParams = createPluginParams({
+export const convertTransformParams = createParamsSchema({
   convertToShorts: booleanSchema,
   floatPrecision: precisionSchema,
   transformPrecision: precisionSchema,

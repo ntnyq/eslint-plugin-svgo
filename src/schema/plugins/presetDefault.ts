@@ -1,5 +1,5 @@
 import { booleanSchema } from '../shared'
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 import { cleanupAttrsParams } from './cleanupAttrs'
 import { cleanupEnableBackgroundParams } from './cleanupEnableBackground'
 import { cleanupIdsParams } from './cleanupIds'
@@ -35,7 +35,7 @@ import { removeXMLProcInstParams } from './removeXMLProcInst'
 import { sortAttrsParams } from './sortAttrs'
 import { sortDefsChildrenParams } from './sortDefsChildren'
 
-export const presetDefaultParams = createPluginParams({
+export const presetDefaultParams = createParamsSchema({
   overrides: {
     type: 'object',
     // @keep-sorted

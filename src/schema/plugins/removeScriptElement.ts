@@ -1,6 +1,6 @@
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const removeScriptElementParams = createPluginParams()
+export const removeScriptElementParams = createParamsSchema()
 
 export const removeScriptElementPlugin = createPluginSchema(
   'removeScriptElement',

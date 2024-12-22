@@ -1,7 +1,7 @@
 import { booleanSchema, precisionSchema } from '../shared'
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const mergePathsParams = createPluginParams({
+export const mergePathsParams = createParamsSchema({
   force: booleanSchema,
   floatPrecision: precisionSchema,
   noSpaceAfterFlags: booleanSchema,

@@ -1,6 +1,6 @@
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const removeXMLProcInstParams = createPluginParams()
+export const removeXMLProcInstParams = createParamsSchema()
 
 export const removeXMLProcInstPlugin = createPluginSchema(
   'removeXMLProcInst',

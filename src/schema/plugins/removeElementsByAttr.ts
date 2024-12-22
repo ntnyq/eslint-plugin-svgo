@@ -1,7 +1,7 @@
 import { stringArraySchema } from '../shared'
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const removeElementsByAttrParams = createPluginParams({
+export const removeElementsByAttrParams = createParamsSchema({
   id: stringArraySchema,
   class: stringArraySchema,
 })

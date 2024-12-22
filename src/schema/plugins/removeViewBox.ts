@@ -1,5 +1,5 @@
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const removeViewBoxParams = createPluginParams()
+export const removeViewBoxParams = createParamsSchema()
 
 export const removeViewBoxPlugin = createPluginSchema('removeViewBox', removeViewBoxParams)

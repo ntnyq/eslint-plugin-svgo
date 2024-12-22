@@ -1,5 +1,5 @@
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const removeDimensionsParams = createPluginParams({})
+export const removeDimensionsParams = createParamsSchema({})
 
 export const removeDimensionsPlugin = createPluginSchema('removeDimensions', removeDimensionsParams)

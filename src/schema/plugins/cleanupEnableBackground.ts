@@ -1,6 +1,6 @@
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const cleanupEnableBackgroundParams = createPluginParams()
+export const cleanupEnableBackgroundParams = createParamsSchema()
 
 export const cleanupEnableBackgroundPlugin = createPluginSchema(
   'cleanupEnableBackground',

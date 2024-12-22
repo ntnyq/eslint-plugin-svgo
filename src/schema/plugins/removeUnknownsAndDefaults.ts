@@ -1,7 +1,7 @@
 import { booleanSchema } from '../shared'
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const removeUnknownsAndDefaultsParams = createPluginParams({
+export const removeUnknownsAndDefaultsParams = createParamsSchema({
   unknownContent: booleanSchema,
   unknownAttrs: booleanSchema,
   defaultAttrs: booleanSchema,

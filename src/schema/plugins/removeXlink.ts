@@ -1,7 +1,7 @@
 import { booleanSchema } from '../shared'
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const removeXlinkParams = createPluginParams({
+export const removeXlinkParams = createParamsSchema({
   includeLegacy: booleanSchema,
 })
 

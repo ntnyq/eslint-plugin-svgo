@@ -1,7 +1,7 @@
 import { booleanSchema, precisionSchema } from '../shared'
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const convertShapeToPathParams = createPluginParams({
+export const convertShapeToPathParams = createParamsSchema({
   convertArcs: booleanSchema,
   floatPrecision: precisionSchema,
 })

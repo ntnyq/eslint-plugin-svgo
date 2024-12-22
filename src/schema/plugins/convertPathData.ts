@@ -1,7 +1,7 @@
 import { booleanSchema, precisionSchema } from '../shared'
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const convertPathDataParams = createPluginParams({
+export const convertPathDataParams = createParamsSchema({
   applyTransforms: booleanSchema,
   applyTransformsStroked: booleanSchema,
   straightCurves: booleanSchema,

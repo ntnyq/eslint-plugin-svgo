@@ -1,6 +1,6 @@
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const removeRasterImagesParams = createPluginParams()
+export const removeRasterImagesParams = createParamsSchema()
 
 export const removeRasterImagesPlugin = createPluginSchema(
   'removeRasterImages',

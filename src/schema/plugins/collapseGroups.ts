@@ -1,5 +1,5 @@
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const collapseGroupsParams = createPluginParams()
+export const collapseGroupsParams = createParamsSchema()
 
 export const collapseGroupsPlugin = createPluginSchema('collapseGroups', collapseGroupsParams)

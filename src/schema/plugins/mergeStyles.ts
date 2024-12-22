@@ -1,5 +1,5 @@
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const mergeStylesParams = createPluginParams()
+export const mergeStylesParams = createParamsSchema()
 
 export const mergeStylesPlugin = createPluginSchema('mergeStyles', mergeStylesParams)

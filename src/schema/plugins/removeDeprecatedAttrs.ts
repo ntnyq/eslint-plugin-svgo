@@ -1,7 +1,7 @@
 import { booleanSchema } from '../shared'
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const removeDeprecatedAttrsParams = createPluginParams({
+export const removeDeprecatedAttrsParams = createParamsSchema({
   removeAny: booleanSchema,
 })
 

@@ -1,6 +1,6 @@
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const convertOneStopGradientsParams = createPluginParams()
+export const convertOneStopGradientsParams = createParamsSchema()
 
 export const convertOneStopGradientsPlugin = createPluginSchema(
   'convertOneStopGradients',

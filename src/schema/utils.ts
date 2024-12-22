@@ -1,6 +1,6 @@
 import type { JSONSchema4 } from 'json-schema'
 
-export function createPluginParams(
+export function createParamsSchema(
   properties: JSONSchema4['properties'] = {},
   additionalProperties = false,
 ) {

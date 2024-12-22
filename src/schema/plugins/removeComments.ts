@@ -1,7 +1,7 @@
 import { booleanSchema, stringArraySchema } from '../shared'
-import { createPluginParams, createPluginSchema } from '../utils'
+import { createParamsSchema, createPluginSchema } from '../utils'
 
-export const removeCommentsParams = createPluginParams({
+export const removeCommentsParams = createParamsSchema({
   preservePatterns: {
     oneOf: [booleanSchema, stringArraySchema],
   },
