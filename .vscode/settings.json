@@ -20,6 +20,16 @@
     "javascriptreact",
     "typescriptreact"
   ],
-  "cSpell.words": ["bumpp", "changelogithub", "codecov", "lcov", "pnpm", "unenc", "vite", "vitest"],
+  "cSpell.words": [
+    "bumpp",
+    "changelogithub",
+    "codecov",
+    "lcov",
+    "pnpm",
+    "unenc",
+    "vite",
+    "vitest",
+    "Xlink"
+  ],
   "cSpell.allowCompoundWords": true
 }
