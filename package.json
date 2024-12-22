@@ -30,6 +30,12 @@
         "types": "./dist/index.d.cts",
         "default": "./dist/index.cjs"
       }
+    },
+    "./rule-options": {
+      "types": "./dts/rule-options.d.ts"
+    },
+    "./define-config-support": {
+      "types": "./dts/define-config-support.d.ts"
     }
   },
   "main": "./dist/index.js",
@@ -37,6 +43,7 @@
   "types": "./dist/index.d.ts",
   "files": [
     "dist",
+    "dts",
     "workers"
   ],
   "sideEffects": false,
