@@ -1,11 +1,7 @@
 import { config } from './config'
 import { meta } from './meta'
-import { svgo } from './rules/svgo'
+import { rules } from './rules'
 import type { ESLint } from 'eslint'
-
-const rules = {
-  svgo,
-}
 
 export const plugin = {
   meta,
@@ -15,8 +11,9 @@ export const plugin = {
   },
 } satisfies ESLint.Plugin
 
-export default plugin
-
 export * from './meta'
+export * from './rules'
 export * from './config'
 export * from './parser'
+
+export default plugin

@@ -26,7 +26,7 @@ export const svgo = {
         properties: {
           ...svgoConfigProperties,
         },
-        additionalProperties: true,
+        additionalProperties: false,
       },
     ],
     messages,
