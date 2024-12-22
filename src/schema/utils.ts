@@ -19,9 +19,11 @@ export function createPluginSchema(pluginName: string, params: JSONSchema4 = {})
       name: {
         type: 'string',
         enum: [pluginName],
+        required: true,
       },
       ...(Object.keys(params).length ? { params } : {}),
     },
+    required: ['name'],
     additionalProperties: false,
   }
 

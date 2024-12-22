@@ -21,6 +21,11 @@ export const integerSchema: JSONSchema4 = {
   type: 'integer',
 }
 
+export const objectSchema: JSONSchema4 = {
+  type: 'object',
+  additionalProperties: false,
+}
+
 export const stringArraySchema: JSONSchema4 = {
   type: 'array',
   items: stringSchema,

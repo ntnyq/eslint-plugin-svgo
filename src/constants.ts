@@ -59,12 +59,14 @@ export const PLUGIN_NON_DEFAULT = [
   'removeAttributesBySelector',
   // required params
   'removeAttrs',
+  'removeDeprecatedAttrs',
   'removeDimensions',
   // required params
   'removeElementsByAttr',
   'removeOffCanvasPaths',
   'removeRasterImages',
   'removeScriptElement',
+  'removeScripts',
   'removeStyleElement',
   'removeXlink',
   'removeXMLNS',

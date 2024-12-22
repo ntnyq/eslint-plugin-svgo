@@ -11,7 +11,21 @@ export const minifyStylesParams = createParamsSchema({
   comments: {
     oneOf: [booleanSchema, stringSchema],
   },
-  usage: booleanSchema,
+  usage: {
+    oneOf: [
+      booleanSchema,
+      {
+        type: 'object',
+        properties: {
+          force: booleanSchema,
+          ids: booleanSchema,
+          classes: booleanSchema,
+          tags: booleanSchema,
+        },
+        additionalProperties: false,
+      },
+    ],
+  },
 })
 
 export const minifyStylesPlugin = createPluginSchema('minifyStyles', minifyStylesParams)

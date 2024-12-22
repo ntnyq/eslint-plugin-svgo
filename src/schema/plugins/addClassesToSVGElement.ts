@@ -2,8 +2,8 @@ import { stringArraySchema, stringSchema } from '../shared'
 import { createParamsSchema, createPluginSchema } from '../utils'
 
 export const addClassesToSVGElementParams = createParamsSchema({
-  classNames: stringArraySchema,
   className: stringSchema,
+  classNames: stringArraySchema,
 })
 
 export const addClassesToSVGElementPlugin = createPluginSchema(

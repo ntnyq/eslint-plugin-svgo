@@ -41,6 +41,7 @@ import {
   removeOffCanvasPathsPlugin,
   removeRasterImagesPlugin,
   removeScriptElementPlugin,
+  removeScriptsPlugin,
   removeStyleElementPlugin,
   removeTitlePlugin,
   removeUnknownsAndDefaultsPlugin,
@@ -121,7 +122,6 @@ const plugins = {
       /**
        * plugins with params
        */
-
       addAttributesToSVGElementPlugin,
       addClassesToSVGElementPlugin,
       cleanupAttrsPlugin,
@@ -163,6 +163,7 @@ const plugins = {
       removeOffCanvasPathsPlugin,
       removeRasterImagesPlugin,
       removeScriptElementPlugin,
+      removeScriptsPlugin,
       removeStyleElementPlugin,
       removeTitlePlugin,
       removeUnknownsAndDefaultsPlugin,

@@ -1,15 +1,35 @@
-import { stringArraySchema } from '../shared'
+import { objectSchema, stringSchema } from '../shared'
 import { createParamsSchema, createPluginSchema } from '../utils'
 
 export const addAttributesToSVGElementParams = createParamsSchema({
-  attributes: {
+  attribute: {
     oneOf: [
+      stringSchema,
       {
-        type: 'object',
-        additionalProperties: true,
+        ...objectSchema,
+        patternProperties: {
+          '.*': {
+            type: ['string', 'null'],
+          },
+        },
       },
-      stringArraySchema,
     ],
+  },
+  attributes: {
+    type: 'array',
+    items: {
+      anyOf: [
+        stringSchema,
+        {
+          ...objectSchema,
+          patternProperties: {
+            '.*': {
+              type: ['string', 'null'],
+            },
+          },
+        },
+      ],
+    },
   },
 })
 
