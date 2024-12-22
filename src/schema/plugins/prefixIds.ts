@@ -3,8 +3,9 @@ import { createParamsSchema, createPluginSchema } from '../utils'
 
 export const prefixIdsParams = createParamsSchema({
   delim: stringSchema,
-  // TODO: how to support function in schema, maybe not
-  prefix: stringSchema,
+  prefix: {
+    oneOf: [booleanSchema, stringSchema],
+  },
   prefixIds: booleanSchema,
   prefixClassNames: booleanSchema,
 })

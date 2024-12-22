@@ -4,6 +4,10 @@ export const booleanSchema: JSONSchema4 = {
   type: 'boolean',
 }
 
+export const numberSchema: JSONSchema4 = {
+  type: 'number',
+}
+
 export const onlyFalseSchema: JSONSchema4 = {
   type: 'boolean',
   enum: [false],

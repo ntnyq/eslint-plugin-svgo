@@ -1,9 +1,13 @@
-import { stringArraySchema } from '../shared'
+import { stringArraySchema, stringSchema } from '../shared'
 import { createParamsSchema, createPluginSchema } from '../utils'
 
 export const removeElementsByAttrParams = createParamsSchema({
-  id: stringArraySchema,
-  class: stringArraySchema,
+  id: {
+    oneOf: [stringSchema, stringArraySchema],
+  },
+  class: {
+    oneOf: [stringSchema, stringArraySchema],
+  },
 })
 
 export const removeElementsByAttrPlugin = createPluginSchema(

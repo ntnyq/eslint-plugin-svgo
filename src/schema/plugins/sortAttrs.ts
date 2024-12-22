@@ -9,7 +9,7 @@ export const sortAttrsParams = createParamsSchema({
   order: stringArraySchema,
   xmlnsOrder: {
     ...stringSchema,
-    enum: ['front'],
+    enum: ['front', 'alphabetical'],
   },
 })
 
