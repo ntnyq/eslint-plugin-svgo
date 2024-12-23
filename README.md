@@ -7,6 +7,11 @@
 
 Optimize SVG files with [SVGO](https://github.com/svg/svgo) using ESLint.
 
+## Supported
+
+- SVGO v4.0.0-rc.1+
+- ESLint v9.5.0+
+
 ## Install
 
 ```bash
@@ -38,7 +43,7 @@ export default [
 ]
 ```
 
-### Advanced Usage
+## Advanced Usage
 
 ```ts
 // eslint.config.js
@@ -69,6 +74,22 @@ export default [
   }),
 ]
 ```
+
+## Intergrated
+
+### VSCode
+
+Enable `xml` support.
+
+```json
+{
+  "eslint.validate": ["xml"]
+}
+```
+
+### Prettier
+
+You should ignores `**/*.svg` for `eslint-plugin-prettier` config or add it to `.prettierignore`
 
 ## Rules
 
