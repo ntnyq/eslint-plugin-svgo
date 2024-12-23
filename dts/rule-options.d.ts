@@ -42,7 +42,7 @@ type SvgoSvgo = []|[{
     textStart?: string
     useShortTags?: boolean
   }
-  plugins?: (("preset-default" | "cleanupAttrs" | "cleanupEnableBackground" | "cleanupIds" | "cleanupNumericValues" | "collapseGroups" | "convertColors" | "convertEllipseToCircle" | "convertPathData" | "convertShapeToPath" | "convertTransform" | "inlineStyles" | "mergePaths" | "mergeStyles" | "minifyStyles" | "moveElemsAttrsToGroup" | "moveGroupAttrsToElems" | "removeComments" | "removeDesc" | "removeDoctype" | "removeEditorsNSData" | "removeEmptyAttrs" | "removeEmptyContainers" | "removeEmptyText" | "removeHiddenElems" | "removeMetadata" | "removeNonInheritableGroupAttrs" | "removeTitle" | "removeUnknownsAndDefaults" | "removeUnusedNS" | "removeUselessDefs" | "removeUselessStrokeAndFill" | "removeViewBox" | "removeXMLProcInst" | "sortAttrs" | "sortDefsChildren" | "addAttributesToSVGElement" | "addClassesToSVGElement" | "cleanupListOfValues" | "convertOneStopGradients" | "convertStyleToAttrs" | "prefixIds" | "removeAttributesBySelector" | "removeAttrs" | "removeDeprecatedAttrs" | "removeDimensions" | "removeElementsByAttr" | "removeOffCanvasPaths" | "removeRasterImages" | "removeScriptElement" | "removeScripts" | "removeStyleElement" | "removeXlink" | "removeXMLNS" | "reusePaths") | {
+  plugins?: (("preset-default" | "cleanupAttrs" | "cleanupEnableBackground" | "cleanupIds" | "cleanupNumericValues" | "collapseGroups" | "convertColors" | "convertEllipseToCircle" | "convertPathData" | "convertShapeToPath" | "convertTransform" | "inlineStyles" | "mergePaths" | "mergeStyles" | "minifyStyles" | "moveElemsAttrsToGroup" | "moveGroupAttrsToElems" | "removeComments" | "removeDesc" | "removeDoctype" | "removeEditorsNSData" | "removeEmptyAttrs" | "removeEmptyContainers" | "removeEmptyText" | "removeHiddenElems" | "removeMetadata" | "removeNonInheritableGroupAttrs" | "removeTitle" | "removeUnknownsAndDefaults" | "removeUnusedNS" | "removeUselessDefs" | "removeUselessStrokeAndFill" | "removeViewBox" | "removeXMLProcInst" | "sortAttrs" | "sortDefsChildren" | "addAttributesToSVGElement" | "addClassesToSVGElement" | "cleanupListOfValues" | "convertOneStopGradients" | "convertStyleToAttrs" | "prefixIds" | "removeAttributesBySelector" | "removeAttrs" | "removeDeprecatedAttrs" | "removeDimensions" | "removeElementsByAttr" | "removeOffCanvasPaths" | "removeRasterImages" | "removeScripts" | "removeStyleElement" | "removeXlink" | "removeXMLNS" | "reusePaths") | {
     name: "addAttributesToSVGElement"
     params?: {
       attribute?: (string | {
@@ -444,8 +444,6 @@ type SvgoSvgo = []|[{
     name: "removeOffCanvasPaths"
   } | {
     name: "removeRasterImages"
-  } | {
-    name: "removeScriptElement"
   } | {
     name: "removeScripts"
   } | {

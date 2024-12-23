@@ -65,7 +65,6 @@ export const PLUGIN_NON_DEFAULT = [
   'removeElementsByAttr',
   'removeOffCanvasPaths',
   'removeRasterImages',
-  'removeScriptElement',
   'removeScripts',
   'removeStyleElement',
   'removeXlink',
