@@ -56,7 +56,7 @@ import {
   sortAttrsPlugin,
   sortDefsChildrenPlugin,
 } from './plugins'
-import { booleanSchema, integerSchema, precisionSchema, stringSchema } from './shared'
+import { booleanSchema, integerSchema, objectSchema, precisionSchema, stringSchema } from './shared'
 import type { JSONSchema4 } from 'json-schema'
 
 /**
@@ -68,7 +68,7 @@ import type { JSONSchema4 } from 'json-schema'
  * - `encodeEntity`
  */
 const js2svg = {
-  type: 'object',
+  ...objectSchema,
   // @keep-sorted
   properties: {
     attrEnd: stringSchema,

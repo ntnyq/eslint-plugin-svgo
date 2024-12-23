@@ -48,7 +48,7 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "tsup",
+    "build": "pnpm run update:rule-options && tsup",
     "dev": "tsup --watch src",
     "lint": "eslint .",
     "prepare": "husky",
@@ -57,7 +57,8 @@
     "release:check": "run-s lint typecheck test",
     "release:publish": "bumpp && pnpm publish",
     "test": "vitest",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "update:rule-options": "tsx scripts/udpateRuleOptions.ts"
   },
   "peerDependencies": {
     "eslint": "^9.5.0"
@@ -74,6 +75,7 @@
     "@types/node": "^22.10.2",
     "bumpp": "^9.9.2",
     "eslint": "^9.17.0",
+    "eslint-typegen": "^0.3.2",
     "eslint-vitest-rule-tester": "^0.7.1",
     "husky": "^9.1.7",
     "json-schema": "^0.4.0",
@@ -82,6 +84,7 @@
     "prettier": "^3.4.2",
     "tinyglobby": "^0.2.10",
     "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "vitest": "^3.0.0-beta.3"
   },

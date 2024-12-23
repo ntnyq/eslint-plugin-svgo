@@ -1,10 +1,10 @@
 import { parserPlain } from './parser'
 import plugin from '.'
 import type { Linter } from 'eslint'
-import type { Rules } from '../dts/rule-options'
+import type { RuleOptions } from '../dts/rule-options'
 
-export function config(options: Linter.Config<Rules> = {}) {
-  const config: Linter.Config<Rules> = {
+export function config(options: Linter.Config<RuleOptions> = {}) {
+  const config: Linter.Config<RuleOptions> = {
     ...options,
 
     // Overrides

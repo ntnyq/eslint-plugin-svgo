@@ -2,4 +2,6 @@
 
 import { defineESLintConfig } from '@ntnyq/eslint-config'
 
-export default defineESLintConfig()
+export default defineESLintConfig({
+  ignores: ['**/dts/rule-options.d.ts'],
+})
