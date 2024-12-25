@@ -4,7 +4,7 @@ export default defineConfig({
   test: {
     reporters: ['dot'],
     coverage: {
-      include: ['./src/**/*.ts'],
+      include: ['src/**/*.ts'],
       reporter: ['lcov', 'text'],
     },
   },
