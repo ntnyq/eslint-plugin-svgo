@@ -59,6 +59,10 @@ export default [
 
   config({
     files: ['**/*.svg'],
+
+    // ignore matched svg files
+    ignores: ['icons/foo.svg', 'images/**/*.svg'],
+
     rules: {
       'svgo/svgo': [
         'error',
@@ -68,7 +72,37 @@ export default [
           js2svg: {
             pretty: true,
           },
-          plugins: [],
+          plugins: [
+            // plugin preset-default
+            'preset-default',
+
+            // overrides preset-default
+            {
+              name: 'preset-default',
+              params: {
+                overrides: {
+                  // disable plugin
+                  cleanupAttrs: false,
+
+                  // custom plugin params
+                  cleanupIds: {
+                    minify: false,
+                  },
+                },
+              },
+            },
+
+            // plugin name
+            'cleanupIds',
+
+            // plugin with params
+            {
+              name: 'cleanupIds',
+              params: {
+                minify: false,
+              },
+            },
+          ],
         },
       ],
     },
@@ -122,6 +156,9 @@ Use an external config file, e.g: svgo.config.mjs.
 Set to `true`, svgo will auto load config.
 
 Set to `path/to/your/svgo.config` to custom config file path.
+
+> [!NOTE]
+> If you use `svgoConfig`, any other rule options will be ignored unless no config file is found.
 
 ##### path
 
@@ -195,6 +232,30 @@ All parameters of ESLint flat config are supported.
 
 - **type**: `Linter.RulesRecord`
 - **default**: `{ 'svgo/svgo': 'error' }`
+
+## Limitation
+
+For ESLint use json schema compatible syntax as its rule options, so **function**, **regexp** types are not supported in rule `svgo/svgo` options. See bellow:
+
+- `js2svg`
+  - `regEntities` - function
+  - `regValEntities` - function
+  - `encodeEntity` - function
+- `plugins`
+  - `prefixIds`
+    - `prefix` - function
+  - `addClassesToSVGElement`
+    - `className` - function
+    - `classNames` - function
+  - `convertColors`
+    - `currentColor` - regexp
+  - `removeComments`
+    - `preservePatterns` - regexp
+- any custom plugins
+  - `fn` - function
+
+> [!TIP]
+> But you can still support them by using config **[svgoFile](https://github.com/ntnyq/eslint-plugin-svgo#svgoconfig)**
 
 ## Credits
 
