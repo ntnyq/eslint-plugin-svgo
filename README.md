@@ -3,7 +3,7 @@
 [![CI](https://github.com/ntnyq/eslint-plugin-svgo/workflows/CI/badge.svg)](https://github.com/ntnyq/eslint-plugin-svgo/actions)
 [![NPM VERSION](https://img.shields.io/npm/v/eslint-plugin-svgo.svg)](https://www.npmjs.com/package/eslint-plugin-svgo)
 [![NPM DOWNLOADS](https://img.shields.io/npm/dy/eslint-plugin-svgo.svg)](https://www.npmjs.com/package/eslint-plugin-svgo)
-[![CODECOV](https://codecov.io/github/ntnyq/eslint-plugin-svgo/branch/main/graph/badge.svg)](https://codecov.io/github/ntnyq/eslint-plugin-svgo)
+[![CODECOV](https://codecov.io/github/ntnyq/eslint-plugin-svgo/branch/main/graph/badge.svg?token=1B7879ETB6)](https://codecov.io/github/ntnyq/eslint-plugin-svgo)
 [![LICENSE](https://img.shields.io/github/license/ntnyq/eslint-plugin-svgo.svg)](https://github.com/ntnyq/eslint-plugin-svgo/blob/main/LICENSE)
 
 Optimize SVG files with [SVGO](https://github.com/svg/svgo) using ESLint.
@@ -146,7 +146,7 @@ Default options:
 }
 ```
 
-#### svgoConfig
+##### svgoConfig
 
 - **type**: `boolean | string`
 - **default**: `undefined`
@@ -245,8 +245,8 @@ For ESLint use json schema compatible syntax as its rule options, so **function*
   - `prefixIds`
     - `prefix` - `function`, but type `boolean` and `string` is supported
   - `addClassesToSVGElement`
-    - `className` - `function`, but type `string` is suppored
-    - `classNames` - `function`, but type `string` is suppored
+    - `className` - `function`, but type `string` is supported
+    - `classNames` - `function`, but type `string` is supported
   - `convertColors`
     - `currentColor` - `regexp`, but type `boolean` and `string` is supported
   - `removeComments`
@@ -255,7 +255,7 @@ For ESLint use json schema compatible syntax as its rule options, so **function*
   - `fn` - `function`
 
 > [!TIP]
-> But you can still support all of them by using options **[svgoConfig](https://github.com/ntnyq/eslint-plugin-svgo#svgoconfig)** and a svgo config file.
+> You can still support all of them by using options **[svgoConfig](https://github.com/ntnyq/eslint-plugin-svgo#svgoconfig)** and a svgo config file.
 
 ## Credits
 
