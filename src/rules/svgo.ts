@@ -6,6 +6,7 @@ import { svgoConfigProperties } from '../schema'
 import { booleanSchema, stringSchema } from '../schema/shared'
 import type { Rule } from 'eslint'
 import type { Config } from 'svgo'
+import type { SvgoParserError } from '../types'
 
 // import from svgo next release
 type Output = { data: string }
@@ -62,14 +63,23 @@ export const svgo = {
           })
 
           reportDifferences(context, sourceCode, output.data)
-        } catch {
-          context.report({
-            loc: {
-              start: { line: 1, column: 0 },
-              end: { line: 1, column: 0 },
-            },
-            message: 'Failed to optimize SVG file',
-          })
+        } catch (err) {
+          if ((err as any)?.name === 'SvgoParserError') {
+            const { reason, line, column } = err as SvgoParserError
+
+            context.report({
+              message: `SvgoParserError: ${reason}`,
+              loc: { line, column },
+            })
+          } else {
+            context.report({
+              loc: {
+                start: { line: 1, column: 0 },
+                end: { line: 1, column: 0 },
+              },
+              message: 'Failed to optimize SVG file',
+            })
+          }
         }
       },
     }

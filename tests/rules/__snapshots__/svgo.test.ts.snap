@@ -910,3 +910,29 @@ exports[`svgo > invalid > Invalid #10: svgoConfig config path 1`] = `
   },
 ]
 `;
+
+exports[`svgo > invalid > Invalid #11: invalid 1`] = `
+[
+  {
+    "column": 6,
+    "line": 1,
+    "message": "SvgoParserError: Unclosed root tag",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+]
+`;
+
+exports[`svgo > invalid > Invalid #12: not svg 1`] = `
+[
+  {
+    "column": 2,
+    "line": 1,
+    "message": "SvgoParserError: Non-whitespace before first tag.",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+]
+`;

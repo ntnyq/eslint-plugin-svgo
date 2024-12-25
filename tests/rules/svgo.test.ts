@@ -422,5 +422,47 @@ run({
         expect(errors).toMatchSnapshot()
       },
     },
+
+    /**
+     * ===========================================
+     *                parser error
+     * ===========================================
+     */
+    {
+      description: 'invalid',
+      filename: 'file.svg',
+      code: $`
+        <svg>
+      `,
+      output(output) {
+        expect(output).toMatchInlineSnapshot(`"<svg>"`)
+      },
+      errors(errors) {
+        expect(errors).toMatchSnapshot()
+      },
+    },
+    {
+      description: 'not svg',
+      filename: 'file.svg',
+      code: $`
+        name: CI
+        on:
+          push:
+            branches:
+              - main
+      `,
+      output(output) {
+        expect(output).toMatchInlineSnapshot(`
+          "name: CI
+          on:
+            push:
+              branches:
+                - main"
+        `)
+      },
+      errors(errors) {
+        expect(errors).toMatchSnapshot()
+      },
+    },
   ],
 })
