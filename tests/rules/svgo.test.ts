@@ -1,4 +1,5 @@
 import { expect } from 'vitest'
+import { resolve } from '../../scripts/utils'
 import { svgo as rule } from '../../src/rules/svgo'
 import { $, run } from '../internal'
 
@@ -327,6 +328,92 @@ run({
         expect(output).toMatchInlineSnapshot(`
           "<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 100" width="150">
             <rect id="useless" width="0" height="0" fill="#ff0000"/>
+          </svg>
+          "
+        `)
+      },
+      errors(errors) {
+        expect(errors).toMatchSnapshot()
+      },
+    },
+
+    /**
+     * ===========================================
+     *                 svgoConfig
+     * ===========================================
+     */
+    {
+      description: 'svgoConfig default',
+      filename: 'file.svg',
+      options: {
+        svgoConfig: true,
+      },
+      code: $`
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox=" 0 0  150 100 " width="150">
+          <!-- Created with love! -->
+          <defs>
+            <ellipse cx="50" cy="50.0" rx="50.00" ry="auto" fill="black" id="circle"/>
+          </defs>
+          <g>
+            <use href="#circle" transform="skewX(16)"/>
+            <rect id="useless" width="0" height="0" fill="#ff0000"/>
+          </g>
+        </svg>
+      `,
+      output(output) {
+        expect(output).toMatchInlineSnapshot(
+          `
+          "<?xml version="1.0" encoding="UTF-8"?>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox=" 0 0  150 100 " width="150">
+          <!--Created with love!-->
+              <defs>
+                  <ellipse cx="50" cy="50.0" rx="50.00" ry="auto" fill="black" id="a"/>
+              </defs>
+              <g>
+                  <use href="#a" transform="skewX(16)"/>
+                  <rect width="0" height="0" fill="#ff0000"/>
+              </g>
+          </svg>
+          "
+        `,
+        )
+      },
+      errors(errors) {
+        expect(errors).toMatchSnapshot()
+      },
+    },
+    {
+      description: 'svgoConfig config path',
+      filename: 'file.svg',
+      options: {
+        svgoConfig: resolve('svgo.config.mjs'),
+      },
+      code: $`
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox=" 0 0  150 100 " width="150">
+          <!-- Created with love! -->
+          <defs>
+            <ellipse cx="50" cy="50.0" rx="50.00" ry="auto" fill="black" id="circle"/>
+          </defs>
+          <g>
+            <use href="#circle" transform="skewX(16)"/>
+            <rect id="useless" width="0" height="0" fill="#ff0000"/>
+          </g>
+        </svg>
+      `,
+      output(output) {
+        expect(output).toMatchInlineSnapshot(`
+          "<?xml version="1.0" encoding="UTF-8"?>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox=" 0 0  150 100 " width="150">
+          <!--Created with love!-->
+              <defs>
+                  <ellipse cx="50" cy="50.0" rx="50.00" ry="auto" fill="black" id="a"/>
+              </defs>
+              <g>
+                  <use href="#a" transform="skewX(16)"/>
+                  <rect width="0" height="0" fill="#ff0000"/>
+              </g>
           </svg>
           "
         `)

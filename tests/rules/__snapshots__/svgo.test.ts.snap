@@ -574,3 +574,339 @@ exports[`svgo > invalid > Invalid #8: plugin cleanupIds with params 1`] = `
   },
 ]
 `;
+
+exports[`svgo > invalid > Invalid #9: svgoConfig default 1`] = `
+[
+  {
+    "column": 1,
+    "endColumn": 27,
+    "endLine": 3,
+    "fix": {
+      "range": [
+        117,
+        143,
+      ],
+      "text": "<!--Created with love!",
+    },
+    "line": 3,
+    "message": "Replace \`··<!--·Created·with·love!·\` with \`<!--Created·with·love!\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+  {
+    "column": 1,
+    "endColumn": 3,
+    "endLine": 4,
+    "fix": {
+      "range": [
+        147,
+        149,
+      ],
+      "text": "    ",
+    },
+    "line": 4,
+    "message": "Replace \`··\` with \`····\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+  {
+    "column": 1,
+    "endColumn": 76,
+    "endLine": 5,
+    "fix": {
+      "range": [
+        156,
+        231,
+      ],
+      "text": "        <ellipse cx="50" cy="50.0" rx="50.00" ry="auto" fill="black" id="a",
+    },
+    "line": 5,
+    "message": "Replace \`····<ellipse·cx="50"·cy="50.0"·rx="50.00"·ry="auto"·fill="black"·id="circle\` with \`········<ellipse·cx="50"·cy="50.0"·rx="50.00"·ry="auto"·fill="black"·id="a\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+  {
+    "column": 1,
+    "endColumn": 1,
+    "endLine": 6,
+    "fix": {
+      "range": [
+        235,
+        235,
+      ],
+      "text": "  ",
+    },
+    "line": 6,
+    "message": "Insert \`··\`",
+    "messageId": "insert",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+  {
+    "column": 1,
+    "endColumn": 3,
+    "endLine": 7,
+    "fix": {
+      "range": [
+        245,
+        247,
+      ],
+      "text": "    ",
+    },
+    "line": 7,
+    "message": "Replace \`··\` with \`····\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+  {
+    "column": 1,
+    "endColumn": 23,
+    "endLine": 8,
+    "fix": {
+      "range": [
+        251,
+        273,
+      ],
+      "text": "        <use href="#a",
+    },
+    "line": 8,
+    "message": "Replace \`····<use·href="#circle\` with \`········<use·href="#a\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+  {
+    "column": 5,
+    "endColumn": 24,
+    "endLine": 9,
+    "fix": {
+      "range": [
+        303,
+        322,
+      ],
+      "text": "    <rect ",
+    },
+    "line": 9,
+    "message": "Replace \`<rect·id="useless"·\` with \`····<rect·\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+  {
+    "column": 3,
+    "endColumn": 3,
+    "endLine": 10,
+    "fix": {
+      "range": [
+        362,
+        362,
+      ],
+      "text": "  ",
+    },
+    "line": 10,
+    "message": "Insert \`··\`",
+    "messageId": "insert",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+  {
+    "column": 7,
+    "endColumn": 7,
+    "endLine": 11,
+    "fix": {
+      "range": [
+        373,
+        373,
+      ],
+      "text": "
+",
+    },
+    "line": 11,
+    "message": "Insert \`⏎\`",
+    "messageId": "insert",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+]
+`;
+
+exports[`svgo > invalid > Invalid #10: svgoConfig config path 1`] = `
+[
+  {
+    "column": 1,
+    "endColumn": 27,
+    "endLine": 3,
+    "fix": {
+      "range": [
+        117,
+        143,
+      ],
+      "text": "<!--Created with love!",
+    },
+    "line": 3,
+    "message": "Replace \`··<!--·Created·with·love!·\` with \`<!--Created·with·love!\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+  {
+    "column": 1,
+    "endColumn": 3,
+    "endLine": 4,
+    "fix": {
+      "range": [
+        147,
+        149,
+      ],
+      "text": "    ",
+    },
+    "line": 4,
+    "message": "Replace \`··\` with \`····\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+  {
+    "column": 1,
+    "endColumn": 76,
+    "endLine": 5,
+    "fix": {
+      "range": [
+        156,
+        231,
+      ],
+      "text": "        <ellipse cx="50" cy="50.0" rx="50.00" ry="auto" fill="black" id="a",
+    },
+    "line": 5,
+    "message": "Replace \`····<ellipse·cx="50"·cy="50.0"·rx="50.00"·ry="auto"·fill="black"·id="circle\` with \`········<ellipse·cx="50"·cy="50.0"·rx="50.00"·ry="auto"·fill="black"·id="a\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+  {
+    "column": 1,
+    "endColumn": 1,
+    "endLine": 6,
+    "fix": {
+      "range": [
+        235,
+        235,
+      ],
+      "text": "  ",
+    },
+    "line": 6,
+    "message": "Insert \`··\`",
+    "messageId": "insert",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+  {
+    "column": 1,
+    "endColumn": 3,
+    "endLine": 7,
+    "fix": {
+      "range": [
+        245,
+        247,
+      ],
+      "text": "    ",
+    },
+    "line": 7,
+    "message": "Replace \`··\` with \`····\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+  {
+    "column": 1,
+    "endColumn": 23,
+    "endLine": 8,
+    "fix": {
+      "range": [
+        251,
+        273,
+      ],
+      "text": "        <use href="#a",
+    },
+    "line": 8,
+    "message": "Replace \`····<use·href="#circle\` with \`········<use·href="#a\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+  {
+    "column": 5,
+    "endColumn": 24,
+    "endLine": 9,
+    "fix": {
+      "range": [
+        303,
+        322,
+      ],
+      "text": "    <rect ",
+    },
+    "line": 9,
+    "message": "Replace \`<rect·id="useless"·\` with \`····<rect·\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+  {
+    "column": 3,
+    "endColumn": 3,
+    "endLine": 10,
+    "fix": {
+      "range": [
+        362,
+        362,
+      ],
+      "text": "  ",
+    },
+    "line": 10,
+    "message": "Insert \`··\`",
+    "messageId": "insert",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+  {
+    "column": 7,
+    "endColumn": 7,
+    "endLine": 11,
+    "fix": {
+      "range": [
+        373,
+        373,
+      ],
+      "text": "
+",
+    },
+    "line": 11,
+    "message": "Insert \`⏎\`",
+    "messageId": "insert",
+    "nodeType": null,
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+]
+`;
