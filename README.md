@@ -238,24 +238,24 @@ All parameters of ESLint flat config are supported.
 For ESLint use json schema compatible syntax as its rule options, so **function**, **regexp** types are not supported in rule `svgo/svgo` options. See bellow:
 
 - `js2svg`
-  - `regEntities` - function
-  - `regValEntities` - function
-  - `encodeEntity` - function
+  - `regEntities` - `function`
+  - `regValEntities` - `function`
+  - `encodeEntity` - `function`
 - `plugins`
   - `prefixIds`
-    - `prefix` - function
+    - `prefix` - `function`, but type `boolean` and `string` is supported
   - `addClassesToSVGElement`
-    - `className` - function
-    - `classNames` - function
+    - `className` - `function`, but type `string` is suppored
+    - `classNames` - `function`, but type `string` is suppored
   - `convertColors`
-    - `currentColor` - regexp
+    - `currentColor` - `regexp`, but type `boolean` and `string` is supported
   - `removeComments`
-    - `preservePatterns` - regexp
+    - `preservePatterns` - `regexp`, but type `boolean` and `string` is supported
 - any custom plugins
-  - `fn` - function
+  - `fn` - `function`
 
 > [!TIP]
-> But you can still support them by using config **[svgoFile](https://github.com/ntnyq/eslint-plugin-svgo#svgoconfig)**
+> But you can still support all of them by using options **[svgoConfig](https://github.com/ntnyq/eslint-plugin-svgo#svgoconfig)** and a svgo config file.
 
 ## Credits
 
