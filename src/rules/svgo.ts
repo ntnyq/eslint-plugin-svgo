@@ -64,7 +64,7 @@ export const svgo = {
 
           reportDifferences(context, sourceCode, output.data)
         } catch (err) {
-          if ((err as any)?.name === 'SvgoParserError') {
+          if ((err as Error)?.name === 'SvgoParserError') {
             const { reason, line, column } = err as SvgoParserError
 
             context.report({
