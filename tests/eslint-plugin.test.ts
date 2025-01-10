@@ -10,12 +10,15 @@ it('should lint work', async () => {
   const files = await glob('**/*.svg', { cwd: TEST_CWD, onlyFiles: true })
   const eslint = new ESLint({
     overrideConfigFile: true,
-    overrideConfig: [pluginSvgo.configs.recommended],
+    overrideConfig: [
+      // recommended config
+      pluginSvgo.configs.recommended,
+    ],
     cwd: TEST_CWD,
     ignore: false,
   })
 
-  const results: ESLint.LintResult[] = await eslint.lintFiles(files)
+  const results = await eslint.lintFiles(files)
 
   expect(results.length).toBe(files.length)
 

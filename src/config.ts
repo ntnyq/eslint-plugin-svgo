@@ -3,13 +3,23 @@ import plugin from '.'
 import type { Linter } from 'eslint'
 import type { RuleOptions } from '../dts/rule-options'
 
-export function config(options: Linter.Config<RuleOptions> = {}) {
+/**
+ * Just options of ESLint config options
+ *
+ * @see {@link https://eslint.org/docs/latest/use/configure/configuration-files#configuration-objects}
+ */
+export type CreateConfigOptions = Linter.Config<RuleOptions>
+
+/**
+ * Shortcut for creating an ESLint config
+ *
+ * @param options - {@link CreateConfigOptions}
+ * @returns An eslint config
+ */
+export function createConfig(options: CreateConfigOptions = {}) {
   const config: Linter.Config<RuleOptions> = {
     ...options,
 
-    // Overrides
-    name: options.name || 'svgo/recommended',
-    files: options.files || ['**/*.svg'],
     plugins: {
       ...(options.plugins || {}),
       /* v8 ignore start */
@@ -22,12 +32,27 @@ export function config(options: Linter.Config<RuleOptions> = {}) {
       ...(options.languageOptions || {}),
       parser: parserPlain,
     },
-    rules: {
-      'svgo/svgo': 'error',
-      // overrides rules
-      ...options.rules,
-    },
   }
 
   return config
+}
+
+/**
+ * Shortcut for creating an ESLint config
+ *
+ * @deprecated use {@link createConfig} instead
+ */
+export const config = createConfig
+
+export const configs = {
+  /**
+   * recommended config for eslint-plugin-svgo
+   */
+  recommended: createConfig({
+    name: 'svgo/recommended',
+    files: ['**/*.svg'],
+    rules: {
+      'svgo/svgo': 'error',
+    },
+  }),
 }

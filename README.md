@@ -15,15 +15,15 @@ Optimize SVG files with [SVGO](https://github.com/svg/svgo) using ESLint.
 
 ## Install
 
-```bash
+```shell
 npm install eslint-plugin-svgo -D
 ```
 
-```bash
+```shell
 yarn add eslint-plugin-svgo -D
 ```
 
-```bash
+```shell
 pnpm add eslint-plugin-svgo -D
 ```
 
@@ -49,7 +49,7 @@ export default [
 ```ts
 // eslint.config.js
 
-import { config } from 'eslint-plugin-svgo'
+import { createConfig } from 'eslint-plugin-svgo'
 
 /**
  * @type import('eslint').Linter.Config[]
@@ -57,7 +57,7 @@ import { config } from 'eslint-plugin-svgo'
 export default [
   // ...other flat configs
 
-  config({
+  createConfig({
     files: ['**/*.svg'],
 
     // ignore matched svg files
@@ -210,28 +210,21 @@ Plugins configuration. Check [Plugins | SVGO Documentation](https://svgo.dev/doc
 
 ## Types
 
-### `config`
+### `createConfig`
 
-Helper function to create ESLint config.
+Shortcut for creating an ESLint config.
 
-#### parameters
+#### Options
 
-All parameters of ESLint flat config are supported.
+All [Options](https://eslint.org/docs/latest/use/configure/configuration-files#configuration-objects) of ESLint config are supported. But options has built-in value and can not be changed
 
-##### name
+**`plugins.svgo`**
 
-- **type**: `string`
-- **default**: `svgo/recommended`
+Set to this plugin.
 
-##### files
+**`languageOptions.parser`**
 
-- **type**: `string[]`
-- **default**: `[**/*.svg]`
-
-#### rules
-
-- **type**: `Linter.RulesRecord`
-- **default**: `{ 'svgo/svgo': 'error' }`
+Set to [so1ve/eslint-parser-plain](https://github.com/so1ve/eslint-parser-plain).
 
 ## Limitation
 

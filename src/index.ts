@@ -1,4 +1,4 @@
-import { config } from './config'
+import { configs } from './config'
 import { meta } from './meta'
 import { rules } from './rules'
 import type { ESLint } from 'eslint'
@@ -6,9 +6,7 @@ import type { ESLint } from 'eslint'
 export const plugin = {
   meta,
   rules,
-  configs: {
-    recommended: config(),
-  },
+  configs,
 } satisfies ESLint.Plugin
 
 export * from './meta'
