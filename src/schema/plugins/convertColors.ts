@@ -24,4 +24,7 @@ export const convertColorsParams = createParamsSchema({
   shortname: booleanSchema,
 })
 
-export const convertColorsPlugin = createPluginSchema('convertColors', convertColorsParams)
+export const convertColorsPlugin = createPluginSchema(
+  'convertColors',
+  convertColorsParams,
+)

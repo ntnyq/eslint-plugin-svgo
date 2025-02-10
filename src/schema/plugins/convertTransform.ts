@@ -17,4 +17,7 @@ export const convertTransformParams = createParamsSchema({
   collapseIntoOne: booleanSchema,
 })
 
-export const convertTransformPlugin = createPluginSchema('convertTransform', convertTransformParams)
+export const convertTransformPlugin = createPluginSchema(
+  'convertTransform',
+  convertTransformParams,
+)

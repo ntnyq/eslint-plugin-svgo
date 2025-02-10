@@ -11,4 +11,7 @@ export const mergePathsParams = createParamsSchema({
   noSpaceAfterFlags: booleanSchema,
 })
 
-export const mergePathsPlugin = createPluginSchema('mergePaths', mergePathsParams)
+export const mergePathsPlugin = createPluginSchema(
+  'mergePaths',
+  mergePathsParams,
+)

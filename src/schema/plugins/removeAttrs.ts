@@ -9,4 +9,7 @@ export const removeAttrsParams = createParamsSchema({
   preserveCurrentColor: booleanSchema,
 })
 
-export const removeAttrsPlugin = createPluginSchema('removeAttrs', removeAttrsParams)
+export const removeAttrsPlugin = createPluginSchema(
+  'removeAttrs',
+  removeAttrsParams,
+)

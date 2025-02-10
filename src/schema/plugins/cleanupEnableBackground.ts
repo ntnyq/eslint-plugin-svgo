@@ -4,4 +4,6 @@
 
 import { createPluginSchema } from '../utils'
 
-export const cleanupEnableBackgroundPlugin = createPluginSchema('cleanupEnableBackground')
+export const cleanupEnableBackgroundPlugin = createPluginSchema(
+  'cleanupEnableBackground',
+)

@@ -2,7 +2,12 @@
  * @kind default
  */
 
-import { booleanSchema, numberSchema, onlyFalseSchema, precisionSchema } from '../shared'
+import {
+  booleanSchema,
+  numberSchema,
+  onlyFalseSchema,
+  precisionSchema,
+} from '../shared'
 import { createParamsSchema, createPluginSchema } from '../utils'
 
 export const convertPathDataParams = createParamsSchema({
@@ -35,4 +40,7 @@ export const convertPathDataParams = createParamsSchema({
   forceAbsolutePath: booleanSchema,
 })
 
-export const convertPathDataPlugin = createPluginSchema('convertPathData', convertPathDataParams)
+export const convertPathDataPlugin = createPluginSchema(
+  'convertPathData',
+  convertPathDataParams,
+)

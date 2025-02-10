@@ -9,4 +9,7 @@ export const removeDescParams = createParamsSchema({
   removeAny: booleanSchema,
 })
 
-export const removeDescPlugin = createPluginSchema('removeDesc', removeDescParams)
+export const removeDescPlugin = createPluginSchema(
+  'removeDesc',
+  removeDescParams,
+)

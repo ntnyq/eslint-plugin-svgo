@@ -28,4 +28,7 @@ export const minifyStylesParams = createParamsSchema({
   },
 })
 
-export const minifyStylesPlugin = createPluginSchema('minifyStyles', minifyStylesParams)
+export const minifyStylesPlugin = createPluginSchema(
+  'minifyStyles',
+  minifyStylesParams,
+)

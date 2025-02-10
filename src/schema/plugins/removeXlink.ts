@@ -5,4 +5,7 @@ export const removeXlinkParams = createParamsSchema({
   includeLegacy: booleanSchema,
 })
 
-export const removeXlinkPlugin = createPluginSchema('removeXlink', removeXlinkParams)
+export const removeXlinkPlugin = createPluginSchema(
+  'removeXlink',
+  removeXlinkParams,
+)

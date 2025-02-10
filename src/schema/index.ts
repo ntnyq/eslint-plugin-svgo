@@ -1,4 +1,8 @@
-import { PLUGIN_NON_DEFAULT, PLUGIN_PRESET_DEFAULT, PLUGINS_PRESET_DEFAULT } from '../constants'
+import {
+  PLUGIN_NON_DEFAULT,
+  PLUGIN_PRESET_DEFAULT,
+  PLUGINS_PRESET_DEFAULT,
+} from '../constants'
 import {
   addAttributesToSVGElementPlugin,
   addClassesToSVGElementPlugin,
@@ -55,7 +59,13 @@ import {
   sortAttrsPlugin,
   sortDefsChildrenPlugin,
 } from './plugins'
-import { booleanSchema, integerSchema, objectSchema, precisionSchema, stringSchema } from './shared'
+import {
+  booleanSchema,
+  integerSchema,
+  objectSchema,
+  precisionSchema,
+  stringSchema,
+} from './shared'
 import type { JSONSchema4 } from 'json-schema'
 
 /**

@@ -11,4 +11,7 @@ export const removeEmptyTextParams = createParamsSchema({
   tref: booleanSchema,
 })
 
-export const removeEmptyTextPlugin = createPluginSchema('removeEmptyText', removeEmptyTextParams)
+export const removeEmptyTextPlugin = createPluginSchema(
+  'removeEmptyText',
+  removeEmptyTextParams,
+)

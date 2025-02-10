@@ -103,4 +103,7 @@ export const presetDefaultParams = createParamsSchema({
   },
 })
 
-export const presetDefaultPlugin = createPluginSchema('preset-default', presetDefaultParams)
+export const presetDefaultPlugin = createPluginSchema(
+  'preset-default',
+  presetDefaultParams,
+)

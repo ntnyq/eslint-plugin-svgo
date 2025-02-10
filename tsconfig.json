@@ -16,10 +16,6 @@
   "include": [
     "./src/**/*.ts",
     "./dts/**/*.ts",
-    "./docs/**/*/ts",
-    "./docs/.vitepress/**/*.ts",
-    "./docs/.vitepress/**/*.vue",
-    "./docs/**/*.d.ts",
     "./scripts/**/*.ts",
     "./tests/**/*.ts",
     "*.config.ts",

@@ -1,3 +1,5 @@
 import { createPluginSchema } from '../utils'
 
-export const removeOffCanvasPathsPlugin = createPluginSchema('removeOffCanvasPaths')
+export const removeOffCanvasPathsPlugin = createPluginSchema(
+  'removeOffCanvasPaths',
+)

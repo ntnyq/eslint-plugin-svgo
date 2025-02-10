@@ -11,4 +11,7 @@ export const cleanupAttrsParams = createParamsSchema({
   spaces: booleanSchema,
 })
 
-export const cleanupAttrsPlugin = createPluginSchema('cleanupAttrs', cleanupAttrsParams)
+export const cleanupAttrsPlugin = createPluginSchema(
+  'cleanupAttrs',
+  cleanupAttrsParams,
+)

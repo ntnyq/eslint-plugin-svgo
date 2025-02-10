@@ -12,4 +12,7 @@ export const inlineStylesParams = createParamsSchema({
   usePseudos: stringArraySchema,
 })
 
-export const inlineStylesPlugin = createPluginSchema('inlineStyles', inlineStylesParams)
+export const inlineStylesPlugin = createPluginSchema(
+  'inlineStyles',
+  inlineStylesParams,
+)

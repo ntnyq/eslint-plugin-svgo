@@ -13,4 +13,7 @@ export const cleanupIdsParams = createParamsSchema({
   preservePrefixes: stringArraySchema,
 })
 
-export const cleanupIdsPlugin = createPluginSchema('cleanupIds', cleanupIdsParams)
+export const cleanupIdsPlugin = createPluginSchema(
+  'cleanupIds',
+  cleanupIdsParams,
+)

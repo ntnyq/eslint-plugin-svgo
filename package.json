@@ -70,20 +70,20 @@
     "synckit": "^0.9.2"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^3.12.3",
-    "@ntnyq/prettier-config": "^1.22.1",
+    "@ntnyq/eslint-config": "^4.0.0-beta.2",
+    "@ntnyq/prettier-config": "^2.0.0-beta.2",
     "@types/json-schema": "^7.0.15",
     "@types/node": "^22.13.1",
     "@vitest/coverage-v8": "^3.0.5",
-    "bumpp": "^10.0.1",
-    "eslint": "^9.19.0",
+    "bumpp": "^10.0.2",
+    "eslint": "9.19.0",
     "eslint-typegen": "^1.0.0",
     "eslint-vitest-rule-tester": "^1.1.0",
     "husky": "^9.1.7",
     "json-schema": "^0.4.0",
     "nano-staged": "^0.8.0",
     "npm-run-all2": "^7.0.2",
-    "prettier": "^3.4.2",
+    "prettier": "^3.5.0",
     "tinyglobby": "^0.2.10",
     "tsup": "^8.3.6",
     "tsx": "^4.19.2",
@@ -92,6 +92,11 @@
   },
   "engines": {
     "node": ">=18.18.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   },
   "nano-staged": {
     "*.{js,ts,mjs,cjs,json,md,yml,yaml}": "eslint --fix"

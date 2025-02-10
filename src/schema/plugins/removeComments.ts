@@ -11,4 +11,7 @@ export const removeCommentsParams = createParamsSchema({
   },
 })
 
-export const removeCommentsPlugin = createPluginSchema('removeComments', removeCommentsParams)
+export const removeCommentsPlugin = createPluginSchema(
+  'removeComments',
+  removeCommentsParams,
+)

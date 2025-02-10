@@ -35,9 +35,14 @@ runAsWorker(
 
     if (svgoConfig && !externalConfig) {
       externalConfig =
-        typeof svgoConfig === 'string' ? await svgo.loadConfig(svgoConfig) : await svgo.loadConfig()
+        typeof svgoConfig === 'string'
+          ? await svgo.loadConfig(svgoConfig)
+          : await svgo.loadConfig()
     }
 
-    return svgo.optimize(input, svgoConfig ? externalConfig || ruleConfig : ruleConfig)
+    return svgo.optimize(
+      input,
+      svgoConfig ? externalConfig || ruleConfig : ruleConfig,
+    )
   },
 )

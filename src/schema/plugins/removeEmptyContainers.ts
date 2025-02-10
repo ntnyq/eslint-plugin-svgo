@@ -4,4 +4,6 @@
 
 import { createPluginSchema } from '../utils'
 
-export const removeEmptyContainersPlugin = createPluginSchema('removeEmptyContainers')
+export const removeEmptyContainersPlugin = createPluginSchema(
+  'removeEmptyContainers',
+)

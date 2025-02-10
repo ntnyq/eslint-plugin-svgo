@@ -1,3 +1,5 @@
 import { createPluginSchema } from '../utils'
 
-export const convertOneStopGradientsPlugin = createPluginSchema('convertOneStopGradients')
+export const convertOneStopGradientsPlugin = createPluginSchema(
+  'convertOneStopGradients',
+)

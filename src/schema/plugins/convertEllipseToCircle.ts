@@ -4,4 +4,6 @@
 
 import { createPluginSchema } from '../utils'
 
-export const convertEllipseToCirclePlugin = createPluginSchema('convertEllipseToCircle')
+export const convertEllipseToCirclePlugin = createPluginSchema(
+  'convertEllipseToCircle',
+)

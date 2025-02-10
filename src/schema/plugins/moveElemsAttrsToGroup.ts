@@ -4,4 +4,6 @@
 
 import { createPluginSchema } from '../utils'
 
-export const moveElemsAttrsToGroupPlugin = createPluginSchema('moveElemsAttrsToGroup')
+export const moveElemsAttrsToGroupPlugin = createPluginSchema(
+  'moveElemsAttrsToGroup',
+)
