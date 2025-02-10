@@ -1,10 +1,8 @@
 import { writeFile } from 'node:fs/promises'
 import { flatConfigsToRulesDTS } from 'eslint-typegen/core'
-import { config } from '../src'
+import { createConfig } from '../src'
 
-const configs = [config()]
-
-const dts = await flatConfigsToRulesDTS(configs, {
+const dts = await flatConfigsToRulesDTS([createConfig()], {
   includeAugmentation: false,
 })
 
