@@ -11,6 +11,7 @@
   },
   "eslint.validate": [
     "vue",
+    "xml",
     "yaml",
     "toml",
     "json",

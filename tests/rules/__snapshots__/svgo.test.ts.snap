@@ -915,6 +915,8 @@ exports[`svgo > invalid > Invalid #11: invalid 1`] = `
 [
   {
     "column": 6,
+    "endColumn": 6,
+    "endLine": 1,
     "line": 1,
     "message": "SvgoParserError: Unclosed root tag",
     "nodeType": null,
@@ -928,6 +930,8 @@ exports[`svgo > invalid > Invalid #12: not svg 1`] = `
 [
   {
     "column": 2,
+    "endColumn": 2,
+    "endLine": 1,
     "line": 1,
     "message": "SvgoParserError: Non-whitespace before first tag.",
     "nodeType": null,

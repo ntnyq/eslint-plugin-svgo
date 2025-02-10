@@ -70,7 +70,10 @@ export const svgo = {
 
             context.report({
               message: `SvgoParserError: ${reason}`,
-              loc: { line, column },
+              loc: {
+                start: { line, column },
+                end: { line, column },
+              },
             })
             /* v8 ignore start */
           } else {
