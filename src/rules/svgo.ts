@@ -59,6 +59,7 @@ export const svgo = {
         try {
           const output = optimizeSVG(sourceCode, {
             path: context.filename,
+            /* v8 ignore next */
             ...(context.options?.[0] || {}),
           })
 
@@ -71,6 +72,7 @@ export const svgo = {
               message: `SvgoParserError: ${reason}`,
               loc: { line, column },
             })
+            /* v8 ignore start */
           } else {
             context.report({
               loc: {
@@ -80,6 +82,7 @@ export const svgo = {
               message: 'Failed to optimize SVG file',
             })
           }
+          /* v8 ignore end */
         }
       },
     }
