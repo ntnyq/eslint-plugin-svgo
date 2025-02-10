@@ -37,13 +37,6 @@ export function createConfig(options: CreateConfigOptions = {}) {
   return config
 }
 
-/**
- * Shortcut for creating an ESLint config
- *
- * @deprecated use {@link createConfig} instead
- */
-export const config = createConfig
-
 export const configs = {
   /**
    * recommended config for eslint-plugin-svgo
