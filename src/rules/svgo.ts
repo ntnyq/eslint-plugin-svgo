@@ -13,7 +13,7 @@ type Output = { data: string }
 
 let optimizeSVG: (input: string, config: Config) => Output
 
-export const svgo = {
+export const svgo: Rule.RuleModule = {
   meta: {
     type: 'suggestion',
     docs: {
@@ -90,4 +90,4 @@ export const svgo = {
       },
     }
   },
-} satisfies Rule.RuleModule
+}
