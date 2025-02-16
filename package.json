@@ -2,7 +2,7 @@
   "name": "eslint-plugin-svgo",
   "type": "module",
   "version": "0.5.1",
-  "packageManager": "pnpm@10.3.0",
+  "packageManager": "pnpm@10.4.0",
   "description": "Optimize SVG files with SVGO using ESLint.",
   "keywords": [
     "eslint",
@@ -31,11 +31,11 @@
         "default": "./dist/index.cjs"
       }
     },
-    "./rule-options": {
-      "types": "./dts/rule-options.d.ts"
-    },
     "./define-config-support": {
       "types": "./dts/define-config-support.d.ts"
+    },
+    "./rule-options": {
+      "types": "./dts/rule-options.d.ts"
     }
   },
   "main": "./dist/index.js",
@@ -70,10 +70,10 @@
     "synckit": "^0.9.2"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^4.0.0-beta.3",
-    "@ntnyq/prettier-config": "^2.0.0-beta.2",
+    "@ntnyq/eslint-config": "^4.0.0-beta.4",
+    "@ntnyq/prettier-config": "^2.0.0",
     "@types/json-schema": "^7.0.15",
-    "@types/node": "^22.13.1",
+    "@types/node": "^22.13.4",
     "@vitest/coverage-v8": "^3.0.5",
     "bumpp": "^10.0.3",
     "eslint": "^9.20.1",
@@ -83,7 +83,7 @@
     "json-schema": "^0.4.0",
     "nano-staged": "^0.8.0",
     "npm-run-all2": "^7.0.2",
-    "prettier": "^3.5.0",
+    "prettier": "^3.5.1",
     "tinyglobby": "^0.2.10",
     "tsup": "^8.3.6",
     "tsx": "^4.19.2",
