@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-svgo",
   "type": "module",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "packageManager": "pnpm@10.4.0",
   "description": "Optimize SVG files with SVGO using ESLint.",
   "keywords": [
