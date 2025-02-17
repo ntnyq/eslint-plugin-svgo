@@ -2,7 +2,7 @@ import { ESLint } from 'eslint'
 import { glob } from 'tinyglobby'
 import { expect, it } from 'vitest'
 import { resolve } from '../scripts/utils'
-import { plugin as pluginSvgo } from '../src'
+import pluginSVGO from '../src'
 
 const TEST_CWD = resolve('tests/fixtures/eslint-plugin')
 
@@ -12,7 +12,7 @@ it('should lint work', async () => {
     overrideConfigFile: true,
     overrideConfig: [
       // recommended config
-      pluginSvgo.configs.recommended,
+      pluginSVGO.configs.recommended,
     ],
     cwd: TEST_CWD,
     ignore: false,

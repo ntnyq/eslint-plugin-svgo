@@ -3,12 +3,10 @@
     "target": "ES2022",
     "lib": ["ESNext"],
     "module": "ESNext",
-    "rootDir": ".",
     "moduleResolution": "Bundler",
     "types": ["node"],
     "resolveJsonModule": true,
     "allowJs": true,
-    "outDir": "dist",
     "esModuleInterop": true,
     "strict": true,
     "skipLibCheck": true
@@ -18,7 +16,6 @@
     "./dts/**/*.ts",
     "./scripts/**/*.ts",
     "./tests/**/*.ts",
-    "*.config.ts",
-    "./eslint.config.mjs"
+    "*.config.ts"
   ]
 }

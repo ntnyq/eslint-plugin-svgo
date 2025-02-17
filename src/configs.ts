@@ -15,18 +15,19 @@ export type CreateConfigOptions = Linter.Config<RuleOptions>
  *
  * @param options - {@link CreateConfigOptions}
  * @returns An eslint config
+ *
+ * @deprecated
  */
+/* v8 ignore start */
 export function createConfig(options: CreateConfigOptions = {}) {
   const config: Linter.Config<RuleOptions> = {
     ...options,
 
     plugins: {
       ...(options.plugins || {}),
-      /* v8 ignore start */
       get svgo() {
         return plugin
       },
-      /* v8 ignore stop */
     },
     languageOptions: {
       ...(options.languageOptions || {}),
@@ -36,16 +37,29 @@ export function createConfig(options: CreateConfigOptions = {}) {
 
   return config
 }
+/* v8 ignore stop */
+
+/**
+ * Recommended config of eslint-plugin-svgo
+ */
+export const recommended: Linter.Config = {
+  name: 'svgo/recommended',
+  files: ['**/*.svg'],
+  plugins: {
+    /* v8 ignore start */
+    get svgo() {
+      return plugin
+    },
+    /* v8 ignore stop */
+  },
+  languageOptions: {
+    parser: parserPlain,
+  },
+  rules: {
+    'svgo/svgo': 'error',
+  },
+}
 
 export const configs = {
-  /**
-   * recommended config for eslint-plugin-svgo
-   */
-  recommended: createConfig({
-    name: 'svgo/recommended',
-    files: ['**/*.svg'],
-    rules: {
-      'svgo/svgo': 'error',
-    },
-  }),
+  recommended,
 }

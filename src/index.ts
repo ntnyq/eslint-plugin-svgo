@@ -1,4 +1,4 @@
-import { configs } from './config'
+import { configs } from './configs'
 import { meta } from './meta'
 import { rules } from './rules'
 import type { ESLint } from 'eslint'
@@ -11,7 +11,7 @@ export const plugin = {
 
 export * from './meta'
 export * from './rules'
-export * from './config'
 export * from './parser'
+export * from './configs'
 
 export default plugin

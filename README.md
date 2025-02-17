@@ -32,7 +32,7 @@ pnpm add eslint-plugin-svgo -D
 ```ts
 // eslint.config.js
 
-import pluginSvgo from 'eslint-plugin-svgo'
+import pluginSVGO from 'eslint-plugin-svgo'
 
 /**
  * @type import('eslint').Linter.Config[]
@@ -40,7 +40,7 @@ import pluginSvgo from 'eslint-plugin-svgo'
 export default [
   // ...other flat configs
 
-  pluginSvgo.configs.recommended,
+  pluginSVGO.configs.recommended,
 ]
 ```
 
@@ -49,19 +49,32 @@ export default [
 ```ts
 // eslint.config.js
 
-import { createConfig } from 'eslint-plugin-svgo'
+import { parserPlain, plugin as pluginSVGO } from 'eslint-plugin-svgo'
 
 /**
  * @type import('eslint').Linter.Config[]
  */
 export default [
   // ...other flat configs
+  {
+    // plugin name, optional
+    name: 'svgo',
 
-  createConfig({
+    // only check svg files
     files: ['**/*.svg'],
 
     // ignore matched svg files
     ignores: ['icons/foo.svg', 'images/**/*.svg'],
+
+    // use svgo plugins
+    plugins: {
+      svgo: pluginSVGO,
+    },
+
+    // use parser
+    languageOptions: {
+      parser: parserPlain,
+    },
 
     rules: {
       'svgo/svgo': [
@@ -106,7 +119,7 @@ export default [
         },
       ],
     },
-  }),
+  },
 ]
 ```
 
@@ -207,24 +220,6 @@ Options bellow are not supported:
 - **default**: `['preset-default']`
 
 Plugins configuration. Check [Plugins | SVGO Documentation](https://svgo.dev/docs/plugins/) for details.
-
-## Types
-
-### `createConfig`
-
-Shortcut for creating an ESLint config.
-
-#### Options
-
-All [Options](https://eslint.org/docs/latest/use/configure/configuration-files#configuration-objects) of ESLint config are supported. But options has built-in value and can not be changed
-
-**`plugins.svgo`**
-
-Set to this plugin.
-
-**`languageOptions.parser`**
-
-Set to [so1ve/eslint-parser-plain](https://github.com/so1ve/eslint-parser-plain).
 
 ## Limitation
 
