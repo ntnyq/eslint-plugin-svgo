@@ -77,7 +77,7 @@
     "@vitest/coverage-v8": "^3.0.5",
     "bumpp": "^10.0.3",
     "eslint": "^9.20.1",
-    "eslint-typegen": "^1.0.0",
+    "eslint-typegen": "^2.0.0",
     "eslint-vitest-rule-tester": "^1.1.0",
     "husky": "^9.1.7",
     "json-schema": "^0.4.0",
