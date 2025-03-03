@@ -7,7 +7,6 @@
     "moduleResolution": "Bundler",
     "types": ["node"],
     "resolveJsonModule": true,
-    "allowJs": true,
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
     "esModuleInterop": true,
