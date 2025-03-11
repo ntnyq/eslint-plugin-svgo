@@ -27,6 +27,7 @@
     "bumpp",
     "changelogithub",
     "codecov",
+    "esbuild",
     "lcov",
     "pnpm",
     "unenc",
