@@ -32,16 +32,13 @@ pnpm add eslint-plugin-svgo -D
 ```ts
 // eslint.config.js
 
+import { defineConfig } from 'eslint/config'
 import pluginSVGO from 'eslint-plugin-svgo'
 
-/**
- * @type import('eslint').Linter.Config[]
- */
-export default [
+export default defineConfig([
   // ...other flat configs
-
   pluginSVGO.configs.recommended,
-]
+])
 ```
 
 ## Advanced Usage
@@ -49,12 +46,10 @@ export default [
 ```ts
 // eslint.config.js
 
+import { defineConfig } from 'eslint/config'
 import { parserPlain, plugin as pluginSVGO } from 'eslint-plugin-svgo'
 
-/**
- * @type import('eslint').Linter.Config[]
- */
-export default [
+export default defineConfig([
   // ...other flat configs
   {
     // plugin name, optional
@@ -120,7 +115,7 @@ export default [
       ],
     },
   },
-]
+])
 ```
 
 ## Intergrated
