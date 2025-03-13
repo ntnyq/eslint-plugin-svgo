@@ -1,7 +1,7 @@
 import { join } from 'node:path'
-import { messages, reportDifferences } from 'eslint-formatting-reporter'
 import { createSyncFn } from 'synckit'
 import { dirWorkers } from '../dir'
+import { messages, reportDifferences } from '../reporter'
 import { svgoConfigProperties } from '../schema'
 import { booleanSchema, stringSchema } from '../schema/shared'
 import type { Rule } from 'eslint'
