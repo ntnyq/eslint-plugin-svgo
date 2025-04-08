@@ -12,7 +12,7 @@ export type RuleOptions = {
 
 /* ======= Declarations ======= */
 // ----- svgo/svgo -----
-type SvgoSvgo = []|[{
+export type SvgoSvgo = []|[{
   path?: string
   multipass?: boolean
   floatPrecision?: number

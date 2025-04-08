@@ -14,5 +14,7 @@ const dts = await flatConfigsToRulesDTS(
 
 await writeFile(
   'dts/rule-options.d.ts',
-  dts.replace('export interface RuleOptions {', 'export type RuleOptions = {'),
+  dts
+    .replace('export interface RuleOptions {', 'export type RuleOptions = {')
+    .replace('type SvgoSvgo =', 'export type SvgoSvgo ='),
 )

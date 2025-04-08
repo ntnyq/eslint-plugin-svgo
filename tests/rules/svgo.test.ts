@@ -15,9 +15,11 @@ run({
     {
       description: 'js2svg default',
       filename: 'file.svg',
-      options: {
-        plugins: [],
-      },
+      options: [
+        {
+          plugins: [],
+        },
+      ],
       code: $`
         <?xml version="1.0" encoding="UTF-8"?>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox=" 0 0  150 100 " width="150">
@@ -54,12 +56,14 @@ run({
     {
       description: 'js2svg pretty false',
       filename: 'file.svg',
-      options: {
-        js2svg: {
-          pretty: false,
+      options: [
+        {
+          js2svg: {
+            pretty: false,
+          },
+          plugins: [],
         },
-        plugins: [],
-      },
+      ],
       code: $`
         <?xml version="1.0" encoding="UTF-8"?>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox=" 0 0  150 100 " width="150">
@@ -85,12 +89,14 @@ run({
     {
       description: 'js2svg indent 4',
       filename: 'file.svg',
-      options: {
-        js2svg: {
-          indent: 4,
+      options: [
+        {
+          js2svg: {
+            indent: 4,
+          },
+          plugins: [],
         },
-        plugins: [],
-      },
+      ],
       code: $`
         <?xml version="1.0" encoding="UTF-8"?>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox=" 0 0  150 100 " width="150">
@@ -164,18 +170,20 @@ run({
     {
       description: 'preset-default disable cleanupIds',
       filename: 'file.svg',
-      options: {
-        plugins: [
-          {
-            name: 'preset-default',
-            params: {
-              overrides: {
-                cleanupIds: false,
+      options: [
+        {
+          plugins: [
+            {
+              name: 'preset-default',
+              params: {
+                overrides: {
+                  cleanupIds: false,
+                },
               },
             },
-          },
-        ],
-      },
+          ],
+        },
+      ],
       code: $`
         <?xml version="1.0" encoding="UTF-8"?>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox=" 0 0  150 100 " width="150">
@@ -207,21 +215,23 @@ run({
     {
       description: 'preset-default with cleanupIds params',
       filename: 'file.svg',
-      options: {
-        plugins: [
-          {
-            name: 'preset-default',
-            params: {
-              overrides: {
-                cleanupIds: {
-                  // minify referenced IDs
-                  minify: false,
+      options: [
+        {
+          plugins: [
+            {
+              name: 'preset-default',
+              params: {
+                overrides: {
+                  cleanupIds: {
+                    // minify referenced IDs
+                    minify: false,
+                  },
                 },
               },
             },
-          },
-        ],
-      },
+          ],
+        },
+      ],
       code: $`
         <?xml version="1.0" encoding="UTF-8"?>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox=" 0 0  150 100 " width="150">
@@ -259,9 +269,11 @@ run({
     {
       description: 'plugin cleanupIds name',
       filename: 'file.svg',
-      options: {
-        plugins: ['cleanupIds'],
-      },
+      options: [
+        {
+          plugins: ['cleanupIds'],
+        },
+      ],
       code: $`
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 100" width="150">
           <rect id="useless" width="0" height="0" fill="#ff0000"/>
@@ -282,13 +294,15 @@ run({
     {
       description: 'plugin cleanupIds object',
       filename: 'file.svg',
-      options: {
-        plugins: [
-          {
-            name: 'cleanupIds',
-          },
-        ],
-      },
+      options: [
+        {
+          plugins: [
+            {
+              name: 'cleanupIds',
+            },
+          ],
+        },
+      ],
       code: $`
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 100" width="150">
           <rect id="useless" width="0" height="0" fill="#ff0000"/>
@@ -309,16 +323,18 @@ run({
     {
       description: 'plugin cleanupIds with params',
       filename: 'file.svg',
-      options: {
-        plugins: [
-          {
-            name: 'cleanupIds',
-            params: {
-              remove: false,
+      options: [
+        {
+          plugins: [
+            {
+              name: 'cleanupIds',
+              params: {
+                remove: false,
+              },
             },
-          },
-        ],
-      },
+          ],
+        },
+      ],
       code: $`
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 100" width="150">
           <rect id="useless" width="0" height="0" fill="#ff0000"/>
@@ -345,9 +361,11 @@ run({
     {
       description: 'svgoConfig default',
       filename: 'file.svg',
-      options: {
-        svgoConfig: true,
-      },
+      options: [
+        {
+          svgoConfig: true,
+        },
+      ],
       code: $`
         <?xml version="1.0" encoding="UTF-8"?>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox=" 0 0  150 100 " width="150">
@@ -386,9 +404,11 @@ run({
     {
       description: 'svgoConfig config path',
       filename: 'file.svg',
-      options: {
-        svgoConfig: resolve('svgo.config.mjs'),
-      },
+      options: [
+        {
+          svgoConfig: resolve('svgo.config.mjs'),
+        },
+      ],
       code: $`
         <?xml version="1.0" encoding="UTF-8"?>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox=" 0 0  150 100 " width="150">
