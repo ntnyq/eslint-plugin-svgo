@@ -2,7 +2,7 @@
   "name": "eslint-plugin-svgo",
   "type": "module",
   "version": "0.7.0",
-  "packageManager": "pnpm@10.7.1",
+  "packageManager": "pnpm@10.8.0",
   "description": "Optimize SVG files with SVGO using ESLint.",
   "keywords": [
     "eslint",
@@ -61,7 +61,7 @@
   "dependencies": {
     "generate-differences": "^0.0.1",
     "svgo": "^4.0.0-rc.1",
-    "synckit": "^0.11.2"
+    "synckit": "^0.11.3"
   },
   "devDependencies": {
     "@ntnyq/eslint-config": "^4.0.3",
