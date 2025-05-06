@@ -1,0 +1,11 @@
+diff --git a/types/lib/svgo-node.d.ts b/types/lib/svgo-node.d.ts
+index 432a4073670f49e3ab48960438075eabd5eed9c2..f3990cf1f412070fa85cadb4d5a616d692535eb4 100644
+--- a/types/lib/svgo-node.d.ts
++++ b/types/lib/svgo-node.d.ts
+@@ -6,5 +6,5 @@ export * from "./svgo.js";
+  *
+  * @type {<T extends string>(configFile: T | null, cwd?: string) => Promise<T extends string ? import('./svgo.js').Config : import('./svgo.js').Config | null>}
+  */
+-export const loadConfig: <T extends string>(configFile: T | null, cwd?: string) => Promise<T extends string ? import("./svgo.js").Config : import("./svgo.js").Config | null>;
++export const loadConfig: <T extends string>(configFile?: T | null, cwd?: string) => Promise<T extends string ? import("./svgo.js").Config : import("./svgo.js").Config | null>;
+ export function optimize(input: string, config?: import("./svgo.js").Config | undefined): import("./svgo.js").Output;

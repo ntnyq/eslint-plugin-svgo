@@ -5,11 +5,8 @@ import { messages, reportDifferences } from '../reporter'
 import { svgoConfigProperties } from '../schema'
 import { booleanSchema, stringSchema } from '../schema/shared'
 import type { Rule } from 'eslint'
-import type { Config } from 'svgo'
+import type { Config, Output } from 'svgo'
 import type { SvgoParserError } from '../types'
-
-// import from svgo next release
-type Output = { data: string }
 
 let optimizeSVG: (input: string, config: Config) => Output
 

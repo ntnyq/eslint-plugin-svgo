@@ -2,8 +2,11 @@ packages:
   - .
 
 overrides:
-  esbuild: ^0.25.3
+  esbuild: ^0.25.4
 
 onlyBuiltDependencies:
   - esbuild
   - unrs-resolver
+
+patchedDependencies:
+  svgo@4.0.0-rc.2: patches/svgo@4.0.0-rc.2.patch
