@@ -46,7 +46,7 @@ export const svgo: Rule.RuleModule = {
   },
   create(context) {
     if (!optimizeSVG) {
-      optimizeSVG = createSyncFn(join(dirWorkers, 'svgo.cjs')) as any
+      optimizeSVG = createSyncFn(join(dirWorkers, 'svgo.mjs')) as any
     }
 
     return {
