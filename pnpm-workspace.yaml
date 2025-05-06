@@ -7,6 +7,3 @@ overrides:
 onlyBuiltDependencies:
   - esbuild
   - unrs-resolver
-
-patchedDependencies:
-  svgo@4.0.0-rc.2: patches/svgo@4.0.0-rc.2.patch
