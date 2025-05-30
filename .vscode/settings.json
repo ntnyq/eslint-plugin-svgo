@@ -30,6 +30,7 @@
     "esbuild",
     "lcov",
     "pnpm",
+    "tsdown",
     "unenc",
     "unrs",
     "vite",

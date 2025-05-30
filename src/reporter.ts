@@ -55,7 +55,9 @@ export function reportDifferences(
   formatted: string,
   offset = 0,
 ) {
-  if (source === formatted) return
+  if (source === formatted) {
+    return
+  }
 
   const differences = generateDifferences(source, formatted)
 

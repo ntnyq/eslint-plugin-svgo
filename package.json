@@ -22,8 +22,8 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "types": "./dist/index.d.mts",
-      "default": "./dist/index.mjs"
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
     },
     "./define-config-support": {
       "types": "./dts/define-config-support.d.ts"
@@ -32,8 +32,8 @@
       "types": "./dts/rule-options.d.ts"
     }
   },
-  "main": "./dist/index.mjs",
-  "types": "./dist/index.d.mts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist",
     "dts",
@@ -41,9 +41,9 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "pnpm run update:rule-options && unbuild",
+    "build": "pnpm run update:rule-options && tsdown",
     "coverage": "vitest --coverage",
-    "dev": "unbuild --watch",
+    "dev": "tsdown --watch",
     "lint": "eslint",
     "prepare": "husky",
     "prepublishOnly": "pnpm run build",
@@ -64,7 +64,7 @@
     "synckit": "^0.11.8"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^4.3.0",
+    "@ntnyq/eslint-config": "^5.0.0-beta.4",
     "@ntnyq/prettier-config": "^2.2.0",
     "@types/json-schema": "^7.0.15",
     "@types/node": "^22.15.27",
@@ -81,13 +81,10 @@
     "prettier": "^3.5.3",
     "show-invisibles": "^0.0.1",
     "tinyglobby": "^0.2.14",
+    "tsdown": "^0.12.4",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3",
-    "unbuild": "^3.5.0",
     "vitest": "^3.1.4"
-  },
-  "engines": {
-    "node": ">=18.18.0"
   },
   "nano-staged": {
     "*.{js,ts,mjs,cjs,md,yml,yaml,json}": "eslint --fix"
