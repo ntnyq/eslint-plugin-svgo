@@ -25,9 +25,6 @@
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
-    "./define-config-support": {
-      "types": "./dts/define-config-support.d.ts"
-    },
     "./rule-options": {
       "types": "./dts/rule-options.d.ts"
     }
