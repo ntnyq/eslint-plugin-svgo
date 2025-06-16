@@ -57,17 +57,17 @@
   },
   "dependencies": {
     "generate-differences": "^0.1.0",
-    "svgo": "^4.0.0-rc.4",
+    "svgo": "^4.0.0-rc.5",
     "synckit": "^0.11.8"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^5.0.0-beta.5",
+    "@ntnyq/eslint-config": "^5.0.0-beta.6",
     "@ntnyq/prettier-config": "^2.2.0",
     "@types/json-schema": "^7.0.15",
-    "@types/node": "^22.15.30",
-    "@vitest/coverage-v8": "^3.2.2",
+    "@types/node": "^22.15.31",
+    "@vitest/coverage-v8": "^3.2.3",
     "bumpp": "^10.1.1",
-    "eslint": "^9.28.0",
+    "eslint": "^9.29.0",
     "eslint-parser-plain": "^0.1.1",
     "eslint-typegen": "^2.2.0",
     "eslint-vitest-rule-tester": "^2.2.0",
@@ -79,9 +79,9 @@
     "show-invisibles": "^0.0.1",
     "tinyglobby": "^0.2.14",
     "tsdown": "^0.12.7",
-    "tsx": "^4.19.4",
+    "tsx": "^4.20.3",
     "typescript": "^5.8.3",
-    "vitest": "^3.2.2"
+    "vitest": "^3.2.3"
   },
   "nano-staged": {
     "*.{js,ts,mjs,cjs,md,yml,yaml,json}": "eslint --fix"
