@@ -10,7 +10,7 @@ Optimize SVG files with [SVGO](https://github.com/svg/svgo) using ESLint.
 
 ## Supported
 
-- SVGO v4.0.0-rc.1+
+- SVGO v4.0.0+
 - ESLint v9.5.0+
 
 ## Install
