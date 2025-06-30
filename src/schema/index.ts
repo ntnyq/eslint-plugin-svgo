@@ -1,6 +1,6 @@
 import {
-  PLUGIN_NON_DEFAULT,
   PLUGIN_PRESET_DEFAULT,
+  PLUGINS_NON_DEFAULT,
   PLUGINS_PRESET_DEFAULT,
 } from '../constants'
 import {
@@ -71,12 +71,12 @@ import type { JSONSchema4 } from 'json-schema'
 /**
  * Stringify Options
  *
- * Bellow options are not supported
+ * Options below are not supported
  * - `regEntities`
  * - `regValEntities`
  * - `encodeEntity`
  */
-const js2svg = {
+const js2svgSchema = {
   ...objectSchema,
   // @keep-sorted
   properties: {
@@ -111,7 +111,7 @@ const js2svg = {
   },
 } satisfies JSONSchema4
 
-const plugins = {
+const pluginsSchema = {
   type: 'array',
   items: {
     anyOf: [
@@ -119,12 +119,10 @@ const plugins = {
         ...stringSchema,
         enum: [
           PLUGIN_PRESET_DEFAULT,
-
           // preset-default plugin names
           ...PLUGINS_PRESET_DEFAULT,
-
           // non-default plugin names
-          ...PLUGIN_NON_DEFAULT,
+          ...PLUGINS_NON_DEFAULT,
         ],
       },
 
@@ -197,6 +195,6 @@ export const svgoConfigProperties = {
     ...stringSchema,
     enum: ['base64', 'enc', 'unenc'],
   },
-  js2svg,
-  plugins,
+  js2svg: js2svgSchema,
+  plugins: pluginsSchema,
 } satisfies JSONSchema4['properties']

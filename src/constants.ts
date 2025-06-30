@@ -44,23 +44,22 @@ export const PLUGINS_PRESET_DEFAULT = [
 ]
 
 // @keep-sorted
-export const PLUGIN_NON_DEFAULT = [
-  // required params
+export const PLUGINS_REQUIRED_PARAMS = [
   'addAttributesToSVGElement',
-  // required params
   'addClassesToSVGElement',
+  'removeAttributesBySelector',
+  'removeAttrs',
+  'removeElementsByAttr',
+]
+
+// @keep-sorted
+export const PLUGINS_NON_DEFAULT = [
   'cleanupListOfValues',
   'convertOneStopGradients',
   'convertStyleToAttrs',
   'prefixIds',
-  // required params
-  'removeAttributesBySelector',
-  // required params
-  'removeAttrs',
   'removeDeprecatedAttrs',
   'removeDimensions',
-  // required params
-  'removeElementsByAttr',
   'removeOffCanvasPaths',
   'removeRasterImages',
   'removeScripts',
@@ -70,4 +69,5 @@ export const PLUGIN_NON_DEFAULT = [
   'removeXlink',
   'removeXMLNS',
   'reusePaths',
+  ...PLUGINS_REQUIRED_PARAMS,
 ]
