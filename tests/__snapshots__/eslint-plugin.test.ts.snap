@@ -4,53 +4,17 @@ exports[`should lint work > cleanup-ids.svg 1`] = `
 [
   {
     "column": 1,
-    "endColumn": 29,
-    "endLine": 3,
+    "endColumn": 1,
+    "endLine": 12,
     "fix": {
       "range": [
         0,
-        145,
+        374,
       ],
-      "text": "<svg xmlns="http://www.w3.org/2000/svg" width="150" viewBox="0 0 150 100"",
+      "text": "<svg xmlns="http://www.w3.org/2000/svg" width="150" viewBox="0 0 150 100"><defs><circle id="a" cx="50" cy="50" r="50" fill="#000"/></defs><use href="#a" transform="skewX(16)"/></svg>",
     },
     "line": 1,
-    "message": "Replace \`<?xml·version="1.0"·encoding="UTF-8"?>⏎<svg·xmlns="http://www.w3.org/2000/svg"·viewBox="·0·0··150·100·"·width="150">⏎··<!--·Created·with·love!·--\` with \`<svg·xmlns="http://www.w3.org/2000/svg"·width="150"·viewBox="0·0·150·100"\`",
-    "messageId": "replace",
-    "nodeType": null,
-    "ruleId": "svgo/svgo",
-    "severity": 2,
-  },
-  {
-    "column": 6,
-    "endColumn": 76,
-    "endLine": 5,
-    "fix": {
-      "range": [
-        161,
-        231,
-      ],
-      "text": "circle id="a" cx="50" cy="50" r="50" fill="#000",
-    },
-    "line": 5,
-    "message": "Replace \`ellipse·cx="50"·cy="50.0"·rx="50.00"·ry="auto"·fill="black"·id="circle\` with \`circle·id="a"·cx="50"·cy="50"·r="50"·fill="#000\`",
-    "messageId": "replace",
-    "nodeType": null,
-    "ruleId": "svgo/svgo",
-    "severity": 2,
-  },
-  {
-    "column": 4,
-    "endColumn": 6,
-    "endLine": 10,
-    "fix": {
-      "range": [
-        248,
-        365,
-      ],
-      "text": "use href="#a" transform="skewX(16)"/",
-    },
-    "line": 7,
-    "message": "Replace \`g>⏎····<use·href="#circle"·transform="skewX(16)"/>⏎····<rect·id="useless"·width="0"·height="0"·fill="#ff0000"/>⏎··</g\` with \`use·href="#a"·transform="skewX(16)"/\`",
+    "message": "Replace \`<?xml·version="1.0"·encoding="UTF-8"?>⏎<svg·xmlns="http://www.w3.org/2000/svg"·viewBox="·0·0··150·100·"·width="150">⏎··<!--·Created·with·love!·-->⏎··<defs>⏎····<ellipse·cx="50"·cy="50.0"·rx="50.00"·ry="auto"·fill="black"·id="circle"/>⏎··</defs>⏎··<g>⏎····<use·href="#circle"·transform="skewX(16)"/>⏎····<rect·id="useless"·width="0"·height="0"·fill="#ff0000"/>⏎··</g>⏎</svg>⏎\` with \`<svg·xmlns="http://www.w3.org/2000/svg"·width="150"·viewBox="0·0·150·100"><defs><circle·id="a"·cx="50"·cy="50"·r="50"·fill="#000"/></defs><use·href="#a"·transform="skewX(16)"/></svg>\`",
     "messageId": "replace",
     "nodeType": null,
     "ruleId": "svgo/svgo",

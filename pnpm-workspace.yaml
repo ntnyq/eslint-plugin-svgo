@@ -1,5 +1,5 @@
 overrides:
-  esbuild: ^0.25.5
+  esbuild: ^0.25.7
 
 onlyBuiltDependencies:
   - esbuild
