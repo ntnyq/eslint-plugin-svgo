@@ -34,19 +34,11 @@ export const svgo: Rule.RuleModule = {
       },
     ],
     messages,
-    defaultOptions: [
-      {
-        js2svg: {
-          indent: 2,
-          pretty: true,
-        },
-        plugins: ['preset-default'],
-      },
-    ],
+    defaultOptions: [],
   },
   create(context) {
     if (!optimizeSVG) {
-      optimizeSVG = createSyncFn(join(dirWorkers, 'svgo.mjs')) as any
+      optimizeSVG = createSyncFn(join(dirWorkers, 'svgo.mjs'))
     }
 
     return {

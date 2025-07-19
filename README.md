@@ -142,18 +142,6 @@ Use svgo to optimize SVG files.
 
 #### Options
 
-Default options:
-
-```json
-{
-  "js2svg": {
-    "indent": 2,
-    "pretty": true
-  },
-  "plugins": ["preset-default"]
-}
-```
-
 ##### svgoConfig
 
 - **type**: `boolean | string`
