@@ -187,7 +187,7 @@ Output as Data URI string.
 ##### js2svg
 
 - **type**: `object`
-- **default**: `{ indent: 2, pretty: true }`
+- **default**: `undefined`
 
 Options for rendering optimized SVG from AST. Check [svgo/lib/types.d.ts](https://github.com/svg/svgo/blob/main/lib/types.d.ts) for details.
 
