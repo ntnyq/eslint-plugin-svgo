@@ -1,4 +1,4 @@
-import { booleanSchema, onlyFalseSchema } from '../shared'
+import { booleanSchema, onlyFalseSchema, precisionSchema } from '../shared'
 import { createParamsSchema, createPluginSchema } from '../utils'
 import { cleanupAttrsParams } from './cleanupAttrs'
 import { cleanupIdsParams } from './cleanupIds'
@@ -11,8 +11,8 @@ import { inlineStylesParams } from './inlineStyles'
 import { mergePathsParams } from './mergePaths'
 import { minifyStylesParams } from './minifyStyles'
 import { removeCommentsParams } from './removeComments'
+import { removeDeprecatedAttrsParams } from './removeDeprecatedAttrs'
 import { removeDescParams } from './removeDesc'
-import { removeDoctypeParams } from './removeDoctype'
 import { removeEditorsNSDataParams } from './removeEditorsNSData'
 import { removeEmptyTextParams } from './removeEmptyText'
 import { removeHiddenElemsParams } from './removeHiddenElems'
@@ -21,6 +21,7 @@ import { removeUselessStrokeAndFillParams } from './removeUselessStrokeAndFill'
 import { sortAttrsParams } from './sortAttrs'
 
 export const presetDefaultParams = createParamsSchema({
+  floatPrecision: precisionSchema,
   overrides: {
     type: 'object',
     // @keep-sorted
@@ -61,15 +62,17 @@ export const presetDefaultParams = createParamsSchema({
       },
       moveElemsAttrsToGroup: onlyFalseSchema,
       moveGroupAttrsToElems: onlyFalseSchema,
+      oneOf: [booleanSchema, removeCommentsParams],
       removeComments: {
         oneOf: [booleanSchema, removeCommentsParams],
+      },
+      removeDeprecatedAttrs: {
+        oneOf: [booleanSchema, removeDeprecatedAttrsParams],
       },
       removeDesc: {
         oneOf: [booleanSchema, removeDescParams],
       },
-      removeDoctype: {
-        oneOf: [booleanSchema, removeDoctypeParams],
-      },
+      removeDoctype: onlyFalseSchema,
       removeEditorsNSData: {
         oneOf: [booleanSchema, removeEditorsNSDataParams],
       },

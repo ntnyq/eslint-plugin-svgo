@@ -9,7 +9,13 @@ export const minifyStylesParams = createParamsSchema({
   restructure: booleanSchema,
   forceMediaMerge: booleanSchema,
   comments: {
-    oneOf: [booleanSchema, stringSchema],
+    oneOf: [
+      booleanSchema,
+      {
+        ...stringSchema,
+        enum: ['exclamation', 'first-exclamation'],
+      },
+    ],
   },
   usage: {
     oneOf: [
