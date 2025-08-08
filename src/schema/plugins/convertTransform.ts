@@ -7,6 +7,7 @@ import { createParamsSchema, createPluginSchema } from '../utils'
 
 export const convertTransformParams = createParamsSchema({
   convertToShorts: booleanSchema,
+  degPrecision: booleanSchema,
   floatPrecision: precisionSchema,
   transformPrecision: precisionSchema,
   matrixToTransform: booleanSchema,
@@ -15,6 +16,8 @@ export const convertTransformParams = createParamsSchema({
   shortRotate: booleanSchema,
   removeUseless: booleanSchema,
   collapseIntoOne: booleanSchema,
+  leadingZero: booleanSchema,
+  negativeExtraSpace: booleanSchema,
 })
 
 export const convertTransformPlugin = createPluginSchema(

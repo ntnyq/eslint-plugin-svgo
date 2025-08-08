@@ -42,7 +42,7 @@ export type SvgoSvgo = []|[{
     textStart?: string
     useShortTags?: boolean
   }
-  plugins?: (("preset-default" | "cleanupAttrs" | "cleanupEnableBackground" | "cleanupIds" | "cleanupNumericValues" | "collapseGroups" | "convertColors" | "convertEllipseToCircle" | "convertPathData" | "convertShapeToPath" | "convertTransform" | "inlineStyles" | "mergePaths" | "mergeStyles" | "minifyStyles" | "moveElemsAttrsToGroup" | "moveGroupAttrsToElems" | "removeComments" | "removeDesc" | "removeDoctype" | "removeEditorsNSData" | "removeEmptyAttrs" | "removeEmptyContainers" | "removeEmptyText" | "removeHiddenElems" | "removeMetadata" | "removeNonInheritableGroupAttrs" | "removeUnknownsAndDefaults" | "removeUnusedNS" | "removeUselessDefs" | "removeUselessStrokeAndFill" | "removeXMLProcInst" | "sortAttrs" | "sortDefsChildren" | "cleanupListOfValues" | "convertOneStopGradients" | "convertStyleToAttrs" | "prefixIds" | "removeDeprecatedAttrs" | "removeDimensions" | "removeOffCanvasPaths" | "removeRasterImages" | "removeScripts" | "removeStyleElement" | "removeTitle" | "removeViewBox" | "removeXlink" | "removeXMLNS" | "reusePaths" | "addAttributesToSVGElement" | "addClassesToSVGElement" | "removeAttributesBySelector" | "removeAttrs" | "removeElementsByAttr") | {
+  plugins?: (("preset-default" | "cleanupAttrs" | "cleanupEnableBackground" | "cleanupIds" | "cleanupNumericValues" | "collapseGroups" | "convertColors" | "convertEllipseToCircle" | "convertPathData" | "convertShapeToPath" | "convertTransform" | "inlineStyles" | "mergePaths" | "mergeStyles" | "minifyStyles" | "moveElemsAttrsToGroup" | "moveGroupAttrsToElems" | "removeComments" | "removeDeprecatedAttrs" | "removeDesc" | "removeDoctype" | "removeEditorsNSData" | "removeEmptyAttrs" | "removeEmptyContainers" | "removeEmptyText" | "removeHiddenElems" | "removeMetadata" | "removeNonInheritableGroupAttrs" | "removeUnknownsAndDefaults" | "removeUnusedNS" | "removeUselessDefs" | "removeUselessStrokeAndFill" | "removeXMLProcInst" | "sortAttrs" | "sortDefsChildren" | "cleanupListOfValues" | "convertOneStopGradients" | "convertStyleToAttrs" | "prefixIds" | "removeDimensions" | "removeOffCanvasPaths" | "removeRasterImages" | "removeScripts" | "removeStyleElement" | "removeTitle" | "removeViewBox" | "removeXlink" | "removeXMLNS" | "reusePaths" | "addAttributesToSVGElement" | "addClassesToSVGElement" | "removeAttributesBySelector" | "removeAttrs" | "removeElementsByAttr") | {
     name: "addAttributesToSVGElement"
     params?: {
       attribute?: (string | {
@@ -148,6 +148,7 @@ export type SvgoSvgo = []|[{
     name: "convertTransform"
     params?: {
       convertToShorts?: boolean
+      degPrecision?: boolean
       floatPrecision?: number
       transformPrecision?: number
       matrixToTransform?: boolean
@@ -156,6 +157,8 @@ export type SvgoSvgo = []|[{
       shortRotate?: boolean
       removeUseless?: boolean
       collapseIntoOne?: boolean
+      leadingZero?: boolean
+      negativeExtraSpace?: boolean
     }
   } | {
     name: "inlineStyles"
@@ -179,7 +182,7 @@ export type SvgoSvgo = []|[{
     params?: {
       restructure?: boolean
       forceMediaMerge?: boolean
-      comments?: (boolean | string)
+      comments?: (boolean | ("exclamation" | "first-exclamation"))
       usage?: (boolean | {
         force?: boolean
         ids?: boolean
@@ -202,6 +205,7 @@ export type SvgoSvgo = []|[{
   } | {
     name: "preset-default"
     params?: {
+      floatPrecision?: number
       overrides?: {
         cleanupAttrs?: (boolean | {
           newlines?: boolean
@@ -261,6 +265,7 @@ export type SvgoSvgo = []|[{
         })
         convertTransform?: (boolean | {
           convertToShorts?: boolean
+          degPrecision?: boolean
           floatPrecision?: number
           transformPrecision?: number
           matrixToTransform?: boolean
@@ -269,6 +274,8 @@ export type SvgoSvgo = []|[{
           shortRotate?: boolean
           removeUseless?: boolean
           collapseIntoOne?: boolean
+          leadingZero?: boolean
+          negativeExtraSpace?: boolean
         })
         inlineStyles?: (boolean | {
           onlyMatchedOnce?: boolean
@@ -285,7 +292,7 @@ export type SvgoSvgo = []|[{
         minifyStyles?: (boolean | {
           restructure?: boolean
           forceMediaMerge?: boolean
-          comments?: (boolean | string)
+          comments?: (boolean | ("exclamation" | "first-exclamation"))
           usage?: (boolean | {
             force?: boolean
             ids?: boolean
@@ -295,13 +302,17 @@ export type SvgoSvgo = []|[{
         })
         moveElemsAttrsToGroup?: false
         moveGroupAttrsToElems?: false
+        oneOf?: [{"type":"boolean"},{"type":"object","properties":{"preservePatterns":{"oneOf":[{"type":"boolean","enum":[false]},{"type":"array","items":{"type":"string"},"minItems":0}]}},"additionalProperties":false,"required":[]}]
         removeComments?: (boolean | {
           preservePatterns?: (false | string[])
+        })
+        removeDeprecatedAttrs?: (boolean | {
+          removeUnsafe?: boolean
         })
         removeDesc?: (boolean | {
           removeAny?: boolean
         })
-        removeDoctype?: (boolean | {})
+        removeDoctype?: false
         removeEditorsNSData?: (boolean | {
           additionalNamespaces?: string[]
         })
@@ -382,7 +393,7 @@ export type SvgoSvgo = []|[{
   } | {
     name: "removeDeprecatedAttrs"
     params?: {
-      removeAny?: boolean
+      removeUnsafe?: boolean
     }
   } | {
     name: "removeDesc"
