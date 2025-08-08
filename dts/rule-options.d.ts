@@ -302,7 +302,6 @@ export type SvgoSvgo = []|[{
         })
         moveElemsAttrsToGroup?: false
         moveGroupAttrsToElems?: false
-        oneOf?: [{"type":"boolean"},{"type":"object","properties":{"preservePatterns":{"oneOf":[{"type":"boolean","enum":[false]},{"type":"array","items":{"type":"string"},"minItems":0}]}},"additionalProperties":false,"required":[]}]
         removeComments?: (boolean | {
           preservePatterns?: (false | string[])
         })
