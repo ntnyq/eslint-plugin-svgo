@@ -62,7 +62,6 @@ export const presetDefaultParams = createParamsSchema({
       },
       moveElemsAttrsToGroup: onlyFalseSchema,
       moveGroupAttrsToElems: onlyFalseSchema,
-      oneOf: [booleanSchema, removeCommentsParams],
       removeComments: {
         oneOf: [booleanSchema, removeCommentsParams],
       },
