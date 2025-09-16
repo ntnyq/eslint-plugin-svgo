@@ -43,6 +43,7 @@
     "dev": "tsdown --watch",
     "lint": "eslint",
     "prepare": "husky",
+    "prepublishOnly": "pnpm run build",
     "release": "run-s release:check release:version",
     "release:check": "run-s lint typecheck test build",
     "release:version": "bumpp",
