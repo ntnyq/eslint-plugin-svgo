@@ -3,17 +3,17 @@
 [![CI](https://github.com/ntnyq/eslint-plugin-svgo/workflows/CI/badge.svg)](https://github.com/ntnyq/eslint-plugin-svgo/actions)
 [![NPM VERSION](https://img.shields.io/npm/v/eslint-plugin-svgo.svg)](https://www.npmjs.com/package/eslint-plugin-svgo)
 [![NPM DOWNLOADS](https://img.shields.io/npm/dy/eslint-plugin-svgo.svg)](https://www.npmjs.com/package/eslint-plugin-svgo)
-[![CODECOV](https://codecov.io/github/ntnyq/eslint-plugin-svgo/branch/main/graph/badge.svg?token=1B7879ETB6)](https://codecov.io/github/ntnyq/eslint-plugin-svgo)
+[![CODECOV](https://codecov.io/github/ntnyq/eslint-plugin-svgo/graph/badge.svg?token=1B7879ETB6)](https://codecov.io/github/ntnyq/eslint-plugin-svgo)
 [![LICENSE](https://img.shields.io/github/license/ntnyq/eslint-plugin-svgo.svg)](https://github.com/ntnyq/eslint-plugin-svgo/blob/main/LICENSE)
 
-Optimize SVG files with [SVGO](https://github.com/svg/svgo) using ESLint.
+Optimize SVG files with [SVGO](https://github.com/svg/svgo) via ESLint.
 
-## Supported
+## Compatibility
 
 - SVGO v4.0.0+
 - ESLint v9.5.0+
 
-## Install
+## Installation
 
 ```shell
 npm install eslint-plugin-svgo -D
@@ -52,21 +52,21 @@ import { parserPlain, plugin as pluginSVGO } from 'eslint-plugin-svgo'
 export default defineConfig([
   // ...other flat configs
   {
-    // plugin name, optional
+    // Optional plugin name
     name: 'svgo',
 
-    // only check svg files
+    // Only check SVG files
     files: ['**/*.svg'],
 
-    // ignore matched svg files
+    // Ignore matched SVG files
     ignores: ['icons/foo.svg', 'images/**/*.svg'],
 
-    // use svgo plugins
+    // Use SVGO plugins
     plugins: {
       svgo: pluginSVGO,
     },
 
-    // use parser
+    // Use parser
     languageOptions: {
       parser: parserPlain,
     },
@@ -75,24 +75,24 @@ export default defineConfig([
       'svgo/svgo': [
         'error',
         {
-          // svgo config
+          // SVGO configuration
           floatPrecision: 2,
           js2svg: {
             pretty: true,
           },
           plugins: [
-            // plugin preset-default
+            // Plugin: preset-default
             'preset-default',
 
-            // overrides preset-default
+            // Override preset-default
             {
               name: 'preset-default',
               params: {
                 overrides: {
-                  // disable plugin
+                  // Disable plugin
                   cleanupAttrs: false,
 
-                  // custom plugin params
+                  // Custom plugin parameters
                   cleanupIds: {
                     minify: false,
                   },
@@ -100,10 +100,10 @@ export default defineConfig([
               },
             },
 
-            // plugin name
+            // Plugin name
             'cleanupIds',
 
-            // plugin with params
+            // Plugin with parameters
             {
               name: 'cleanupIds',
               params: {
@@ -118,11 +118,11 @@ export default defineConfig([
 ])
 ```
 
-## Intergrated
+## Integration
 
 ### VSCode
 
-Enable `xml` support.
+Enable `xml` support:
 
 ```json
 {
@@ -132,13 +132,13 @@ Enable `xml` support.
 
 ### Prettier
 
-You should ignores `**/*.svg` for `eslint-plugin-prettier` config or add it to `.prettierignore`
+You should ignore `**/*.svg` in your `eslint-plugin-prettier` configuration or add it to `.prettierignore`.
 
 ## Rules
 
 ### `svgo/svgo`
 
-Use svgo to optimize SVG files.
+Use SVGO to optimize SVG files.
 
 #### Options
 
@@ -147,51 +147,51 @@ Use svgo to optimize SVG files.
 - **type**: `boolean | string`
 - **default**: `undefined`
 
-Use an external config file, e.g: svgo.config.mjs.
+Use an external config file, e.g. `svgo.config.mjs`.
 
-Set to `true`, svgo will auto load config.
+Set to `true` to auto-load the config.
 
-Set to `path/to/your/svgo.config` to custom config file path.
+Set to `path/to/your/svgo.config` to specify a custom config file path.
 
 > [!NOTE]
-> If you use `svgoConfig`, any other rule options will be ignored unless no config file is found.
+> If you use `svgoConfig`, all other rule options will be ignored unless no config file is found.
 
 ##### path
 
 - **type**: `string`
 - **default**: `context.filename`
 
-Can be used by plugins, for example prefixids.
+Can be used by plugins, e.g. `prefixIds`.
 
 ##### multipass
 
 - **type**: `boolean`
 - **default**: `false`
 
-Pass over SVGs multiple times to ensure all optimizations are applied.
+Run multiple optimization passes to ensure all optimizations are applied.
 
 ##### floatPrecision
 
 - **type**: `number`
 - **default**: `3`
 
-Precision of floating point numbers. Will be passed to each plugin that supports this param.
+Precision for floating point numbers. This value is passed to each plugin that supports this parameter.
 
 ##### datauri
 
 - **type**: `'base64' | 'enc' | 'unenc'`
 - **default**: `undefined`
 
-Output as Data URI string.
+Output as a Data URI string.
 
 ##### js2svg
 
 - **type**: `object`
 - **default**: `undefined`
 
-Options for rendering optimized SVG from AST. Check [svgo/lib/types.d.ts](https://github.com/svg/svgo/blob/main/lib/types.d.ts) for details.
+Options for rendering optimized SVG from AST. See [svgo/lib/types.d.ts](https://github.com/svg/svgo/blob/main/lib/types.d.ts) for details.
 
-Options bellow are not supported:
+The following options are not supported:
 
 - `regEntities`
 - `regValEntities`
@@ -202,11 +202,11 @@ Options bellow are not supported:
 - **type**: `array`
 - **default**: `['preset-default']`
 
-Plugins configuration. Check [Plugins | SVGO Documentation](https://svgo.dev/docs/plugins/) for details.
+Plugins configuration. See [Plugins | SVGO Documentation](https://svgo.dev/docs/plugins/) for details.
 
-## Limitation
+## Limitations
 
-For ESLint use json schema compatible syntax as its rule options, so **function**, **regexp** types are not supported in rule `svgo/svgo` options. See bellow:
+ESLint requires rule options to be compatible with JSON schema, so **function** and **regexp** types are not supported in the `svgo/svgo` rule options. See below:
 
 - `js2svg`
   - `regEntities` - `function`
@@ -214,19 +214,19 @@ For ESLint use json schema compatible syntax as its rule options, so **function*
   - `encodeEntity` - `function`
 - `plugins`
   - `prefixIds`
-    - `prefix` - `function`, but type `boolean` and `string` is supported
+    - `prefix` - `function` (only `boolean` and `string` are supported)
   - `addClassesToSVGElement`
-    - `className` - `function`, but type `string` is supported
-    - `classNames` - `function`, but type `string` is supported
+    - `className` - `function` (only `string` is supported)
+    - `classNames` - `function` (only `string` is supported)
   - `convertColors`
-    - `currentColor` - `regexp`, but type `boolean` and `string` is supported
+    - `currentColor` - `regexp` (only `boolean` and `string` are supported)
   - `removeComments`
-    - `preservePatterns` - `regexp`, but type `boolean` and `string` is supported
-- any custom plugins
+    - `preservePatterns` - `regexp` (only `boolean` and `string` are supported)
+- Any custom plugins
   - `fn` - `function`
 
 > [!TIP]
-> You can still support all of them by using options **[svgoConfig](https://github.com/ntnyq/eslint-plugin-svgo#svgoconfig)** and a svgo config file.
+> You can still support all of these by using the **[svgoConfig](https://github.com/ntnyq/eslint-plugin-svgo#svgoconfig)** option and a SVGO config file.
 
 ## Credits
 
