@@ -4,11 +4,11 @@ import { loadConfig, optimize } from 'svgo'
 import { runAsWorker } from 'synckit'
 
 /**
- * @typedef {import('svgo').Config & { svgoConfig?: boolean | string }} Options
+ * @typedef {import('svgo').Config & {svgoConfig?: boolean|string}} Options
  */
 
 /**
- * @type {import('svgo').Config | null}
+ * @type {import('svgo').Config|null}
  */
 let externalConfig
 
