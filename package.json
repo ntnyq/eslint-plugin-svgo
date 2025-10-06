@@ -2,7 +2,7 @@
   "name": "eslint-plugin-svgo",
   "type": "module",
   "version": "0.11.3",
-  "packageManager": "pnpm@10.17.0",
+  "packageManager": "pnpm@10.17.1",
   "description": "Optimize SVG files with SVGO via ESLint.",
   "keywords": [
     "eslint",
@@ -60,7 +60,7 @@
     "synckit": "^0.11.11"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^5.5.0",
+    "@ntnyq/eslint-config": "^5.6.0",
     "@ntnyq/prettier-config": "^3.0.1",
     "@types/json-schema": "^7.0.15",
     "@types/node": "^24.5.2",
@@ -69,7 +69,7 @@
     "eslint": "^9.36.0",
     "eslint-parser-plain": "^0.1.1",
     "eslint-typegen": "^2.3.0",
-    "eslint-vitest-rule-tester": "^2.2.1",
+    "eslint-vitest-rule-tester": "^2.2.2",
     "husky": "^9.1.7",
     "json-schema": "^0.4.0",
     "nano-staged": "^0.8.0",
@@ -77,8 +77,8 @@
     "prettier": "^3.6.2",
     "show-invisibles": "^0.0.1",
     "tinyglobby": "^0.2.15",
-    "tsdown": "^0.15.4",
-    "tsx": "^4.20.5",
+    "tsdown": "^0.15.5",
+    "tsx": "^4.20.6",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"
   },
