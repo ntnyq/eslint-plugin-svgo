@@ -2,11 +2,6 @@
  * @kind default
  */
 
-import { createParamsSchema, createPluginSchema } from '../utils'
+import { createPluginSchema } from '../utils'
 
-export const removeDoctypeParams = createParamsSchema()
-
-export const removeDoctypePlugin = createPluginSchema(
-  'removeDoctype',
-  removeDoctypeParams,
-)
+export const removeDoctypePlugin = createPluginSchema('removeDoctype')

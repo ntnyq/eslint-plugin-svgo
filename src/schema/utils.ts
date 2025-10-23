@@ -12,10 +12,7 @@ export function createParamsSchema(
   return schema
 }
 
-export function createPluginSchema(
-  pluginName: string,
-  params: JSONSchema4 = {},
-) {
+export function createPluginSchema(pluginName: string, params?: JSONSchema4) {
   const schema: JSONSchema4 = {
     type: 'object',
     properties: {
@@ -23,7 +20,9 @@ export function createPluginSchema(
         type: 'string',
         enum: [pluginName],
       },
-      ...(Object.keys(params).length ? { params } : {}),
+      ...(params && Object.keys(params.properties || {}).length > 0
+        ? { params }
+        : {}),
     },
     required: ['name'],
     additionalProperties: false,

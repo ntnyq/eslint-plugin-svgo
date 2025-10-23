@@ -61,6 +61,8 @@ import {
 } from './plugins'
 import {
   booleanSchema,
+  datauriSchema,
+  eolSchema,
   integerSchema,
   objectSchema,
   precisionSchema,
@@ -88,10 +90,7 @@ const js2svgSchema = {
     commentStart: stringSchema,
     doctypeEnd: stringSchema,
     doctypeStart: stringSchema,
-    eol: {
-      ...stringSchema,
-      enum: ['lf', 'crlf'],
-    },
+    eol: eolSchema,
     finalNewline: booleanSchema,
     indent: {
       oneOf: [stringSchema, integerSchema],
@@ -191,10 +190,7 @@ export const svgoConfigProperties = {
   path: stringSchema,
   multipass: booleanSchema,
   floatPrecision: precisionSchema,
-  datauri: {
-    ...stringSchema,
-    enum: ['base64', 'enc', 'unenc'],
-  },
+  datauri: datauriSchema,
   js2svg: js2svgSchema,
   plugins: pluginsSchema,
 } satisfies JSONSchema4['properties']

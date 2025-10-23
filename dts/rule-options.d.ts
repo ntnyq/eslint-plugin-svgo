@@ -401,10 +401,8 @@ export type SvgoSvgo = []|[{
     }
   } | {
     name: "removeDimensions"
-    params?: {}
   } | {
     name: "removeDoctype"
-    params?: {}
   } | {
     name: "removeEditorsNSData"
     params?: {

@@ -64,7 +64,6 @@ export const svgo: Rule.RuleModule = {
                 end: { line, column },
               },
             })
-            /* v8 ignore start */
           } else {
             context.report({
               loc: {
@@ -74,7 +73,6 @@ export const svgo: Rule.RuleModule = {
               message: 'Failed to optimize SVG file',
             })
           }
-          /* v8 ignore end */
         }
       },
     }

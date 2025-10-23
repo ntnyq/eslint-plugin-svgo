@@ -1,10 +1,12 @@
-import { booleanSchema, stringArraySchema, stringSchema } from '../shared'
+import {
+  booleanSchema,
+  stringOrStringArraySchema,
+  stringSchema,
+} from '../shared'
 import { createParamsSchema, createPluginSchema } from '../utils'
 
 export const removeAttrsParams = createParamsSchema({
-  attrs: {
-    oneOf: [stringSchema, stringArraySchema],
-  },
+  attrs: stringOrStringArraySchema,
   elemSeparator: stringSchema,
   preserveCurrentColor: booleanSchema,
 })

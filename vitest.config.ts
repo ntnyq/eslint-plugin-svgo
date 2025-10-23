@@ -4,7 +4,6 @@ export default defineConfig({
   test: {
     watch: false,
     coverage: {
-      all: false,
       include: ['src/**/*.ts'],
       reporter: ['lcov', 'text'],
       thresholds: {

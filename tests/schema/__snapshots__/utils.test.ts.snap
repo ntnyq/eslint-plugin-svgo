@@ -1,0 +1,107 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`createPluginSchema > real-world examples > should work with cleanupIds plugin schema 1`] = `
+{
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "enum": [
+        "cleanupIds",
+      ],
+      "type": "string",
+    },
+    "params": {
+      "additionalProperties": false,
+      "properties": {
+        "force": {
+          "type": "boolean",
+        },
+        "minify": {
+          "type": "boolean",
+        },
+        "preserve": {
+          "items": {
+            "type": "string",
+          },
+          "type": "array",
+        },
+        "preservePrefixes": {
+          "items": {
+            "type": "string",
+          },
+          "type": "array",
+        },
+        "remove": {
+          "type": "boolean",
+        },
+      },
+      "type": "object",
+    },
+  },
+  "required": [
+    "name",
+  ],
+  "type": "object",
+}
+`;
+
+exports[`createPluginSchema > real-world examples > should work with prefixIds plugin schema 1`] = `
+{
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "enum": [
+        "prefixIds",
+      ],
+      "type": "string",
+    },
+    "params": {
+      "additionalProperties": false,
+      "properties": {
+        "delim": {
+          "type": "string",
+        },
+        "prefix": {
+          "oneOf": [
+            {
+              "type": "boolean",
+            },
+            {
+              "type": "string",
+            },
+          ],
+        },
+        "prefixClassNames": {
+          "type": "boolean",
+        },
+        "prefixIds": {
+          "type": "boolean",
+        },
+      },
+      "type": "object",
+    },
+  },
+  "required": [
+    "name",
+  ],
+  "type": "object",
+}
+`;
+
+exports[`createPluginSchema > real-world examples > should work with removeMetadata plugin (no params) 1`] = `
+{
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "enum": [
+        "removeMetadata",
+      ],
+      "type": "string",
+    },
+  },
+  "required": [
+    "name",
+  ],
+  "type": "object",
+}
+`;

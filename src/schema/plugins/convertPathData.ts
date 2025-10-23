@@ -4,8 +4,8 @@
 
 import {
   booleanSchema,
-  numberSchema,
   onlyFalseSchema,
+  positiveNumberSchema,
   precisionSchema,
 } from '../shared'
 import { createParamsSchema, createPluginSchema } from '../utils'
@@ -16,8 +16,8 @@ export const convertPathDataParams = createParamsSchema({
   makeArcs: {
     type: 'object',
     properties: {
-      threshold: numberSchema,
-      tolerance: numberSchema,
+      threshold: positiveNumberSchema,
+      tolerance: positiveNumberSchema,
     },
     additionalProperties: false,
   },

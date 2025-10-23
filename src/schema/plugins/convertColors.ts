@@ -2,23 +2,20 @@
  * @kind default
  */
 
-import { booleanSchema, onlyFalseSchema, stringSchema } from '../shared'
+import {
+  booleanOrStringSchema,
+  booleanSchema,
+  colorCaseSchema,
+  onlyFalseSchema,
+} from '../shared'
 import { createParamsSchema, createPluginSchema } from '../utils'
 
 export const convertColorsParams = createParamsSchema({
-  currentColor: {
-    oneOf: [booleanSchema, stringSchema],
-  },
+  currentColor: booleanOrStringSchema,
   names2hex: booleanSchema,
   rgb2hex: booleanSchema,
   convertCase: {
-    oneOf: [
-      onlyFalseSchema,
-      {
-        ...stringSchema,
-        enum: ['lower', 'upper'],
-      },
-    ],
+    oneOf: [onlyFalseSchema, colorCaseSchema],
   },
   shorthex: booleanSchema,
   shortname: booleanSchema,
