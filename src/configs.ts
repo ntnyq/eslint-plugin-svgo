@@ -1,11 +1,12 @@
 import { parserPlain } from './parser'
 import plugin from '.'
 import type { Linter } from 'eslint'
+import type { PluginSvgo } from './types'
 
 /**
  * Recommended config of eslint-plugin-svgo
  */
-export const recommended: Linter.Config = {
+export const recommended: Linter.Config<Linter.RulesRecord> = {
   name: 'svgo/recommended',
   files: ['**/*.svg'],
   plugins: {
@@ -23,6 +24,6 @@ export const recommended: Linter.Config = {
   },
 }
 
-export const configs = {
+export const configs: PluginSvgo['configs'] = {
   recommended,
 }

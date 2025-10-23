@@ -1,13 +1,13 @@
 import { configs } from './configs'
 import { meta } from './meta'
 import { rules } from './rules'
-import type { ESLint } from 'eslint'
+import type { PluginSvgo } from './types'
 
-export const plugin = {
+export const plugin: PluginSvgo = {
   meta,
   rules,
   configs,
-} satisfies ESLint.Plugin
+}
 
 export * from './meta'
 export * from './rules'
