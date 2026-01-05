@@ -12,8 +12,8 @@ importers:
   .:
     dependencies:
       generate-differences:
-        specifier: ^0.1.0
-        version: 0.1.0
+        specifier: ^0.1.1
+        version: 0.1.1
       svgo:
         specifier: ^4.0.0
         version: 4.0.0
@@ -67,13 +67,13 @@ importers:
         specifier: ^3.7.4
         version: 3.7.4
       show-invisibles:
-        specifier: ^0.0.1
-        version: 0.0.1
+        specifier: ^0.0.2
+        version: 0.0.2
       tinyglobby:
         specifier: ^0.2.15
         version: 0.2.15
       tsdown:
-        specifier: ^0.18.2
+        specifier: ^0.18.3
         version: 0.18.3(synckit@0.11.11)(typescript@5.9.3)
       tsx:
         specifier: ^4.21.0
@@ -1634,8 +1634,8 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
-  generate-differences@0.1.0:
-    resolution: {integrity: sha512-V5pUOHbOjqKJmNjmyGPdPpZ70fqgSXDztJhmavPfWXUciBUqZuLuunuTg7W5lr2B4JkhCHtjjsa3jV2QkCg6mg==}
+  generate-differences@0.1.1:
+    resolution: {integrity: sha512-XZ4yI95KUy1xcB5xNOYtDwrCOkemwQcOuwlqTlLUBq0Zzvnfll1i+jHXYw0ut7NQDmJF5XPD1vSoV6Gjh0rpOw==}
 
   get-tsconfig@4.13.0:
     resolution: {integrity: sha512-1VKTZJCwBrvbd+Wn3AOgQP/2Av+TfTCOlE4AcRJE72W1ksZXbAx8PPBR9RzgTeSPzlPMHrbANMH3LbltH73wxQ==}
@@ -2263,9 +2263,8 @@ packages:
     resolution: {integrity: sha512-ObmnIF4hXNg1BqhnHmgbDETF8dLPCggZWBjkQfhZpbszZnYur5DUljTcCHii5LC3J5E0yeO/1LIMyH+UvHQgyw==}
     engines: {node: '>= 0.4'}
 
-  show-invisibles@0.0.1:
-    resolution: {integrity: sha512-qt1kSfYcxiEaOwxQcjd3U5z0y0hO50RPvhjLZqfY/LsIkTGmxjOAkLhR1tkKuZQOs7Y+Z1qt34j6m7YRr/KBag==}
-    engines: {node: '>=18.18.0'}
+  show-invisibles@0.0.2:
+    resolution: {integrity: sha512-3VNYS6q3pRQZxC2VV4XSufssaiGR3dwJMEqHfRLttV30iKfNYbTEIHSDExhoXyRJGPEiVgrpg6XGN/a70PPmaA==}
 
   siginfo@2.0.0:
     resolution: {integrity: sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==}
@@ -3934,7 +3933,7 @@ snapshots:
   eslint-plugin-svgo@0.11.3(eslint@9.39.2(jiti@2.6.1)):
     dependencies:
       eslint: 9.39.2(jiti@2.6.1)
-      generate-differences: 0.1.0
+      generate-differences: 0.1.1
       svgo: 4.0.0
       synckit: 0.11.11
 
@@ -4156,7 +4155,7 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
-  generate-differences@0.1.0: {}
+  generate-differences@0.1.1: {}
 
   get-tsconfig@4.13.0:
     dependencies:
@@ -4940,7 +4939,7 @@ snapshots:
 
   shell-quote@1.8.3: {}
 
-  show-invisibles@0.0.1: {}
+  show-invisibles@0.0.2: {}
 
   siginfo@2.0.0: {}
 
