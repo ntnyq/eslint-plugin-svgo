@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect x="10" y="10" width="80" height="80" style="fill:blue;stroke:red;stroke-width:2" />
+  <circle cx="50" cy="50" r="30" style="fill:#ff0000;opacity:0.5;stroke:black" />
+  <text x="20" y="40" style="font-size:16px;fill:green">Text</text>
+</svg>
