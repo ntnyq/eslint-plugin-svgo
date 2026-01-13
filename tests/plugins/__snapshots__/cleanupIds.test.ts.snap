@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`cleanupIds > invalid > Invalid #0: cleanupIds default - minify referenced IDs 1`] = `
+[
+  {
+    "column": 63,
+    "endColumn": 1,
+    "endLine": 6,
+    "fix": {
+      "range": [
+        62,
+        165,
+      ],
+      "text": "<defs><circle id="a" cx="50" cy="50" r="30"/></defs><use href="#a"/>",
+    },
+    "line": 1,
+    "message": "Replace \`⏎··<defs>⏎····<circle·id="myGradient"·cx="50"·cy="50"·r="30"·/>⏎··</defs>⏎··<use·href="#myGradient"·/>⏎\` with \`<defs><circle·id="a"·cx="50"·cy="50"·r="30"/></defs><use·href="#a"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "cleanupIds",
+    "severity": 2,
+  },
+]
+`;
