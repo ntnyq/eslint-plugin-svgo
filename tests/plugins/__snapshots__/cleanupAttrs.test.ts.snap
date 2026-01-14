@@ -1,0 +1,70 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`cleanupAttrs > invalid > Invalid #1: cleanupAttrs with newlines true 1`] = `
+[
+  {
+    "column": 63,
+    "endColumn": 1,
+    "endLine": 3,
+    "fix": {
+      "range": [
+        62,
+        136,
+      ],
+      "text": "<rect x="10" y="10" width="80" height="80" title="test newline"/>",
+    },
+    "line": 1,
+    "message": "Replace \`⏎··<rect·x="10"·y="10"·width="80"·height="80"·title="test&#xA;newline"·/>⏎\` with \`<rect·x="10"·y="10"·width="80"·height="80"·title="test·newline"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "cleanupAttrs",
+    "severity": 2,
+  },
+]
+`;
+
+exports[`cleanupAttrs > invalid > Invalid #2: cleanupAttrs with trim true 1`] = `
+[
+  {
+    "column": 63,
+    "endColumn": 1,
+    "endLine": 3,
+    "fix": {
+      "range": [
+        62,
+        135,
+      ],
+      "text": "<rect x="10" y="10" width="80" height="80" title="spaced text"/>",
+    },
+    "line": 1,
+    "message": "Replace \`⏎··<rect·x="10"·y="10"·width="80"·height="80"·title="··spaced·text··"·/>⏎\` with \`<rect·x="10"·y="10"·width="80"·height="80"·title="spaced·text"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "cleanupAttrs",
+    "severity": 2,
+  },
+]
+`;
+
+exports[`cleanupAttrs > invalid > Invalid #3: cleanupAttrs with spaces true 1`] = `
+[
+  {
+    "column": 63,
+    "endColumn": 1,
+    "endLine": 3,
+    "fix": {
+      "range": [
+        62,
+        134,
+      ],
+      "text": "<rect x="10" y="10" width="80" height="80" d="M 10 20 L 30 40"/>",
+    },
+    "line": 1,
+    "message": "Replace \`⏎··<rect·x="10"·y="10"·width="80"·height="80"·d="M·10··20··L·30··40"·/>⏎\` with \`<rect·x="10"·y="10"·width="80"·height="80"·d="M·10·20·L·30·40"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "cleanupAttrs",
+    "severity": 2,
+  },
+]
+`;

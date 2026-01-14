@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect x="10" y="10" width="80" height="80" fill="blue" transform="translate(0,0)" />
+  <circle cx="50" cy="50" r="30" fill="red" transform="scale(1.5) rotate(45)" />
+  <path d="M 10 10 L 20 20 L 30 10" transform="translate(10,20) scale(2)" />
+</svg>
