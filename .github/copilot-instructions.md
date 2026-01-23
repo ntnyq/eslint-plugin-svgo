@@ -34,18 +34,31 @@
 ## Example: Custom Rule Config
 
 ```js
-{
-  name: 'svgo',
-  files: ['**/*.svg'],
-  plugins: { svgo: pluginSVGO },
-  languageOptions: { parser: parserPlain },
-  rules: {
-    'svgo/svgo': [
-      'error',
-      { svgoConfig: true, floatPrecision: 2, plugins: ['preset-default', 'cleanupIds'] }
-    ]
-  }
-}
+import { defineConfig } from 'eslint/config'
+import { plugin as pluginSVGO, parserPlain } from 'eslint-plugin-svgo'
+
+export default defineConfig([
+  {
+    name: 'svgo',
+    files: ['**/*.svg'],
+    plugins: {
+      svgo: pluginSVGO,
+    },
+    languageOptions: {
+      parser: parserPlain,
+    },
+    rules: {
+      'svgo/svgo': [
+        'error',
+        {
+          svgoConfig: true,
+          floatPrecision: 2,
+          plugins: ['preset-default', 'cleanupIds'],
+        },
+      ],
+    },
+  },
+])
 ```
 
 ## Key Files & Directories

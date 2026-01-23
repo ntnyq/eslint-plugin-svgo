@@ -31,7 +31,7 @@ importers:
         specifier: ^25.0.8
         version: 25.0.8
       '@typescript/native-preview':
-        specifier: 7.0.0-dev.20260122.4
+        specifier: ^7.0.0-dev.20260122.4
         version: 7.0.0-dev.20260122.4
       '@vitest/coverage-v8':
         specifier: ^4.0.18
@@ -63,6 +63,9 @@ importers:
       npm-run-all2:
         specifier: ^8.0.4
         version: 8.0.4
+      oxfmt:
+        specifier: ^0.26.0
+        version: 0.26.0
       show-invisibles:
         specifier: ^0.0.2
         version: 0.0.2

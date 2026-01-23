@@ -4,6 +4,8 @@ import { defineESLintConfig } from '@ntnyq/eslint-config'
 
 export default defineESLintConfig({
   ignores: ['**/dts/rule-options.d.ts'],
+  prettier: false,
+  oxfmt: true,
   svgo: true,
   test: {
     overridesVitestRules: {

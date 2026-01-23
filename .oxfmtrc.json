@@ -12,7 +12,8 @@
     "**/dist/**",
     "pnpm-lock.yaml",
     "**/*.min.*",
-    "**/tests/fixtures/**"
+    "**/tests/fixtures/**",
+    "dts/rule-options.d.ts"
   ],
   "insertFinalNewline": true,
   "jsxSingleQuote": true,
