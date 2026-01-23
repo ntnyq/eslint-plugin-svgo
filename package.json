@@ -41,14 +41,16 @@
     "build": "pnpm run update:rule-options && tsdown",
     "coverage": "vitest --coverage",
     "dev": "tsdown --watch",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
     "lint": "eslint",
     "prepare": "husky",
     "prepublishOnly": "pnpm run build",
     "release": "run-s release:check release:version",
-    "release:check": "run-s lint typecheck test build",
+    "release:check": "run-s format:check lint typecheck test build",
     "release:version": "bumpp",
     "test": "vitest",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsgo --noEmit",
     "update:rule-options": "tsx scripts/udpateRuleOptions.ts"
   },
   "peerDependencies": {
@@ -57,14 +59,14 @@
   "dependencies": {
     "generate-differences": "^0.1.1",
     "svgo": "^4.0.0",
-    "synckit": "^0.11.11"
+    "synckit": "^0.11.12"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^5.9.0",
-    "@ntnyq/prettier-config": "^3.0.1",
+    "@ntnyq/eslint-config": "^6.0.0-beta.3",
     "@types/json-schema": "^7.0.15",
     "@types/node": "^25.0.8",
-    "@vitest/coverage-v8": "^4.0.17",
+    "@typescript/native-preview": "^7.0.0-dev.20260122.4",
+    "@vitest/coverage-v8": "^4.0.18",
     "bumpp": "^10.4.0",
     "eslint": "^9.39.2",
     "eslint-parser-plain": "^0.1.1",
@@ -74,13 +76,12 @@
     "json-schema": "^0.4.0",
     "nano-staged": "^0.9.0",
     "npm-run-all2": "^8.0.4",
-    "prettier": "^3.7.4",
     "show-invisibles": "^0.0.2",
     "tinyglobby": "^0.2.15",
-    "tsdown": "^0.20.0-beta.2",
+    "tsdown": "^0.20.1",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.17"
+    "vitest": "^4.0.18"
   },
   "nano-staged": {
     "*.{js,ts,mjs,cjs,md,yml,yaml,json}": "eslint --fix"
