@@ -32,11 +32,11 @@ Optimize SVG files with [SVGO](https://github.com/svg/svgo) via ESLint rules, en
 Choose your package manager:
 
 ```shell
-npm i -D eslint-plugin-svgo
+npm i eslint-plugin-svgo -D
 ```
 
 ```shell
-yarn add eslint-plugin-svgo --dev
+yarn add eslint-plugin-svgo -D
 ```
 
 ```shell
@@ -49,7 +49,6 @@ The quickest way to get started - use the recommended configuration:
 
 ```js
 // eslint.config.js
-
 import { defineConfig } from 'eslint/config'
 import pluginSVGO from 'eslint-plugin-svgo'
 
@@ -71,7 +70,6 @@ For more control over the SVGO optimization process, configure the plugin manual
 
 ```js
 // eslint.config.js
-
 import { defineConfig } from 'eslint/config'
 import { parserPlain, plugin as pluginSVGO } from 'eslint-plugin-svgo'
 
@@ -116,43 +114,87 @@ You can configure SVGO plugins in two ways:
 
 **1. By plugin name (using defaults):**
 
-```json
-{ "plugins": ["cleanupIds", "convertColors"] }
+```js
+import { defineConfig } from 'eslint/config'
+import pluginSVGO from 'eslint-plugin-svgo'
+
+export default defineConfig([
+  // Your other configs...
+  {
+    ...pluginSVGO.configs.recommended,
+    rules: {
+      'svgo/svgo': [
+        'error',
+        {
+          plugins: ['cleanupIds', 'convertColors'],
+        },
+      ],
+    },
+  },
+])
 ```
 
 **2. With custom parameters:**
 
-```json
-{
-  "plugins": [
-    {
-      "name": "cleanupIds",
-      "params": {
-        "minify": false
-      }
-    }
-  ]
-}
+```js
+import { defineConfig } from 'eslint/config'
+import pluginSVGO from 'eslint-plugin-svgo'
+
+export default defineConfig([
+  // Your other configs...
+  {
+    ...pluginSVGO.configs.recommended,
+    rules: {
+      'svgo/svgo': [
+        'error',
+        {
+          plugins: [
+            {
+              name: 'cleanupIds',
+              params: {
+                minify: false,
+              },
+            },
+          ],
+        },
+      ],
+    },
+  },
+])
 ```
 
 **3. Override preset defaults:**
 
-```json
-{
-  "plugins": [
-    {
-      "name": "preset-default",
-      "params": {
-        "overrides": {
-          "cleanupAttrs": false,
-          "cleanupIds": {
-            "minify": false
-          }
-        }
-      }
-    }
-  ]
-}
+```js
+import { defineConfig } from 'eslint/config'
+import pluginSVGO from 'eslint-plugin-svgo'
+
+export default defineConfig([
+  // Your other configs...
+  {
+    ...pluginSVGO.configs.recommended,
+    rules: {
+      'svgo/svgo': [
+        'error',
+        {
+          plugins: [
+            {
+              name: 'preset-default',
+              params: {
+                overrides: {
+                  cleanupAttrs: false,
+                  cleanupIds: {
+                    minify: false,
+                  },
+                },
+              },
+            },
+          ],
+        },
+      ],
+    },
+  },
+])
 ```
 
 ## 🔌 Integration Guides
@@ -247,15 +289,29 @@ Options for rendering the optimized SVG from the AST. See [SVGO's js2svg documen
 
 Common options:
 
-```json
-{
-  "js2svg": {
-    "pretty": true, // Add newlines and indentation
-    "indent": 2, // Indentation size
-    "eol": "lf", // Line ending style
-    "final": true // Add final newline
-  }
-}
+```js
+import { defineConfig } from 'eslint/config'
+import pluginSVGO from 'eslint-plugin-svgo'
+
+export default defineConfig([
+  // Your other configs...
+  {
+    ...pluginSVGO.configs.recommended,
+    rules: {
+      'svgo/svgo': [
+        'error',
+        {
+          js2svg: {
+            pretty: true, // Add newlines and indentation
+            indent: 2, // Indentation size
+            eol: 'lf', // Line ending style
+            final: true, // Add final newline
+          },
+        },
+      ],
+    },
+  },
+])
 ```
 
 > **Unsupported options**: `regEntities`, `regValEntities`, `encodeEntity` (require functions)
@@ -269,20 +325,34 @@ List of SVGO plugins to apply. See [SVGO's plugin documentation](https://svgo.de
 
 **Example configuration:**
 
-```json
-{
-  "plugins": [
-    "preset-default",
-    "removeDoctype",
-    {
-      "name": "cleanupIds",
-      "params": {
-        "minify": false,
-        "prefix": "icon-"
-      }
-    }
-  ]
-}
+```js
+import { defineConfig } from 'eslint/config'
+import pluginSVGO from 'eslint-plugin-svgo'
+
+export default defineConfig([
+  // Your other configs...
+  {
+    ...pluginSVGO.configs.recommended,
+    rules: {
+      'svgo/svgo': [
+        'error',
+        {
+          plugins: [
+            'preset-default',
+            'removeDoctype',
+            {
+              name: 'cleanupIds',
+              params: {
+                minify: false,
+                prefix: 'icon-',
+              },
+            },
+          ],
+        },
+      ],
+    },
+  },
+])
 ```
 
 ## ⚠️ JSON Schema Limitations
@@ -325,12 +395,19 @@ export default {
 
 Then reference it in your ESLint config:
 
-```json
-{
-  "rules": {
-    "svgo/svgo": ["error", { "svgoConfig": "./svgo.config.mjs" }]
-  }
-}
+```js
+import { defineConfig } from 'eslint/config'
+import pluginSVGO from 'eslint-plugin-svgo'
+
+export default defineConfig([
+  // Your other configs...
+  {
+    ...pluginSVGO.configs.recommended,
+    rules: {
+      'svgo/svgo': ['error', { svgoConfig: './svgo.config.mjs' }],
+    },
+  },
+])
 ```
 
 > **Tip**: External config files are the most flexible way to configure SVGO with all its advanced features.
@@ -339,75 +416,115 @@ Then reference it in your ESLint config:
 
 ### Basic SVG Optimization
 
-```json
-{
-  "rules": {
-    "svgo/svgo": "error"
-  }
-}
+```js
+import { defineConfig } from 'eslint/config'
+import pluginSVGO from 'eslint-plugin-svgo'
+
+export default defineConfig([
+  // Your other configs...
+  {
+    ...pluginSVGO.configs.recommended,
+    rules: {
+      'svgo/svgo': 'error',
+    },
+  },
+])
 ```
 
 ### With Custom Float Precision
 
-```json
-{
-  "rules": {
-    "svgo/svgo": ["error", { "floatPrecision": 2 }]
-  }
-}
+```js
+import { defineConfig } from 'eslint/config'
+import pluginSVGO from 'eslint-plugin-svgo'
+
+export default defineConfig([
+  // Your other configs...
+  {
+    ...pluginSVGO.configs.recommended,
+    rules: {
+      'svgo/svgo': [
+        'error',
+        {
+          floatPrecision: 2,
+        },
+      ],
+    },
+  },
+])
 ```
 
 ### Pretty-Printed SVG Output
 
-```json
-{
-  "rules": {
-    "svgo/svgo": [
-      "error",
-      {
-        "js2svg": {
-          "pretty": true,
-          "indent": 2
-        }
-      }
-    ]
-  }
-}
+```js
+import { defineConfig } from 'eslint/config'
+import pluginSVGO from 'eslint-plugin-svgo'
+
+export default defineConfig([
+  // Your other configs...
+  {
+    ...pluginSVGO.configs.recommended,
+    rules: {
+      'svgo/svgo': [
+        'error',
+        {
+          js2svg: {
+            pretty: true,
+            indent: 2,
+          },
+        },
+      ],
+    },
+  },
+])
 ```
 
 ### Disable Specific Plugins
 
-```json
-{
-  "rules": {
-    "svgo/svgo": [
-      "error",
-      {
-        "plugins": [
-          {
-            "name": "preset-default",
-            "params": {
-              "overrides": {
-                "removeDoctype": false,
-                "removeComments": false
-              }
-            }
-          }
-        ]
-      }
-    ]
-  }
-}
+```js
+import { defineConfig } from 'eslint/config'
+import pluginSVGO from 'eslint-plugin-svgo'
+
+export default defineConfig([
+  // Your other configs...
+  {
+    ...pluginSVGO.configs.recommended,
+    rules: {
+      'svgo/svgo': [
+        'error',
+        {
+          plugins: [
+            {
+              name: 'preset-default',
+              params: {
+                overrides: {
+                  removeDoctype: false,
+                  removeComments: false,
+                },
+              },
+            },
+          ],
+        },
+      ],
+    },
+  },
+])
 ```
 
 ### Using External Config
 
-```json
-{
-  "rules": {
-    "svgo/svgo": ["error", { "svgoConfig": true }]
-  }
-}
+```js
+import { defineConfig } from 'eslint/config'
+import pluginSVGO from 'eslint-plugin-svgo'
+
+export default defineConfig([
+  // Your other configs...
+  {
+    ...pluginSVGO.configs.recommended,
+    rules: {
+      'svgo/svgo': ['error', { svgoConfig: true }],
+    },
+  },
+])
 ```
 
 With `svgo.config.mjs`:
