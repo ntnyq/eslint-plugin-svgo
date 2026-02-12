@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`inlineStyles > invalid > Invalid #0: inlineStyles - inline CSS from style element to attributes 1`] = `
+[
+  {
+    "column": 63,
+    "endColumn": 1,
+    "endLine": 6,
+    "fix": {
+      "range": [
+        62,
+        173,
+      ],
+      "text": "<rect x="10" y="10" width="80" height="80" style="fill:blue"/>",
+    },
+    "line": 1,
+    "message": "Replace \`⏎··<style>⏎····.shape·{·fill:·blue;·}⏎··</style>⏎··<rect·x="10"·y="10"·width="80"·height="80"·class="shape"·/>⏎\` with \`<rect·x="10"·y="10"·width="80"·height="80"·style="fill:blue"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "inlineStyles",
+    "severity": 2,
+  },
+]
+`;

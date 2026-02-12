@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`mergeStyles > invalid > Invalid #0: mergeStyles - merge multiple style elements 1`] = `
+[
+  {
+    "column": 63,
+    "endColumn": 1,
+    "endLine": 5,
+    "fix": {
+      "range": [
+        62,
+        209,
+      ],
+      "text": "<style>.shape { fill: blue; }.text { font-size: 12px; }</style><rect x="10" y="10" width="80" height="80" class="shape"/>",
+    },
+    "line": 1,
+    "message": "Replace \`⏎··<style>.shape·{·fill:·blue;·}</style>⏎··<style>.text·{·font-size:·12px;·}</style>⏎··<rect·x="10"·y="10"·width="80"·height="80"·class="shape"·/>⏎\` with \`<style>.shape·{·fill:·blue;·}.text·{·font-size:·12px;·}</style><rect·x="10"·y="10"·width="80"·height="80"·class="shape"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "mergeStyles",
+    "severity": 2,
+  },
+]
+`;

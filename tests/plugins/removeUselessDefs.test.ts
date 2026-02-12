@@ -31,7 +31,7 @@ run({
         expect(output).toMatch(/p1/)
       },
       errors(errors) {
-        expect(errors.length).toBeGreaterThan(0)
+        expect(errors).toMatchSnapshot()
       },
     },
   ],

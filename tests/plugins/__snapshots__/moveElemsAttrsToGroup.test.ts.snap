@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`moveElemsAttrsToGroup > invalid > Invalid #0: moveElemsAttrsToGroup - move common attributes to parent group 1`] = `
+[
+  {
+    "column": 63,
+    "endColumn": 1,
+    "endLine": 6,
+    "fix": {
+      "range": [
+        62,
+        200,
+      ],
+      "text": "<g fill="blue"><rect x="10" y="10" width="30" height="30"/><rect x="50" y="50" width="30" height="30"/></g>",
+    },
+    "line": 1,
+    "message": "Replace \`⏎··<g>⏎····<rect·x="10"·y="10"·width="30"·height="30"·fill="blue"·/>⏎····<rect·x="50"·y="50"·width="30"·height="30"·fill="blue"·/>⏎··</g>⏎\` with \`<g·fill="blue"><rect·x="10"·y="10"·width="30"·height="30"/><rect·x="50"·y="50"·width="30"·height="30"/></g>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "moveElemsAttrsToGroup",
+    "severity": 2,
+  },
+]
+`;

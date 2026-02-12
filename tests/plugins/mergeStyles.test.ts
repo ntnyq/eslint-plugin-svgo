@@ -26,7 +26,7 @@ run({
         expect(styleCount).toBeLessThanOrEqual(1)
       },
       errors(errors) {
-        expect(errors.length).toBeGreaterThan(0)
+        expect(errors).toMatchSnapshot()
       },
     },
   ],

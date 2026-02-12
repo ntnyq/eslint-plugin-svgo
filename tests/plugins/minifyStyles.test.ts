@@ -29,7 +29,7 @@ run({
         expect(output).toMatch(/.shape\{fill:#00f;stroke:red\}/)
       },
       errors(errors) {
-        expect(errors.length).toBeGreaterThan(0)
+        expect(errors).toMatchSnapshot()
       },
     },
   ],

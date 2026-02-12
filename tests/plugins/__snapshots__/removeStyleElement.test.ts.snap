@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`removeStyleElement > invalid > Invalid #0: removeStyleElement - remove style elements 1`] = `
+[
+  {
+    "column": 63,
+    "endColumn": 1,
+    "endLine": 4,
+    "fix": {
+      "range": [
+        62,
+        165,
+      ],
+      "text": "<rect x="10" y="10" width="80" height="80" class="shape"/>",
+    },
+    "line": 1,
+    "message": "Replace \`⏎··<style>.shape·{·fill:·blue;·}</style>⏎··<rect·x="10"·y="10"·width="80"·height="80"·class="shape"·/>⏎\` with \`<rect·x="10"·y="10"·width="80"·height="80"·class="shape"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "removeStyleElement",
+    "severity": 2,
+  },
+]
+`;

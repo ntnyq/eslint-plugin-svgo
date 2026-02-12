@@ -30,7 +30,7 @@ run({
         expect(output).toMatch(/class="icon svg-icon"/)
       },
       errors(errors) {
-        expect(errors.length).toBeGreaterThan(0)
+        expect(errors).toMatchSnapshot()
       },
     },
   ],

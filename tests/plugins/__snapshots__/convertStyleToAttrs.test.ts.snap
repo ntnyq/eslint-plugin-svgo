@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`convertStyleToAttrs > invalid > Invalid #0: convertStyleToAttrs default - convert style to attributes 1`] = `
+[
+  {
+    "column": 63,
+    "endColumn": 1,
+    "endLine": 3,
+    "fix": {
+      "range": [
+        62,
+        129,
+      ],
+      "text": "<rect x="10" y="10" width="80" height="80" fill="blue"/>",
+    },
+    "line": 1,
+    "message": "Replace \`⏎··<rect·x="10"·y="10"·width="80"·height="80"·style="fill:blue"·/>⏎\` with \`<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "convertStyleToAttrs",
+    "severity": 2,
+  },
+]
+`;

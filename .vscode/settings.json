@@ -3,7 +3,6 @@
   "eslint.enable": true,
   "prettier.enable": false,
   "editor.formatOnSave": true,
-  "typescript.experimental.useTsgo": true,
   "editor.defaultFormatter": "oxc.oxc-vscode",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
@@ -24,6 +23,7 @@
     "javascriptreact",
     "typescriptreact"
   ],
+  "typescript.experimental.useTsgo": true,
   "cSpell.words": [
     "bumpp",
     "changelogithub",

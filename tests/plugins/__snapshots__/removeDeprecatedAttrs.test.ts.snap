@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`removeDeprecatedAttrs > invalid > Invalid #0: removeDeprecatedAttrs - remove deprecated SVG attributes 1`] = `
+[
+  {
+    "column": 62,
+    "endColumn": 1,
+    "endLine": 3,
+    "fix": {
+      "range": [
+        61,
+        137,
+      ],
+      "text": "><rect x="10" y="10" width="80" height="80" fill="blue"/>",
+    },
+    "line": 1,
+    "message": "Replace \`·version="1.1">⏎··<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"·/>⏎\` with \`><rect·x="10"·y="10"·width="80"·height="80"·fill="blue"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "removeDeprecatedAttrs",
+    "severity": 2,
+  },
+]
+`;

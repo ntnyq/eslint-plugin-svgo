@@ -25,7 +25,7 @@ run({
         expect(output).not.toMatch(/<!--/)
       },
       errors(errors) {
-        expect(errors.length).toBeGreaterThan(0)
+        expect(errors).toMatchSnapshot()
       },
     },
     {
@@ -56,7 +56,7 @@ run({
         expect(output).toMatch(/<!--/)
       },
       errors(errors) {
-        expect(errors.length).toBeGreaterThan(0)
+        expect(errors).toMatchSnapshot()
       },
     },
   ],

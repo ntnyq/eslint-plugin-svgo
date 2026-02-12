@@ -27,7 +27,7 @@ run({
         expect(output).toMatch(/<g fill="blue">/)
       },
       errors(errors) {
-        expect(errors.length).toBeGreaterThan(0)
+        expect(errors).toMatchSnapshot()
       },
     },
   ],

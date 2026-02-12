@@ -23,7 +23,7 @@ run({
         expect(output).not.toMatch(/fill=""/)
       },
       errors(errors) {
-        expect(errors.length).toBeGreaterThan(0)
+        expect(errors).toMatchSnapshot()
       },
     },
   ],

@@ -25,7 +25,7 @@ run({
         expect(output).toMatch(/width="100"/)
       },
       errors(errors) {
-        expect(errors.length).toBeGreaterThan(0)
+        expect(errors).toMatchSnapshot()
       },
     },
   ],

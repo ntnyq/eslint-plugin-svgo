@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`sortAttrs > invalid > Invalid #0: sortAttrs - sort attributes alphabetically 1`] = `
+[
+  {
+    "column": 63,
+    "endColumn": 1,
+    "endLine": 3,
+    "fix": {
+      "range": [
+        62,
+        123,
+      ],
+      "text": "<rect width="80" height="80" x="10" y="10" fill="blue"/>",
+    },
+    "line": 1,
+    "message": "Replace \`⏎··<rect·fill="blue"·x="10"·y="10"·width="80"·height="80"·/>⏎\` with \`<rect·width="80"·height="80"·x="10"·y="10"·fill="blue"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "sortAttrs",
+    "severity": 2,
+  },
+]
+`;

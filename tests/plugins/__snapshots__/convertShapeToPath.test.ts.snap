@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`convertShapeToPath > invalid > Invalid #0: convertShapeToPath - convert rect to path 1`] = `
+[
+  {
+    "column": 63,
+    "endColumn": 1,
+    "endLine": 3,
+    "fix": {
+      "range": [
+        62,
+        123,
+      ],
+      "text": "<path fill="blue" d="M10 10H90V90H10z"/>",
+    },
+    "line": 1,
+    "message": "Replace \`⏎··<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"·/>⏎\` with \`<path·fill="blue"·d="M10·10H90V90H10z"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "convertShapeToPath",
+    "severity": 2,
+  },
+]
+`;

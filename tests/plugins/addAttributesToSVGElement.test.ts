@@ -32,7 +32,7 @@ run({
         expect(output).toMatch(/aria-label="Icon"/)
       },
       errors(errors) {
-        expect(errors.length).toBeGreaterThan(0)
+        expect(errors).toMatchSnapshot()
       },
     },
   ],

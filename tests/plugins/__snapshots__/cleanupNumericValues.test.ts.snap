@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`cleanupNumericValues > invalid > Invalid #0: cleanupNumericValues default - clean numeric values 1`] = `
+[
+  {
+    "column": 63,
+    "endColumn": 1,
+    "endLine": 3,
+    "fix": {
+      "range": [
+        62,
+        131,
+      ],
+      "text": "<rect x="10" y="20" width="50" height="60" fill="blue"/>",
+    },
+    "line": 1,
+    "message": "Replace \`⏎··<rect·x="10.00"·y="20.00"·width="50.0"·height="60"·fill="blue"·/>⏎\` with \`<rect·x="10"·y="20"·width="50"·height="60"·fill="blue"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "cleanupNumericValues",
+    "severity": 2,
+  },
+]
+`;

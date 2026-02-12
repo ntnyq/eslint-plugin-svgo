@@ -23,7 +23,7 @@ run({
         expect(output).toMatch(/points="10 10 50 90 90 10"/)
       },
       errors(errors) {
-        expect(errors.length).toBeGreaterThan(0)
+        expect(errors).toMatchSnapshot()
       },
     },
   ],

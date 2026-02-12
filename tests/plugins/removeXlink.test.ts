@@ -27,7 +27,7 @@ run({
         expect(output).toMatch(/href="#circle"/)
       },
       errors(errors) {
-        expect(errors.length).toBeGreaterThan(0)
+        expect(errors).toMatchSnapshot()
       },
     },
   ],

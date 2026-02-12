@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`removeXMLNS > invalid > Invalid #0: removeXMLNS - remove xmlns attribute 1`] = `
+[
+  {
+    "column": 6,
+    "endColumn": 1,
+    "endLine": 3,
+    "fix": {
+      "range": [
+        5,
+        123,
+      ],
+      "text": "viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" fill="blue"/>",
+    },
+    "line": 1,
+    "message": "Replace \`xmlns="http://www.w3.org/2000/svg"·viewBox="0·0·100·100">⏎··<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"·/>⏎\` with \`viewBox="0·0·100·100"><rect·x="10"·y="10"·width="80"·height="80"·fill="blue"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "removeXMLNS",
+    "severity": 2,
+  },
+]
+`;

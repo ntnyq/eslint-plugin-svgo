@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`removeEditorsNSData > invalid > Invalid #0: removeEditorsNSData - remove editor namespace data 1`] = `
+[
+  {
+    "column": 41,
+    "endColumn": 1,
+    "endLine": 3,
+    "fix": {
+      "range": [
+        40,
+        205,
+      ],
+      "text": "viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" fill="blue"/>",
+    },
+    "line": 1,
+    "message": "Replace \`xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"·viewBox="0·0·100·100">⏎··<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"·sketch:type="MSShapeGroup"·/>⏎\` with \`viewBox="0·0·100·100"><rect·x="10"·y="10"·width="80"·height="80"·fill="blue"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "removeEditorsNSData",
+    "severity": 2,
+  },
+]
+`;

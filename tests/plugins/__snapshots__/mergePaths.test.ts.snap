@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`mergePaths > invalid > Invalid #0: mergePaths - merge multiple path elements 1`] = `
+[
+  {
+    "column": 63,
+    "endColumn": 1,
+    "endLine": 4,
+    "fix": {
+      "range": [
+        62,
+        153,
+      ],
+      "text": "<path d="M10 10h30v30h-30zM50 50h30v30h-30z" fill="blue"/>",
+    },
+    "line": 1,
+    "message": "Replace \`⏎··<path·d="M10·10h30v30h-30z"·fill="blue"·/>⏎··<path·d="M50·50h30v30h-30z"·fill="blue"·/>⏎\` with \`<path·d="M10·10h30v30h-30zM50·50h30v30h-30z"·fill="blue"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "mergePaths",
+    "severity": 2,
+  },
+]
+`;

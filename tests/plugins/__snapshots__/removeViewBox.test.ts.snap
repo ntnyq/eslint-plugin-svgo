@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`removeViewBox > invalid > Invalid #0: removeViewBox default - remove viewBox when width/height present 1`] = `
+[
+  {
+    "column": 41,
+    "endColumn": 1,
+    "endLine": 3,
+    "fix": {
+      "range": [
+        40,
+        148,
+      ],
+      "text": "width="100" height="100"><rect x="10" y="10" width="80" height="80" fill="blue"/>",
+    },
+    "line": 1,
+    "message": "Replace \`viewBox="0·0·100·100"·width="100"·height="100">⏎··<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"·/>⏎\` with \`width="100"·height="100"><rect·x="10"·y="10"·width="80"·height="80"·fill="blue"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "removeViewBox",
+    "severity": 2,
+  },
+]
+`;

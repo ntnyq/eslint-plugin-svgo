@@ -24,7 +24,7 @@ run({
         expect(output).not.toMatch(/<title/)
       },
       errors(errors) {
-        expect(errors.length).toBeGreaterThan(0)
+        expect(errors).toMatchSnapshot()
       },
     },
   ],

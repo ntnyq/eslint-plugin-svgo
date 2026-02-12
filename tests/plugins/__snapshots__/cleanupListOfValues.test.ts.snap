@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`cleanupListOfValues > invalid > Invalid #0: cleanupListOfValues - optimize list-based attribute values 1`] = `
+[
+  {
+    "column": 63,
+    "endColumn": 1,
+    "endLine": 3,
+    "fix": {
+      "range": [
+        62,
+        121,
+      ],
+      "text": "<polygon points="10 10 50 90 90 10" fill="blue"/>",
+    },
+    "line": 1,
+    "message": "Replace \`⏎··<polygon·points="10,·10··50,·90··90,·10"·fill="blue"·/>⏎\` with \`<polygon·points="10·10·50·90·90·10"·fill="blue"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "cleanupListOfValues",
+    "severity": 2,
+  },
+]
+`;

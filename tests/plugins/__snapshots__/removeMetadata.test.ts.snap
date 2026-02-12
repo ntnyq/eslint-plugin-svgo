@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`removeMetadata > invalid > Invalid #0: removeMetadata default - remove metadata elements 1`] = `
+[
+  {
+    "column": 63,
+    "endColumn": 1,
+    "endLine": 4,
+    "fix": {
+      "range": [
+        62,
+        216,
+      ],
+      "text": "<rect x="10" y="10" width="80" height="80" fill="blue"/>",
+    },
+    "line": 1,
+    "message": "Replace \`⏎··<metadata><dc:title·xmlns:dc="http://purl.org/dc/elements/1.1/">Icon</dc:title></metadata>⏎··<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"·/>⏎\` with \`<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "removeMetadata",
+    "severity": 2,
+  },
+]
+`;

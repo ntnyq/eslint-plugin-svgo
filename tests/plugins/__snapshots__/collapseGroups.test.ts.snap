@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`collapseGroups > invalid > Invalid #0: collapseGroups default - collapse redundant groups 1`] = `
+[
+  {
+    "column": 63,
+    "endColumn": 1,
+    "endLine": 5,
+    "fix": {
+      "range": [
+        62,
+        138,
+      ],
+      "text": "<rect x="10" y="10" width="30" height="30" fill="blue"/>",
+    },
+    "line": 1,
+    "message": "Replace \`⏎··<g·fill="blue">⏎····<rect·x="10"·y="10"·width="30"·height="30"·/>⏎··</g>⏎\` with \`<rect·x="10"·y="10"·width="30"·height="30"·fill="blue"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "collapseGroups",
+    "severity": 2,
+  },
+]
+`;

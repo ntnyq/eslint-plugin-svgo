@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`minifyStyles > invalid > Invalid #0: minifyStyles - minify CSS in style elements 1`] = `
+[
+  {
+    "column": 63,
+    "endColumn": 1,
+    "endLine": 9,
+    "fix": {
+      "range": [
+        62,
+        202,
+      ],
+      "text": "<style>.shape{fill:#00f;stroke:red}</style><rect x="10" y="10" width="80" height="80" class="shape"/>",
+    },
+    "line": 1,
+    "message": "Replace \`⏎··<style>⏎····.shape·{⏎······fill:·blue;⏎······stroke:·red;⏎····}⏎··</style>⏎··<rect·x="10"·y="10"·width="80"·height="80"·class="shape"·/>⏎\` with \`<style>.shape{fill:#00f;stroke:red}</style><rect·x="10"·y="10"·width="80"·height="80"·class="shape"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "minifyStyles",
+    "severity": 2,
+  },
+]
+`;

@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`removeXMLProcInst > invalid > Invalid #0: removeXMLProcInst default - remove XML declaration 1`] = `
+[
+  {
+    "column": 1,
+    "endColumn": 1,
+    "endLine": 4,
+    "fix": {
+      "range": [
+        0,
+        162,
+      ],
+      "text": "<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" fill="blue"/>",
+    },
+    "line": 1,
+    "message": "Replace \`<?xml·version="1.0"·encoding="UTF-8"?>⏎<svg·xmlns="http://www.w3.org/2000/svg"·viewBox="0·0·100·100">⏎··<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"·/>⏎\` with \`<svg·xmlns="http://www.w3.org/2000/svg"·viewBox="0·0·100·100"><rect·x="10"·y="10"·width="80"·height="80"·fill="blue"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "removeXMLProcInst",
+    "severity": 2,
+  },
+]
+`;

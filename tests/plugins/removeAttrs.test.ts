@@ -31,7 +31,7 @@ run({
         expect(output).not.toMatch(/class="/)
       },
       errors(errors) {
-        expect(errors.length).toBeGreaterThan(0)
+        expect(errors).toMatchSnapshot()
       },
     },
   ],

@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`removeEmptyAttrs > invalid > Invalid #0: removeEmptyAttrs default - remove all empty attributes 1`] = `
+[
+  {
+    "column": 63,
+    "endColumn": 1,
+    "endLine": 3,
+    "fix": {
+      "range": [
+        62,
+        119,
+      ],
+      "text": "<rect x="10" y="10" width="80" height="80"/>",
+    },
+    "line": 1,
+    "message": "Replace \`⏎··<rect·x="10"·y="10"·width="80"·height="80"·fill=""·/>⏎\` with \`<rect·x="10"·y="10"·width="80"·height="80"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "removeEmptyAttrs",
+    "severity": 2,
+  },
+]
+`;

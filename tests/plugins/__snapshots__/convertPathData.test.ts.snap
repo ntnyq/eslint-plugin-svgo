@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`convertPathData > invalid > Invalid #0: convertPathData default - convert path data 1`] = `
+[
+  {
+    "column": 63,
+    "endColumn": 1,
+    "endLine": 3,
+    "fix": {
+      "range": [
+        62,
+        129,
+      ],
+      "text": "<path d="m10 10 10 10 10-10" fill="none" stroke="black"/>",
+    },
+    "line": 1,
+    "message": "Replace \`⏎··<path·d="M·10·10·L·20·20·L·30·10"·fill="none"·stroke="black"·/>⏎\` with \`<path·d="m10·10·10·10·10-10"·fill="none"·stroke="black"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "convertPathData",
+    "severity": 2,
+  },
+]
+`;

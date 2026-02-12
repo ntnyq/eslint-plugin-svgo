@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`removeElementsByAttr > invalid > Invalid #0: removeElementsByAttr - remove elements by attribute 1`] = `
+[
+  {
+    "column": 63,
+    "endColumn": 1,
+    "endLine": 4,
+    "fix": {
+      "range": [
+        62,
+        197,
+      ],
+      "text": "<rect x="50" y="50" width="30" height="30" fill="red"/>",
+    },
+    "line": 1,
+    "message": "Replace \`⏎··<rect·x="10"·y="10"·width="30"·height="30"·fill="blue"·id="remove-me"·/>⏎··<rect·x="50"·y="50"·width="30"·height="30"·fill="red"·/>⏎\` with \`<rect·x="50"·y="50"·width="30"·height="30"·fill="red"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "removeElementsByAttr",
+    "severity": 2,
+  },
+]
+`;

@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`addAttributesToSVGElement > invalid > Invalid #0: addAttributesToSVGElement - add custom attributes to SVG element 1`] = `
+[
+  {
+    "column": 62,
+    "endColumn": 1,
+    "endLine": 3,
+    "fix": {
+      "range": [
+        61,
+        123,
+      ],
+      "text": " role="img" aria-label="Icon"><rect x="10" y="10" width="80" height="80" fill="blue"/>",
+    },
+    "line": 1,
+    "message": "Replace \`>⏎··<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"·/>⏎\` with \`·role="img"·aria-label="Icon"><rect·x="10"·y="10"·width="80"·height="80"·fill="blue"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "addAttributesToSVGElement",
+    "severity": 2,
+  },
+]
+`;

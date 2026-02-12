@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`removeUselessStrokeAndFill > invalid > Invalid #0: removeUselessStrokeAndFill - remove useless stroke and fill attributes 1`] = `
+[
+  {
+    "column": 63,
+    "endColumn": 1,
+    "endLine": 3,
+    "fix": {
+      "range": [
+        62,
+        122,
+      ],
+      "text": "<path d="M10 10h80v80h-80z" fill="none"/>",
+    },
+    "line": 1,
+    "message": "Replace \`⏎··<path·d="M10·10h80v80h-80z"·fill="none"·stroke="none"·/>⏎\` with \`<path·d="M10·10h80v80h-80z"·fill="none"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "removeUselessStrokeAndFill",
+    "severity": 2,
+  },
+]
+`;

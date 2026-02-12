@@ -1,5 +1,28 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`cleanupAttrs > invalid > Invalid #0: cleanupAttrs default - remove empty attributes 1`] = `
+[
+  {
+    "column": 63,
+    "endColumn": 1,
+    "endLine": 4,
+    "fix": {
+      "range": [
+        62,
+        180,
+      ],
+      "text": "<rect x="10" y="10" width="80" height="80" fill="" stroke=""/><circle cx="50" cy="50" r="30" id="" class=""/>",
+    },
+    "line": 1,
+    "message": "Replace \`⏎··<rect·x="10"·y="10"·width="80"·height="80"·fill=""·stroke=""·/>⏎··<circle·cx="50"·cy="50"·r="30"·id=""·class=""·/>⏎\` with \`<rect·x="10"·y="10"·width="80"·height="80"·fill=""·stroke=""/><circle·cx="50"·cy="50"·r="30"·id=""·class=""/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "cleanupAttrs",
+    "severity": 2,
+  },
+]
+`;
+
 exports[`cleanupAttrs > invalid > Invalid #1: cleanupAttrs with newlines true 1`] = `
 [
   {

@@ -1,0 +1,47 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`preset-default > invalid > Invalid #0: preset-default - apply default optimizations 1`] = `
+[
+  {
+    "column": 63,
+    "endColumn": 1,
+    "endLine": 5,
+    "fix": {
+      "range": [
+        62,
+        166,
+      ],
+      "text": "<title>My SVG</title><path fill="#00f" d="M10 10h80v80H10z"/>",
+    },
+    "line": 1,
+    "message": "Replace \`⏎··<!--·Comment·-->⏎··<title>My·SVG</title>⏎··<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"·/>⏎\` with \`<title>My·SVG</title><path·fill="#00f"·d="M10·10h80v80H10z"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "preset-default",
+    "severity": 2,
+  },
+]
+`;
+
+exports[`preset-default > invalid > Invalid #1: preset-default with overrides - customize specific plugins 1`] = `
+[
+  {
+    "column": 63,
+    "endColumn": 1,
+    "endLine": 5,
+    "fix": {
+      "range": [
+        62,
+        166,
+      ],
+      "text": "<!--Comment--><title>My SVG</title><path fill="#00f" d="M10 10h80v80H10z"/>",
+    },
+    "line": 1,
+    "message": "Replace \`⏎··<!--·Comment·-->⏎··<title>My·SVG</title>⏎··<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"·/>⏎\` with \`<!--Comment--><title>My·SVG</title><path·fill="#00f"·d="M10·10h80v80H10z"/>\`",
+    "messageId": "replace",
+    "nodeType": null,
+    "ruleId": "preset-default",
+    "severity": 2,
+  },
+]
+`;

@@ -25,7 +25,7 @@ run({
         expect(output).not.toMatch(/M200 200/)
       },
       errors(errors) {
-        expect(errors.length).toBeGreaterThan(0)
+        expect(errors).toMatchSnapshot()
       },
     },
   ],
