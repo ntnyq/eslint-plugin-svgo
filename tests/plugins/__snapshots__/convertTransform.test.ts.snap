@@ -16,7 +16,6 @@ exports[`convertTransform > invalid > Invalid #0: convertTransform default - opt
     "line": 1,
     "message": "Replace \`⏎··<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"·transform="translate(0,0)"·/>⏎\` with \`<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "convertTransform",
     "severity": 2,
   },

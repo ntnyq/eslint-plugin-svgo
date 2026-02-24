@@ -16,7 +16,6 @@ exports[`removeTitle > invalid > Invalid #0: removeTitle default - remove title 
     "line": 1,
     "message": "Replace \`⏎··<title>My·SVG·Icon</title>⏎··<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"·/>⏎\` with \`<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "removeTitle",
     "severity": 2,
   },

@@ -16,7 +16,6 @@ exports[`removeEmptyContainers > invalid > Invalid #0: removeEmptyContainers def
     "line": 1,
     "message": "Replace \`⏎··<g></g>⏎··<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"·/>⏎\` with \`<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "removeEmptyContainers",
     "severity": 2,
   },

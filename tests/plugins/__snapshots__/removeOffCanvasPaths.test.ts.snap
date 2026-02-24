@@ -16,7 +16,6 @@ exports[`removeOffCanvasPaths > invalid > Invalid #0: removeOffCanvasPaths - rem
     "line": 1,
     "message": "Replace \`⏎··<path·d="M10·10h80v80h-80z"·fill="blue"·/>⏎··<path·d="M200·200h80v80h-80z"·fill="red"·/>⏎\` with \`<path·d="M10·10h80v80h-80z"·fill="blue"/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "removeOffCanvasPaths",
     "severity": 2,
   },

@@ -16,7 +16,6 @@ exports[`removeUnusedNS > invalid > Invalid #0: removeUnusedNS - remove unused n
     "line": 1,
     "message": "Replace \`xmlns:xlink="http://www.w3.org/1999/xlink"·viewBox="0·0·100·100">⏎··<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"·/>⏎\` with \`viewBox="0·0·100·100"><rect·x="10"·y="10"·width="80"·height="80"·fill="blue"/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "removeUnusedNS",
     "severity": 2,
   },

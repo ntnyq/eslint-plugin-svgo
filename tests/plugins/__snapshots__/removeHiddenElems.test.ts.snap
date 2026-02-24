@@ -16,7 +16,6 @@ exports[`removeHiddenElems > invalid > Invalid #0: removeHiddenElems default - r
     "line": 1,
     "message": "Replace \`>⏎··<rect·x="10"·y="10"·width="0"·height="80"·fill="blue"·/>⏎··<circle·cx="50"·cy="50"·r="30"·display="none"·/>⏎</svg>\` with \`/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "removeHiddenElems",
     "severity": 2,
   },

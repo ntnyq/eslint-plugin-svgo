@@ -16,7 +16,6 @@ exports[`minifyStyles > invalid > Invalid #0: minifyStyles - minify CSS in style
     "line": 1,
     "message": "Replace \`⏎··<style>⏎····.shape·{⏎······fill:·blue;⏎······stroke:·red;⏎····}⏎··</style>⏎··<rect·x="10"·y="10"·width="80"·height="80"·class="shape"·/>⏎\` with \`<style>.shape{fill:#00f;stroke:red}</style><rect·x="10"·y="10"·width="80"·height="80"·class="shape"/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "minifyStyles",
     "severity": 2,
   },

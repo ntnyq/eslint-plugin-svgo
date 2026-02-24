@@ -16,7 +16,6 @@ exports[`mergeStyles > invalid > Invalid #0: mergeStyles - merge multiple style 
     "line": 1,
     "message": "Replace \`⏎··<style>.shape·{·fill:·blue;·}</style>⏎··<style>.text·{·font-size:·12px;·}</style>⏎··<rect·x="10"·y="10"·width="80"·height="80"·class="shape"·/>⏎\` with \`<style>.shape·{·fill:·blue;·}.text·{·font-size:·12px;·}</style><rect·x="10"·y="10"·width="80"·height="80"·class="shape"/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "mergeStyles",
     "severity": 2,
   },

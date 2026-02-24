@@ -16,7 +16,6 @@ exports[`convertShapeToPath > invalid > Invalid #0: convertShapeToPath - convert
     "line": 1,
     "message": "Replace \`⏎··<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"·/>⏎\` with \`<path·fill="blue"·d="M10·10H90V90H10z"/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "convertShapeToPath",
     "severity": 2,
   },

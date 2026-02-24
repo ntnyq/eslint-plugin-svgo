@@ -16,7 +16,6 @@ exports[`collapseGroups > invalid > Invalid #0: collapseGroups default - collaps
     "line": 1,
     "message": "Replace \`⏎··<g·fill="blue">⏎····<rect·x="10"·y="10"·width="30"·height="30"·/>⏎··</g>⏎\` with \`<rect·x="10"·y="10"·width="30"·height="30"·fill="blue"/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "collapseGroups",
     "severity": 2,
   },

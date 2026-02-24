@@ -16,7 +16,6 @@ exports[`addAttributesToSVGElement > invalid > Invalid #0: addAttributesToSVGEle
     "line": 1,
     "message": "Replace \`>⏎··<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"·/>⏎\` with \`·role="img"·aria-label="Icon"><rect·x="10"·y="10"·width="80"·height="80"·fill="blue"/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "addAttributesToSVGElement",
     "severity": 2,
   },

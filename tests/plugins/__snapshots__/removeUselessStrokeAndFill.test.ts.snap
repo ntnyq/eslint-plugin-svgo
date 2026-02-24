@@ -16,7 +16,6 @@ exports[`removeUselessStrokeAndFill > invalid > Invalid #0: removeUselessStrokeA
     "line": 1,
     "message": "Replace \`⏎··<path·d="M10·10h80v80h-80z"·fill="none"·stroke="none"·/>⏎\` with \`<path·d="M10·10h80v80h-80z"·fill="none"/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "removeUselessStrokeAndFill",
     "severity": 2,
   },

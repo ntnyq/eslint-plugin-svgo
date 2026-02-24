@@ -16,7 +16,6 @@ exports[`removeDoctype > invalid > Invalid #0: removeDoctype default - remove DO
     "line": 1,
     "message": "Replace \`<!DOCTYPE·svg·PUBLIC·"-//W3C//DTD·SVG·1.1//EN"·"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">⏎<svg·xmlns="http://www.w3.org/2000/svg"·viewBox="0·0·100·100">⏎··<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"·/>⏎\` with \`<svg·xmlns="http://www.w3.org/2000/svg"·viewBox="0·0·100·100"><rect·x="10"·y="10"·width="80"·height="80"·fill="blue"/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "removeDoctype",
     "severity": 2,
   },

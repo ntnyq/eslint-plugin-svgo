@@ -16,7 +16,6 @@ exports[`sortAttrs > invalid > Invalid #0: sortAttrs - sort attributes alphabeti
     "line": 1,
     "message": "Replace \`⏎··<rect·fill="blue"·x="10"·y="10"·width="80"·height="80"·/>⏎\` with \`<rect·width="80"·height="80"·x="10"·y="10"·fill="blue"/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "sortAttrs",
     "severity": 2,
   },

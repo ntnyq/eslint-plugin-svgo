@@ -16,7 +16,6 @@ exports[`inlineStyles > invalid > Invalid #0: inlineStyles - inline CSS from sty
     "line": 1,
     "message": "Replace \`⏎··<style>⏎····.shape·{·fill:·blue;·}⏎··</style>⏎··<rect·x="10"·y="10"·width="80"·height="80"·class="shape"·/>⏎\` with \`<rect·x="10"·y="10"·width="80"·height="80"·style="fill:blue"/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "inlineStyles",
     "severity": 2,
   },

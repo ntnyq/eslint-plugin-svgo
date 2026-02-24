@@ -16,7 +16,6 @@ exports[`removeAttributesBySelector > invalid > Invalid #0: removeAttributesBySe
     "line": 1,
     "message": "Replace \`⏎··<rect·x="10"·y="10"·width="30"·height="30"·fill="red"·/>⏎··<rect·x="50"·y="50"·width="30"·height="30"·fill="blue"·/>⏎\` with \`<rect·x="10"·y="10"·width="30"·height="30"/><rect·x="50"·y="50"·width="30"·height="30"·fill="blue"/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "removeAttributesBySelector",
     "severity": 2,
   },

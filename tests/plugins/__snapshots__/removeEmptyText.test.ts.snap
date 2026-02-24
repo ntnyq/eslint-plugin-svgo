@@ -16,7 +16,6 @@ exports[`removeEmptyText > invalid > Invalid #0: removeEmptyText default - remov
     "line": 1,
     "message": "Replace \`⏎··<text·x="10"·y="20"></text>⏎··<text·x="30"·y="40">Hello</text>⏎\` with \`<text·x="30"·y="40">Hello</text>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "removeEmptyText",
     "severity": 2,
   },

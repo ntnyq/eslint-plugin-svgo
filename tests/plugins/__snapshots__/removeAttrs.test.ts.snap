@@ -16,7 +16,6 @@ exports[`removeAttrs > invalid > Invalid #0: removeAttrs - remove specific attri
     "line": 1,
     "message": "Replace \`⏎··<rect·x="10"·y="10"·width="80"·height="80"·id="rect1"·class="shape"·fill="blue"·/>⏎\` with \`<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "removeAttrs",
     "severity": 2,
   },

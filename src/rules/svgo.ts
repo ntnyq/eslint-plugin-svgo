@@ -12,7 +12,7 @@ let optimizeSVG: (input: string, config: Config) => Output
 
 export const svgo: Rule.RuleModule = {
   meta: {
-    type: 'suggestion',
+    type: 'problem',
     docs: {
       recommended: true,
       description: 'Use SVGO to optimize SVG files',
@@ -40,11 +40,10 @@ export const svgo: Rule.RuleModule = {
     if (!optimizeSVG) {
       optimizeSVG = createSyncFn(join(dirWorkers, 'svgo.mjs'))
     }
+    const sourceCode = context.sourceCode.text
 
     return {
       Program() {
-        const sourceCode = context.sourceCode.text
-
         try {
           const output = optimizeSVG(sourceCode, {
             path: context.filename,

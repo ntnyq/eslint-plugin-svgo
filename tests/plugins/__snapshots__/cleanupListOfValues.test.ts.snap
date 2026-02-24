@@ -16,7 +16,6 @@ exports[`cleanupListOfValues > invalid > Invalid #0: cleanupListOfValues - optim
     "line": 1,
     "message": "Replace \`⏎··<polygon·points="10,·10··50,·90··90,·10"·fill="blue"·/>⏎\` with \`<polygon·points="10·10·50·90·90·10"·fill="blue"/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "cleanupListOfValues",
     "severity": 2,
   },

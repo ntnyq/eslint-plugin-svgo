@@ -16,7 +16,6 @@ exports[`removeDesc > invalid > Invalid #0: removeDesc default - remove desc ele
     "line": 1,
     "message": "Replace \`⏎··<desc>This·is·a·description</desc>⏎··<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"·/>⏎\` with \`<desc>This·is·a·description</desc><rect·x="10"·y="10"·width="80"·height="80"·fill="blue"/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "removeDesc",
     "severity": 2,
   },

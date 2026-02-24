@@ -16,7 +16,6 @@ exports[`mergePaths > invalid > Invalid #0: mergePaths - merge multiple path ele
     "line": 1,
     "message": "Replace \`⏎··<path·d="M10·10h30v30h-30z"·fill="blue"·/>⏎··<path·d="M50·50h30v30h-30z"·fill="blue"·/>⏎\` with \`<path·d="M10·10h30v30h-30zM50·50h30v30h-30z"·fill="blue"/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "mergePaths",
     "severity": 2,
   },

@@ -16,7 +16,6 @@ exports[`cleanupIds > invalid > Invalid #0: cleanupIds default - minify referenc
     "line": 1,
     "message": "Replace \`⏎··<defs>⏎····<circle·id="myGradient"·cx="50"·cy="50"·r="30"·/>⏎··</defs>⏎··<use·href="#myGradient"·/>⏎\` with \`<defs><circle·id="a"·cx="50"·cy="50"·r="30"/></defs><use·href="#a"/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "cleanupIds",
     "severity": 2,
   },

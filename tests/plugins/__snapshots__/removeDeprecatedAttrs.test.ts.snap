@@ -16,7 +16,6 @@ exports[`removeDeprecatedAttrs > invalid > Invalid #0: removeDeprecatedAttrs - r
     "line": 1,
     "message": "Replace \`·version="1.1">⏎··<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"·/>⏎\` with \`><rect·x="10"·y="10"·width="80"·height="80"·fill="blue"/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "removeDeprecatedAttrs",
     "severity": 2,
   },

@@ -16,7 +16,6 @@ exports[`removeEmptyAttrs > invalid > Invalid #0: removeEmptyAttrs default - rem
     "line": 1,
     "message": "Replace \`⏎··<rect·x="10"·y="10"·width="80"·height="80"·fill=""·/>⏎\` with \`<rect·x="10"·y="10"·width="80"·height="80"/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "removeEmptyAttrs",
     "severity": 2,
   },

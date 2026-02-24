@@ -16,7 +16,6 @@ exports[`convertOneStopGradients > invalid > Invalid #0: convertOneStopGradients
     "line": 1,
     "message": "Replace \`⏎··<defs>⏎····<linearGradient·id="grad">⏎······<stop·offset="0%"·stop-color="blue"·/>⏎····</linearGradient>⏎··</defs>⏎··<rect·x="10"·y="10"·width="80"·height="80"·fill="url(#grad)"·/>⏎\` with \`<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "convertOneStopGradients",
     "severity": 2,
   },

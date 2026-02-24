@@ -16,7 +16,6 @@ exports[`moveElemsAttrsToGroup > invalid > Invalid #0: moveElemsAttrsToGroup - m
     "line": 1,
     "message": "Replace \`⏎··<g>⏎····<rect·x="10"·y="10"·width="30"·height="30"·fill="blue"·/>⏎····<rect·x="50"·y="50"·width="30"·height="30"·fill="blue"·/>⏎··</g>⏎\` with \`<g·fill="blue"><rect·x="10"·y="10"·width="30"·height="30"/><rect·x="50"·y="50"·width="30"·height="30"/></g>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "moveElemsAttrsToGroup",
     "severity": 2,
   },

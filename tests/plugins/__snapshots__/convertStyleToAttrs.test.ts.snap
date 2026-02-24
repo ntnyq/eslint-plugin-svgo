@@ -16,7 +16,6 @@ exports[`convertStyleToAttrs > invalid > Invalid #0: convertStyleToAttrs default
     "line": 1,
     "message": "Replace \`⏎··<rect·x="10"·y="10"·width="80"·height="80"·style="fill:blue"·/>⏎\` with \`<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "convertStyleToAttrs",
     "severity": 2,
   },

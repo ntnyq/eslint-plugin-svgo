@@ -16,7 +16,6 @@ exports[`removeXMLProcInst > invalid > Invalid #0: removeXMLProcInst default - r
     "line": 1,
     "message": "Replace \`<?xml·version="1.0"·encoding="UTF-8"?>⏎<svg·xmlns="http://www.w3.org/2000/svg"·viewBox="0·0·100·100">⏎··<rect·x="10"·y="10"·width="80"·height="80"·fill="blue"·/>⏎\` with \`<svg·xmlns="http://www.w3.org/2000/svg"·viewBox="0·0·100·100"><rect·x="10"·y="10"·width="80"·height="80"·fill="blue"/>\`",
     "messageId": "replace",
-    "nodeType": null,
     "ruleId": "removeXMLProcInst",
     "severity": 2,
   },
