@@ -20,7 +20,10 @@ describe('svgo rule error handling', () => {
 
     // Create a mock context
     const context = {
-      sourceCode: { text: '<svg></svg>' },
+      sourceCode: {
+        ast: { type: 'Program' },
+        text: '<svg></svg>',
+      },
       filename: 'test.svg',
       options: [{}],
       report: vi.fn(),
@@ -39,7 +42,7 @@ describe('svgo rule error handling', () => {
         start: { line: 1, column: 0 },
         end: { line: 1, column: 0 },
       },
-      message: 'Failed to optimize SVG file',
+      message: 'Failed to optimize SVG file: test.svg',
     })
   })
 })

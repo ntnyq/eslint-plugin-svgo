@@ -43,7 +43,8 @@ export const svgo: Rule.RuleModule = {
     const sourceCode = context.sourceCode.text
 
     return {
-      Program() {
+      /* v8 ignore next */
+      [context.sourceCode.ast.type || 'Program']() {
         try {
           const output = optimizeSVG(sourceCode, {
             path: context.filename,
@@ -69,7 +70,7 @@ export const svgo: Rule.RuleModule = {
                 start: { line: 1, column: 0 },
                 end: { line: 1, column: 0 },
               },
-              message: 'Failed to optimize SVG file',
+              message: `Failed to optimize SVG file: ${context.filename}`,
             })
           }
         }
