@@ -67,7 +67,7 @@
     "@types/node": "^25.5.0",
     "@typescript/native-preview": "^7.0.0-dev.20260315.1",
     "@vitest/coverage-v8": "^4.1.0",
-    "bumpp": "^10.4.1",
+    "bumpp": "^11.0.1",
     "eslint": "^10.0.3",
     "eslint-parser-plain": "^0.1.1",
     "eslint-typegen": "^2.3.1",
