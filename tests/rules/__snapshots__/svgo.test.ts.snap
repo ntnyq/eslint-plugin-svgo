@@ -198,7 +198,29 @@ exports[`svgo > invalid > Invalid #8: plugin cleanupIds with params 1`] = `
 ]
 `;
 
-exports[`svgo > invalid > Invalid #9: svgoConfig default 1`] = `
+exports[`svgo > invalid > Invalid #9: reportMode summary 1`] = `
+[
+  {
+    "column": 1,
+    "endColumn": 7,
+    "endLine": 11,
+    "fix": {
+      "range": [
+        0,
+        373,
+      ],
+      "text": "<svg xmlns="http://www.w3.org/2000/svg" width="150" viewBox="0 0 150 100"><defs><circle id="a" cx="50" cy="50" r="50" fill="#000"/></defs><use href="#a" transform="skewX(16)"/></svg>",
+    },
+    "line": 1,
+    "message": "SVG can be optimized",
+    "messageId": "summary",
+    "ruleId": "svgo",
+    "severity": 2,
+  },
+]
+`;
+
+exports[`svgo > invalid > Invalid #10: svgoConfig default 1`] = `
 [
   {
     "column": 1,
@@ -306,7 +328,7 @@ exports[`svgo > invalid > Invalid #9: svgoConfig default 1`] = `
 ]
 `;
 
-exports[`svgo > invalid > Invalid #10: svgoConfig config path 1`] = `
+exports[`svgo > invalid > Invalid #11: svgoConfig config path 1`] = `
 [
   {
     "column": 1,
@@ -414,7 +436,7 @@ exports[`svgo > invalid > Invalid #10: svgoConfig config path 1`] = `
 ]
 `;
 
-exports[`svgo > invalid > Invalid #11: invalid 1`] = `
+exports[`svgo > invalid > Invalid #12: invalid 1`] = `
 [
   {
     "column": 6,
@@ -428,7 +450,7 @@ exports[`svgo > invalid > Invalid #11: invalid 1`] = `
 ]
 `;
 
-exports[`svgo > invalid > Invalid #12: not svg 1`] = `
+exports[`svgo > invalid > Invalid #13: not svg 1`] = `
 [
   {
     "column": 2,

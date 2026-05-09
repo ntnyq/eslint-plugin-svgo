@@ -2,7 +2,7 @@
   "name": "eslint-plugin-svgo",
   "type": "module",
   "version": "0.12.0",
-  "packageManager": "pnpm@11.0.8",
+  "packageManager": "pnpm@11.0.9",
   "description": "Optimize SVG files with SVGO via ESLint.",
   "keywords": [
     "eslint",
@@ -50,6 +50,7 @@
     "release:check": "run-s format:check lint typecheck test build",
     "release:version": "bumpp",
     "test": "vitest",
+    "test:pack": "tsx scripts/pack-smoke.ts",
     "typecheck": "tsgo --noEmit",
     "update:rule-options": "tsx scripts/udpateRuleOptions.ts"
   },

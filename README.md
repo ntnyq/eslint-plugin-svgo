@@ -246,7 +246,24 @@ Use an external SVGO config file. This is useful when you need to use features t
 - `true` — Auto-load `svgo.config.mjs` or `svgo.config.js` from your project root
 - `'path/to/config'` — Use a specific config file path
 
-> **Note**: When `svgoConfig` is used, all other rule options (except `path`) are ignored. Make sure your config file exists, or it will be treated as `false`.
+Behavior details:
+
+- When `svgoConfig` is `true`, the rule auto-searches for a SVGO config file from the SVG file directory upward.
+- If no external config is found with `svgoConfig: true`, the rule falls back to in-rule options (`plugins`, `floatPrecision`, etc.).
+- When `svgoConfig` is a string path, that path must exist and be loadable, otherwise the rule reports an optimization error.
+- When an external config is loaded successfully, other rule options (except `path`) are ignored.
+
+##### `reportMode`
+
+- **Type**: `'diff' | 'summary'`
+- **Default**: `'diff'`
+
+Choose how diagnostics are reported when SVG can be optimized:
+
+- `'diff'` — Report each text diff as a separate ESLint message (detailed)
+- `'summary'` — Report a single ESLint message with a full-file autofix (quiet CI output)
+
+Set `ESLINT_PLUGIN_SVGO_DEBUG=1` (or `DEBUG=eslint-plugin-svgo`) to include error stacks in diagnostic messages.
 
 ##### `path`
 

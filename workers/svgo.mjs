@@ -1,5 +1,7 @@
 // @ts-check
 
+import { dirname } from 'node:path'
+import process from 'node:process'
 import { loadConfig, optimize } from 'svgo'
 import { runAsWorker } from 'synckit'
 
@@ -8,9 +10,14 @@ import { runAsWorker } from 'synckit'
  */
 
 /**
- * @type {import('svgo').Config | null}
+ * @param {boolean | string} svgoConfig
+ * @param {string} cwd
  */
-let externalConfig
+async function loadExternalConfig(svgoConfig, cwd) {
+  return typeof svgoConfig === 'string'
+    ? loadConfig(svgoConfig, cwd)
+    : loadConfig(undefined, cwd)
+}
 
 runAsWorker(
   async (
@@ -24,12 +31,11 @@ runAsWorker(
     options,
   ) => {
     const { svgoConfig, ...ruleConfig } = options
+    const cwd = ruleConfig.path ? dirname(ruleConfig.path) : process.cwd()
+    let externalConfig = null
 
-    if (svgoConfig && !externalConfig) {
-      externalConfig =
-        typeof svgoConfig === 'string'
-          ? await loadConfig(svgoConfig)
-          : await loadConfig()
+    if (svgoConfig) {
+      externalConfig = await loadExternalConfig(svgoConfig, cwd)
     }
 
     return optimize(

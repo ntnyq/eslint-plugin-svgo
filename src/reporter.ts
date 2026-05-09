@@ -11,7 +11,10 @@ export const messages = {
   [DIFFERENCE.INSERT]: 'Insert `{{ insertText }}`',
   [DIFFERENCE.DELETE]: 'Delete `{{ deleteText }}`',
   [DIFFERENCE.REPLACE]: 'Replace `{{ deleteText }}` with `{{ insertText }}`',
+  summary: 'SVG can be optimized',
 }
+
+export type ReportMode = 'diff' | 'summary'
 
 function _reportDifference(
   context: Rule.RuleContext,
@@ -54,8 +57,23 @@ export function reportDifferences(
   source: string,
   formatted: string,
   offset = 0,
+  mode: ReportMode = 'diff',
 ) {
   if (source === formatted) {
+    return
+  }
+
+  if (mode === 'summary') {
+    const start = context.sourceCode.getLocFromIndex(offset)
+    const end = context.sourceCode.getLocFromIndex(offset + source.length)
+
+    context.report({
+      messageId: 'summary',
+      loc: { start, end },
+      fix: fixer =>
+        fixer.replaceTextRange([offset, offset + source.length], formatted),
+    })
+
     return
   }
 

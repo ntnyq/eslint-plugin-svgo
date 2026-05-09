@@ -505,4 +505,6 @@ export type SvgoSvgo = []|[{
   })[]
   
   svgoConfig?: (boolean | string)
+  
+  reportMode?: ("diff" | "summary")
 }]

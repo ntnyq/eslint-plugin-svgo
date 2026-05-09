@@ -303,6 +303,36 @@ run({
         expect(errors).toMatchSnapshot()
       },
     },
+    {
+      description: 'reportMode summary',
+      filename: 'file.svg',
+      options: [
+        {
+          reportMode: 'summary',
+        } as any,
+      ],
+      code: $`
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox=" 0 0  150 100 " width="150">
+          <!-- Created with love! -->
+          <defs>
+            <ellipse cx="50" cy="50.0" rx="50.00" ry="auto" fill="black" id="circle"/>
+          </defs>
+          <g>
+            <use href="#circle" transform="skewX(16)"/>
+            <rect id="useless" width="0" height="0" fill="#ff0000"/>
+          </g>
+        </svg>
+      `,
+      output(output) {
+        expect(output).toMatchInlineSnapshot(
+          `"<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"150\" viewBox=\"0 0 150 100\"><defs><circle id=\"a\" cx=\"50\" cy=\"50\" r=\"50\" fill=\"#000\"/></defs><use href=\"#a\" transform=\"skewX(16)\"/></svg>"`,
+        )
+      },
+      errors(errors) {
+        expect(errors).toMatchSnapshot()
+      },
+    },
 
     /**
      * ===========================================
