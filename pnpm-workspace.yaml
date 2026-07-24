@@ -1,6 +1,13 @@
 overrides:
+  brace-expansion: 5.0.8
   esbuild: ^0.28.1
+  vite: 8.1.5
 
 allowBuilds:
   esbuild: true
   unrs-resolver: true
+
+minimumReleaseAgeExclude:
+  - brace-expansion@5.0.8
+  - tsdown@0.22.14
+  - verkit@0.3.0
