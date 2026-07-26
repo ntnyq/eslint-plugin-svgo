@@ -322,7 +322,7 @@ export default defineConfig([
             pretty: true, // Add newlines and indentation
             indent: 2, // Indentation size
             eol: 'lf', // Line ending style
-            final: true, // Add final newline
+            finalNewline: true, // Add final newline
           },
         },
       ],
@@ -361,7 +361,6 @@ export default defineConfig([
               name: 'cleanupIds',
               params: {
                 minify: false,
-                prefix: 'icon-',
               },
             },
           ],

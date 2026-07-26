@@ -42,9 +42,9 @@ export type SvgoSvgo = []|[{
     textStart?: string
     useShortTags?: boolean
   }
-  plugins?: (("preset-default" | "cleanupAttrs" | "cleanupEnableBackground" | "cleanupIds" | "cleanupNumericValues" | "collapseGroups" | "convertColors" | "convertEllipseToCircle" | "convertPathData" | "convertShapeToPath" | "convertTransform" | "inlineStyles" | "mergePaths" | "mergeStyles" | "minifyStyles" | "moveElemsAttrsToGroup" | "moveGroupAttrsToElems" | "removeComments" | "removeDeprecatedAttrs" | "removeDesc" | "removeDoctype" | "removeEditorsNSData" | "removeEmptyAttrs" | "removeEmptyContainers" | "removeEmptyText" | "removeHiddenElems" | "removeMetadata" | "removeNonInheritableGroupAttrs" | "removeUnknownsAndDefaults" | "removeUnusedNS" | "removeUselessDefs" | "removeUselessStrokeAndFill" | "removeXMLProcInst" | "sortAttrs" | "sortDefsChildren" | "cleanupListOfValues" | "convertOneStopGradients" | "convertStyleToAttrs" | "prefixIds" | "removeDimensions" | "removeOffCanvasPaths" | "removeRasterImages" | "removeScripts" | "removeStyleElement" | "removeTitle" | "removeViewBox" | "removeXlink" | "removeXMLNS" | "reusePaths" | "addAttributesToSVGElement" | "addClassesToSVGElement" | "removeAttributesBySelector" | "removeAttrs" | "removeElementsByAttr") | {
+  plugins?: (("cleanupAttrs" | "cleanupEnableBackground" | "cleanupIds" | "cleanupListOfValues" | "cleanupNumericValues" | "collapseGroups" | "convertColors" | "convertEllipseToCircle" | "convertOneStopGradients" | "convertPathData" | "convertShapeToPath" | "convertStyleToAttrs" | "convertTransform" | "inlineStyles" | "mergePaths" | "mergeStyles" | "minifyStyles" | "moveElemsAttrsToGroup" | "moveGroupAttrsToElems" | "prefixIds" | "removeComments" | "removeDeprecatedAttrs" | "removeDesc" | "removeDimensions" | "removeDoctype" | "removeEditorsNSData" | "removeEmptyAttrs" | "removeEmptyContainers" | "removeEmptyText" | "removeHiddenElems" | "removeMetadata" | "removeNonInheritableGroupAttrs" | "removeOffCanvasPaths" | "removeRasterImages" | "removeScripts" | "removeStyleElement" | "removeTitle" | "removeUnknownsAndDefaults" | "removeUnusedNS" | "removeUselessDefs" | "removeUselessStrokeAndFill" | "removeViewBox" | "removeXlink" | "removeXMLNS" | "removeXMLProcInst" | "reusePaths" | "sortAttrs" | "sortDefsChildren" | "preset-default") | {
     name: "addAttributesToSVGElement"
-    params?: {
+    params: {
       attribute?: (string | {
         [k: string]: (string | null)
       })
@@ -54,7 +54,7 @@ export type SvgoSvgo = []|[{
     }
   } | {
     name: "addClassesToSVGElement"
-    params?: {
+    params: {
       className?: string
       classNames?: string[]
     }
@@ -203,6 +203,140 @@ export type SvgoSvgo = []|[{
       prefixClassNames?: boolean
     }
   } | {
+    name: "removeAttributesBySelector"
+    params: {
+      selectors?: {
+        selector?: string
+        attributes?: string[]
+        [k: string]: unknown | undefined
+      }[]
+    }
+  } | {
+    name: "removeAttrs"
+    params: {
+      attrs?: (string | string[])
+      elemSeparator?: string
+      preserveCurrentColor?: boolean
+    }
+  } | {
+    name: "removeComments"
+    params?: {
+      preservePatterns?: (false | string[])
+    }
+  } | {
+    name: "removeDeprecatedAttrs"
+    params?: {
+      removeUnsafe?: boolean
+    }
+  } | {
+    name: "removeDesc"
+    params?: {
+      removeAny?: boolean
+    }
+  } | {
+    name: "removeDimensions"
+  } | {
+    name: "removeDoctype"
+  } | {
+    name: "removeEditorsNSData"
+    params?: {
+      additionalNamespaces?: string[]
+    }
+  } | {
+    name: "removeElementsByAttr"
+    params: {
+      id?: (string | string[])
+      class?: (string | string[])
+    }
+  } | {
+    name: "removeEmptyAttrs"
+  } | {
+    name: "removeEmptyContainers"
+  } | {
+    name: "removeEmptyText"
+    params?: {
+      text?: boolean
+      tspan?: boolean
+      tref?: boolean
+    }
+  } | {
+    name: "removeHiddenElems"
+    params?: {
+      isHidden?: boolean
+      displayNone?: boolean
+      opacity0?: boolean
+      circleR0?: boolean
+      ellipseRX0?: boolean
+      ellipseRY0?: boolean
+      rectWidth0?: boolean
+      rectHeight0?: boolean
+      patternWidth0?: boolean
+      patternHeight0?: boolean
+      imageWidth0?: boolean
+      imageHeight0?: boolean
+      pathEmptyD?: boolean
+      polylineEmptyPoints?: boolean
+      polygonEmptyPoints?: boolean
+    }
+  } | {
+    name: "removeMetadata"
+  } | {
+    name: "removeNonInheritableGroupAttrs"
+  } | {
+    name: "removeOffCanvasPaths"
+  } | {
+    name: "removeRasterImages"
+  } | {
+    name: "removeScripts"
+  } | {
+    name: "removeStyleElement"
+  } | {
+    name: "removeTitle"
+  } | {
+    name: "removeUnknownsAndDefaults"
+    params?: {
+      unknownContent?: boolean
+      unknownAttrs?: boolean
+      defaultAttrs?: boolean
+      defaultMarkupDeclarations?: boolean
+      uselessOverrides?: boolean
+      keepDataAttrs?: boolean
+      keepAriaAttrs?: boolean
+      keepRoleAttr?: boolean
+    }
+  } | {
+    name: "removeUnusedNS"
+  } | {
+    name: "removeUselessDefs"
+  } | {
+    name: "removeUselessStrokeAndFill"
+    params?: {
+      stroke?: boolean
+      fill?: boolean
+      removeNone?: boolean
+    }
+  } | {
+    name: "removeViewBox"
+  } | {
+    name: "removeXlink"
+    params?: {
+      includeLegacy?: boolean
+    }
+  } | {
+    name: "removeXMLNS"
+  } | {
+    name: "removeXMLProcInst"
+  } | {
+    name: "reusePaths"
+  } | {
+    name: "sortAttrs"
+    params?: {
+      order?: string[]
+      xmlnsOrder?: ("front" | "alphabetical")
+    }
+  } | {
+    name: "sortDefsChildren"
+  } | {
     name: "preset-default"
     params?: {
       floatPrecision?: number
@@ -341,7 +475,6 @@ export type SvgoSvgo = []|[{
         })
         removeMetadata?: false
         removeNonInheritableGroupAttrs?: false
-        removeTitle?: false
         removeUnknownsAndDefaults?: (boolean | {
           unknownContent?: boolean
           unknownAttrs?: boolean
@@ -359,7 +492,6 @@ export type SvgoSvgo = []|[{
           fill?: boolean
           removeNone?: boolean
         })
-        removeViewBox?: false
         removeXMLProcInst?: false
         sortAttrs?: (boolean | {
           order?: string[]
@@ -368,140 +500,6 @@ export type SvgoSvgo = []|[{
         sortDefsChildren?: false
       }
     }
-  } | {
-    name: "removeAttributesBySelector"
-    params?: {
-      selectors?: {
-        selector?: string
-        attributes?: string[]
-        [k: string]: unknown | undefined
-      }[]
-    }
-  } | {
-    name: "removeAttrs"
-    params?: {
-      attrs?: (string | string[])
-      elemSeparator?: string
-      preserveCurrentColor?: boolean
-    }
-  } | {
-    name: "removeComments"
-    params?: {
-      preservePatterns?: (false | string[])
-    }
-  } | {
-    name: "removeDeprecatedAttrs"
-    params?: {
-      removeUnsafe?: boolean
-    }
-  } | {
-    name: "removeDesc"
-    params?: {
-      removeAny?: boolean
-    }
-  } | {
-    name: "removeDimensions"
-  } | {
-    name: "removeDoctype"
-  } | {
-    name: "removeEditorsNSData"
-    params?: {
-      additionalNamespaces?: string[]
-    }
-  } | {
-    name: "removeElementsByAttr"
-    params?: {
-      id?: (string | string[])
-      class?: (string | string[])
-    }
-  } | {
-    name: "removeEmptyAttrs"
-  } | {
-    name: "removeEmptyContainers"
-  } | {
-    name: "removeEmptyText"
-    params?: {
-      text?: boolean
-      tspan?: boolean
-      tref?: boolean
-    }
-  } | {
-    name: "removeHiddenElems"
-    params?: {
-      isHidden?: boolean
-      displayNone?: boolean
-      opacity0?: boolean
-      circleR0?: boolean
-      ellipseRX0?: boolean
-      ellipseRY0?: boolean
-      rectWidth0?: boolean
-      rectHeight0?: boolean
-      patternWidth0?: boolean
-      patternHeight0?: boolean
-      imageWidth0?: boolean
-      imageHeight0?: boolean
-      pathEmptyD?: boolean
-      polylineEmptyPoints?: boolean
-      polygonEmptyPoints?: boolean
-    }
-  } | {
-    name: "removeMetadata"
-  } | {
-    name: "removeNonInheritableGroupAttrs"
-  } | {
-    name: "removeOffCanvasPaths"
-  } | {
-    name: "removeRasterImages"
-  } | {
-    name: "removeScripts"
-  } | {
-    name: "removeStyleElement"
-  } | {
-    name: "removeTitle"
-  } | {
-    name: "removeUnknownsAndDefaults"
-    params?: {
-      unknownContent?: boolean
-      unknownAttrs?: boolean
-      defaultAttrs?: boolean
-      defaultMarkupDeclarations?: boolean
-      uselessOverrides?: boolean
-      keepDataAttrs?: boolean
-      keepAriaAttrs?: boolean
-      keepRoleAttr?: boolean
-    }
-  } | {
-    name: "removeUnusedNS"
-  } | {
-    name: "removeUselessDefs"
-  } | {
-    name: "removeUselessStrokeAndFill"
-    params?: {
-      stroke?: boolean
-      fill?: boolean
-      removeNone?: boolean
-    }
-  } | {
-    name: "removeViewBox"
-  } | {
-    name: "removeXlink"
-    params?: {
-      includeLegacy?: boolean
-    }
-  } | {
-    name: "removeXMLNS"
-  } | {
-    name: "removeXMLProcInst"
-  } | {
-    name: "reusePaths"
-  } | {
-    name: "sortAttrs"
-    params?: {
-      order?: string[]
-      xmlnsOrder?: ("front" | "alphabetical")
-    }
-  } | {
-    name: "sortDefsChildren"
   })[]
   
   svgoConfig?: (boolean | string)
