@@ -70,10 +70,9 @@ interface PluginCatalogEntry<Kind extends PluginKind> {
 type PluginCatalog = {
   [Name in keyof DefaultPlugins]: PluginCatalogEntry<'default'>
 } & {
-  [Name in Exclude<
-    keyof BuiltinsWithOptionalParams,
-    keyof DefaultPlugins
-  >]: PluginCatalogEntry<'optional'>
+  [
+    Name in Exclude<keyof BuiltinsWithOptionalParams, keyof DefaultPlugins>
+  ]: PluginCatalogEntry<'optional'>
 } & {
   [Name in keyof BuiltinsWithRequiredParams]: PluginCatalogEntry<'required'>
 }
