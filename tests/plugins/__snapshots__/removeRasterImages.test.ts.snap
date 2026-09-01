@@ -1,0 +1,23 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`removeRasterImages > invalid > Invalid #0: removeRasterImages - remove raster image references 1`] = `
+[
+  {
+    "column": 85,
+    "endColumn": 116,
+    "endLine": 1,
+    "fix": {
+      "range": [
+        84,
+        115,
+      ],
+      "text": "",
+    },
+    "line": 1,
+    "message": "Delete \`image·xlink:href="photo.png"/><\`",
+    "messageId": "delete",
+    "ruleId": "removeRasterImages",
+    "severity": 2,
+  },
+]
+`;

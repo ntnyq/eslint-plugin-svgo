@@ -1,0 +1,23 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`sortDefsChildren > invalid > Invalid #0: sortDefsChildren - group frequent element names first 1`] = `
+[
+  {
+    "column": 48,
+    "endColumn": 131,
+    "endLine": 1,
+    "fix": {
+      "range": [
+        47,
+        130,
+      ],
+      "text": "linearGradient id="a"/><linearGradient id="b"/><filter id="f"/><path id="p" d="M0 0",
+    },
+    "line": 1,
+    "message": "Replace \`path·id="p"·d="M0·0"/><linearGradient·id="a"/><filter·id="f"/><linearGradient·id="b\` with \`linearGradient·id="a"/><linearGradient·id="b"/><filter·id="f"/><path·id="p"·d="M0·0\`",
+    "messageId": "replace",
+    "ruleId": "sortDefsChildren",
+    "severity": 2,
+  },
+]
+`;

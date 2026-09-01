@@ -1,0 +1,23 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`reusePaths > invalid > Invalid #0: reusePaths - replace duplicate paths with use elements 1`] = `
+[
+  {
+    "column": 40,
+    "endColumn": 132,
+    "endLine": 1,
+    "fix": {
+      "range": [
+        39,
+        131,
+      ],
+      "text": " xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path fill="red" d="M0 0h10v10z" id="reuse-0"/></defs><use xlink:href="#reuse-0"/><use transform="translate(20)" xlink:href="#reuse-0",
+    },
+    "line": 1,
+    "message": "Replace \`><path·d="M0·0h10v10z"·fill="red"/><path·d="M0·0h10v10z"·fill="red"·transform="translate(20)\` with \`·xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path·fill="red"·d="M0·0h10v10z"·id="reuse-0"/></defs><use·xlink:href="#reuse-0"/><use·transform="translate(20)"·xlink:href="#reuse-0\`",
+    "messageId": "replace",
+    "ruleId": "reusePaths",
+    "severity": 2,
+  },
+]
+`;

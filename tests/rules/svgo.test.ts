@@ -455,5 +455,44 @@ run({
         expect(errors).toMatchSnapshot()
       },
     },
+    {
+      description: 'reject control character references',
+      filename: 'file.svg',
+      code: '<svg><text>&#x1;</text></svg>',
+      errors(errors) {
+        expect(errors).toHaveLength(1)
+        expect(errors[0]).toMatchObject({
+          column: 17,
+          line: 1,
+          message: 'SvgoParserError: Invalid character entity',
+        })
+      },
+    },
+    {
+      description: 'reject UTF-16 surrogate references',
+      filename: 'file.svg',
+      code: '<svg><text>&#xD800;</text></svg>',
+      errors(errors) {
+        expect(errors).toHaveLength(1)
+        expect(errors[0]).toMatchObject({
+          column: 20,
+          line: 1,
+          message: 'SvgoParserError: Invalid character entity',
+        })
+      },
+    },
+    {
+      description: 'reject noncharacter references',
+      filename: 'file.svg',
+      code: '<svg><text>&#xFFFF;</text></svg>',
+      errors(errors) {
+        expect(errors).toHaveLength(1)
+        expect(errors[0]).toMatchObject({
+          column: 20,
+          line: 1,
+          message: 'SvgoParserError: Invalid character entity',
+        })
+      },
+    },
   ],
 })

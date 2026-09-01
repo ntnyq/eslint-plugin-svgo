@@ -1,0 +1,23 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`moveGroupAttrsToElems > invalid > Invalid #0: moveGroupAttrsToElems - distribute group transforms 1`] = `
+[
+  {
+    "column": 43,
+    "endColumn": 123,
+    "endLine": 1,
+    "fix": {
+      "range": [
+        42,
+        122,
+      ],
+      "text": "><path d="M0 0h10" transform="scale(2) rotate(45)"/><path d="M0 0v10" transform="scale(2)",
+    },
+    "line": 1,
+    "message": "Replace \`·transform="scale(2)"><path·d="M0·0h10"·transform="rotate(45)"/><path·d="M0·0v10\` with \`><path·d="M0·0h10"·transform="scale(2)·rotate(45)"/><path·d="M0·0v10"·transform="scale(2)\`",
+    "messageId": "replace",
+    "ruleId": "moveGroupAttrsToElems",
+    "severity": 2,
+  },
+]
+`;

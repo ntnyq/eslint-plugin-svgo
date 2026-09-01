@@ -1,0 +1,23 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`removeNonInheritableGroupAttrs > invalid > Invalid #0: removeNonInheritableGroupAttrs - remove unsupported group presentation attributes 1`] = `
+[
+  {
+    "column": 44,
+    "endColumn": 62,
+    "endLine": 1,
+    "fix": {
+      "range": [
+        43,
+        61,
+      ],
+      "text": "",
+    },
+    "line": 1,
+    "message": "Delete \`overflow="hidden"·\`",
+    "messageId": "delete",
+    "ruleId": "removeNonInheritableGroupAttrs",
+    "severity": 2,
+  },
+]
+`;

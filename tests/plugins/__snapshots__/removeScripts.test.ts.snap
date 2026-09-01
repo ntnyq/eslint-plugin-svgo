@@ -21,3 +21,91 @@ exports[`removeScripts > invalid > Invalid #0: removeScripts - remove script ele
   },
 ]
 `;
+
+exports[`removeScripts > invalid > Invalid #1: removeScripts - remove SVG event attributes 1`] = `
+[
+  {
+    "column": 40,
+    "endColumn": 94,
+    "endLine": 1,
+    "fix": {
+      "range": [
+        39,
+        93,
+      ],
+      "text": "><rect id="target",
+    },
+    "line": 1,
+    "message": "Replace \`·onload="alert(1)"><rect·id="target"·onclick="alert(2)\` with \`><rect·id="target\`",
+    "messageId": "replace",
+    "ruleId": "removeScripts",
+    "severity": 2,
+  },
+]
+`;
+
+exports[`removeScripts > invalid > Invalid #2: removeScripts - collapse executable links 1`] = `
+[
+  {
+    "column": 42,
+    "endColumn": 220,
+    "endLine": 1,
+    "fix": {
+      "range": [
+        41,
+        219,
+      ],
+      "text": "rect id="js"/><rect id="vb"/><rect id="html"/",
+    },
+    "line": 1,
+    "message": "Replace \`a·href="javascript:alert(1)"><rect·id="js"/></a><a·href="vbscript:alert(1)"><rect·id="vb"/></a><a·href="data:text/html,&lt;script&gt;alert(1)&lt;/script&gt;"><rect·id="html"/></a\` with \`rect·id="js"/><rect·id="vb"/><rect·id="html"/\`",
+    "messageId": "replace",
+    "ruleId": "removeScripts",
+    "severity": 2,
+  },
+]
+`;
+
+exports[`removeScripts > invalid > Invalid #3: removeScripts - sanitize foreignObject HTML 1`] = `
+[
+  {
+    "column": 97,
+    "endColumn": 265,
+    "endLine": 1,
+    "fix": {
+      "range": [
+        96,
+        264,
+      ],
+      "text": "><iframe/><form><img",
+    },
+    "line": 1,
+    "message": "Replace \`·onclick="alert(1)"><iframe·srcdoc="&lt;script&gt;alert(1)&lt;/script&gt;"/><form·action="javascript:alert(1)"><img·src="data:image/svg+xml,&lt;svg·onload=alert(1)&gt;"\` with \`><iframe/><form><img\`",
+    "messageId": "replace",
+    "ruleId": "removeScripts",
+    "severity": 2,
+  },
+]
+`;
+
+exports[`removeScripts > invalid > Invalid #4: removeScripts - sanitize namespaced and obfuscated links 1`] = `
+[
+  {
+    "column": 54,
+    "endColumn": 117,
+    "endLine": 1,
+    "fix": {
+      "range": [
+        53,
+        116,
+      ],
+      "text": "rect id="unsafe"/",
+    },
+    "line": 1,
+    "message": "Replace \`a·href="java&#9;script:alert(1)"><svg:rect·id="unsafe"/></svg:a\` with \`rect·id="unsafe"/\`",
+    "messageId": "replace",
+    "ruleId": "removeScripts",
+    "severity": 2,
+  },
+]
+`;
