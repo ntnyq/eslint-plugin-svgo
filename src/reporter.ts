@@ -69,9 +69,16 @@ export function reportDifferences(
 
     context.report({
       messageId: 'summary',
-      loc: { start, end },
-      fix: fixer =>
-        fixer.replaceTextRange([offset, offset + source.length], formatted),
+      loc: {
+        start,
+        end,
+      },
+      fix(fixer) {
+        return fixer.replaceTextRange(
+          [offset, offset + source.length],
+          formatted,
+        )
+      },
     })
 
     return

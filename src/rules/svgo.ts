@@ -62,9 +62,9 @@ export const svgo: Rule.RuleModule = {
           })
 
           reportDifferences(context, sourceCode, output.data, 0, reportMode)
-        } catch (err) {
-          if ((err as Error)?.name === 'SvgoParserError') {
-            const { reason, line, column } = err as SvgoParserError
+        } catch (error) {
+          if ((error as Error)?.name === 'SvgoParserError') {
+            const { reason, line, column } = error as SvgoParserError
 
             context.report({
               message: `SvgoParserError: ${reason}`,
@@ -81,11 +81,11 @@ export const svgo: Rule.RuleModule = {
               },
               message: [
                 `Failed to optimize SVG file: ${context.filename}`,
-                (err as Error)?.message
-                  ? `Reason: ${(err as Error).message}`
+                (error as Error)?.message
+                  ? `Reason: ${(error as Error).message}`
                   : undefined,
-                isDebugEnabled() && (err as Error)?.stack
-                  ? `Stack:\n${(err as Error).stack}`
+                isDebugEnabled() && (error as Error)?.stack
+                  ? `Stack:\n${(error as Error).stack}`
                   : undefined,
               ]
                 .filter(Boolean)
