@@ -22,6 +22,7 @@ run({
       `,
       output(output) {
         const pathCount = (output.match(/<path/g) || []).length
+
         expect(pathCount).toBeLessThan(2)
       },
       errors(errors) {

@@ -36,6 +36,7 @@ describe('svgo rule error handling', () => {
 
     // Call the Program visitor with a mock node
     const mockNode = {} as any
+
     rule.Program?.(mockNode)
 
     // Verify the generic error message was reported (this is line 69)
@@ -54,6 +55,7 @@ describe('svgo rule error handling', () => {
     const { createSyncFn } = await import('synckit')
     const { svgo } = await import('../../src/rules/svgo')
     const previousDebug = process.env.ESLINT_PLUGIN_SVGO_DEBUG
+
     process.env.ESLINT_PLUGIN_SVGO_DEBUG = '1'
 
     const mockOptimizeSVG = vi.fn().mockImplementation(() => {
@@ -73,6 +75,7 @@ describe('svgo rule error handling', () => {
     } as unknown as Rule.RuleContext
 
     const rule = svgo.create(context)
+
     rule.Program?.({} as any)
 
     expect(context.report).toHaveBeenCalledOnce()
@@ -86,6 +89,7 @@ describe('svgo rule error handling', () => {
         message: string
       },
     ]
+
     expect(reportArg.loc).toEqual({
       start: { line: 1, column: 0 },
       end: { line: 1, column: 0 },
