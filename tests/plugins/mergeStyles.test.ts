@@ -23,6 +23,7 @@ run({
       `,
       output(output) {
         const styleCount = (output.match(/<style/g) || []).length
+
         expect(styleCount).toBeLessThanOrEqual(1)
       },
       errors(errors) {

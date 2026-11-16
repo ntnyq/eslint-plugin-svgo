@@ -80,6 +80,7 @@ if (!result.output || result.output === svg) {
 main().catch((error: unknown) => {
   const reason =
     error instanceof Error ? error.stack || error.message : String(error)
+
   console.error(reason)
   process.exitCode = 1
 })

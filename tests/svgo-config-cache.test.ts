@@ -113,11 +113,13 @@ describe('svgoConfig cache behavior', () => {
     })
 
     const [before] = await eslint.lintText(SVG_WITH_ID, { filePath })
+
     expect(strip(before.output)).toContain('id="x"')
 
     await writeFile(configPath, REMOVE_ID_CONFIG)
 
     const [after] = await eslint.lintText(SVG_WITH_ID, { filePath })
+
     expect(strip(after.output)).toContain('id="x"')
   })
 })

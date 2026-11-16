@@ -9,6 +9,7 @@ export function createParamsSchema(
     properties,
     additionalProperties,
   }
+
   return schema
 }
 
